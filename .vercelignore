@@ -1,0 +1,7 @@
+.claude
+CLAUDE.md
+*.md
+*.docx
+*.before-*
+.DS_Store
+Thumbs.db

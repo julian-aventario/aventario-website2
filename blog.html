@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Aventario</title>
+    <meta name="description" content="Field notes from the supplier-management front line. Practical writing on IT vendor savings, structured tenders, governance, and transitions — by the team that runs the engagements.">
+    <link rel="canonical" href="https://aventario.com/blog.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55.42 55.2'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='11.43' y1='48.04' x2='37.22' y2='48.04' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23324a60'/%3E%3Cstop offset='.45' stop-color='%236a9a9b'/%3E%3Cstop offset='1' stop-color='%238dccc0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z' fill='%238dccc0'/%3E%3Cpolygon points='11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15' fill='url(%23g)'/%3E%3Cpath d='M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z' fill='%23324a60'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { base: '#FAFAF7', surface: '#FFFFFF', text: '#334b60', muted: '#5f768b', accent: '#88C9BE', accentdark: '#5FA99D', orange: '#f19a51', bordercolor: 'rgba(51, 75, 96, 0.12)' }, fontFamily: { serif: ['"Lato"', '-apple-system', 'sans-serif'], sans: ['"Lato"', '-apple-system', 'sans-serif'] } } } }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body { background-color: #FAFAF7; color: #334b60; font-family: 'Lato', -apple-system, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, h5, .font-serif { font-family: 'Lato', -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.015em; line-height: 1.05; }
+        .post-cover { background: linear-gradient(135deg, #334b60 0%, #50757f 50%, #88c9be 100%); }
+        .post-cover.alt-1 { background: linear-gradient(135deg, #334b60 0%, #5f768b 100%); }
+        .post-cover.alt-2 { background: linear-gradient(135deg, #88c9be 0%, #5fa99d 100%); }
+        .post-cover.alt-3 { background: linear-gradient(135deg, #f19a51 0%, #d15298 100%); }
+        .post-cover.alt-4 { background: linear-gradient(135deg, #334b60 0%, #d15298 100%); }
+        .post-cover.alt-5 { background: linear-gradient(135deg, #5fa99d 0%, #334b60 100%); }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-40 bg-base/95 backdrop-blur-sm border-b border-bordercolor px-6 md:px-12 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.29 55.2" class="h-6"><g><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="#324a60"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#324a60"/></g></svg></a>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-bold items-center">
+            <a href="index.html#services" class="hover:text-accentdark">Services</a>
+            <a href="success-stories.html" class="hover:text-accentdark">Success Stories</a>
+            <a href="blog.html" class="text-accentdark">Blog</a>
+            <a href="about.html" class="hover:text-accentdark">About</a>
+            <a href="contact.html" class="hover:text-accentdark">Contact</a>
+        </div>
+        <a href="contact.html" class="hidden md:inline-flex text-xs font-bold uppercase tracking-widest bg-text text-surface px-5 py-2.5 rounded-full">Contact Us</a>
+        <button id="mobileMenuBtn" class="md:hidden w-9 h-9 flex items-center justify-center" aria-label="Toggle menu"><i class="ph ph-list text-2xl"></i></button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden border-b border-bordercolor bg-base px-6 py-4 space-y-2">
+        <a href="index.html#services" class="block py-2 text-sm font-bold uppercase tracking-widest">Services</a>
+        <a href="success-stories.html" class="block py-2 text-sm font-bold uppercase tracking-widest">Success Stories</a>
+        <a href="blog.html" class="block py-2 text-sm font-bold uppercase tracking-widest text-accentdark">Blog</a>
+        <a href="about.html" class="block py-2 text-sm font-bold uppercase tracking-widest">About</a>
+        <a href="contact.html" class="block py-2 text-sm font-bold uppercase tracking-widest">Contact</a>
+    </div>
+
+    <!-- ====== HERO ====== -->
+    <section class="bg-surface px-6 md:px-12 py-20 md:py-28 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+            <div class="md:col-span-8">
+                <h1 class="font-serif text-5xl md:text-7xl mb-6">Field notes.</h1>
+                <p class="text-lg md:text-xl text-text leading-relaxed max-w-2xl">Practical writing from the team that actually runs the engagements. IT vendor savings, structured tenders, governance, transitions. No thought-leadership essays.</p>
+            </div>
+            <div class="md:col-span-4 md:text-right">
+                <p class="text-xs uppercase tracking-widest text-text font-bold">Filter by topic</p>
+                <div class="flex md:justify-end flex-wrap gap-2 mt-3">
+                    <button class="text-xs uppercase tracking-widest font-bold px-3 py-1.5 rounded-full bg-text text-surface">All</button>
+                    <button class="text-xs uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-bordercolor text-text hover:bg-base">Savings</button>
+                    <button class="text-xs uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-bordercolor text-text hover:bg-base">RFx</button>
+                    <button class="text-xs uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-bordercolor text-text hover:bg-base">Governance</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FEATURED POST ====== -->
+    <section class="bg-base px-6 md:px-12 py-16 md:py-20">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-xs uppercase tracking-widest text-text font-bold mb-6">Featured</p>
+            <a href="#" class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+                <div class="md:col-span-7 post-cover aspect-[16/10] rounded-md overflow-hidden flex items-end p-8">
+                    <div>
+                        <span class="inline-block text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Savings</span>
+                    </div>
+                </div>
+                <div class="md:col-span-5 flex flex-col justify-center">
+                    <p class="text-xs uppercase tracking-widest text-text mb-3 font-bold">12 min read &middot; coming soon</p>
+                    <h2 class="font-serif text-3xl md:text-4xl mb-4 group-hover:text-accentdark transition-colors">Why your IT savings programme keeps producing PowerPoint instead of P&amp;L impact.</h2>
+                    <p class="text-lg text-text leading-relaxed mb-6">A field-tested view of why "savings identified" rarely becomes "savings realized" — and what changes when an engagement is paid on the outcome instead of the analysis.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-text text-surface flex items-center justify-center text-xs font-bold">MJ</div>
+                        <div class="text-sm">
+                            <p class="font-bold text-text">Markus Jaksch</p>
+                            <p class="text-text/70">CIO &middot; Aventario</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ====== POST GRID ====== -->
+    <section class="bg-surface px-6 md:px-12 py-20 md:py-24 border-y border-bordercolor">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-3xl md:text-4xl mb-12">Recent</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+
+                <a href="#" class="group">
+                    <div class="post-cover alt-1 aspect-[4/3] rounded-md mb-5 flex items-end p-5">
+                        <span class="inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Vendor management</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-text mb-2">7 min read</p>
+                    <h3 class="font-serif text-2xl text-text mb-3 group-hover:text-accentdark transition-colors leading-tight">The hidden cost of green SLA reports.</h3>
+                    <p class="text-text/80 leading-relaxed">When vendor-reported SLAs go unchallenged for years, the gap between contract and reality compounds quietly. Here's how to find it.</p>
+                </a>
+
+                <a href="#" class="group">
+                    <div class="post-cover alt-2 aspect-[4/3] rounded-md mb-5 flex items-end p-5">
+                        <span class="inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">RFx</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-text mb-2">9 min read</p>
+                    <h3 class="font-serif text-2xl text-text mb-3 group-hover:text-accentdark transition-colors leading-tight">Six weeks to award. Why it's structure, not speed.</h3>
+                    <p class="text-text/80 leading-relaxed">An RFP that runs in six to eight weeks isn't faster — it's more decided. The real work happens before vendors see the question.</p>
+                </a>
+
+                <a href="#" class="group">
+                    <div class="post-cover alt-3 aspect-[4/3] rounded-md mb-5 flex items-end p-5">
+                        <span class="inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Transitions</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-text mb-2">11 min read</p>
+                    <h3 class="font-serif text-2xl text-text mb-3 group-hover:text-accentdark transition-colors leading-tight">The day the outgoing provider stops trying.</h3>
+                    <p class="text-text/80 leading-relaxed">Transition is the single highest-risk moment in any vendor change. Most plans assume goodwill that isn't there.</p>
+                </a>
+
+                <a href="#" class="group">
+                    <div class="post-cover alt-4 aspect-[4/3] rounded-md mb-5 flex items-end p-5">
+                        <span class="inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Consolidation</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-text mb-2">6 min read</p>
+                    <h3 class="font-serif text-2xl text-text mb-3 group-hover:text-accentdark transition-colors leading-tight">Vendor sprawl is rarely a procurement problem.</h3>
+                    <p class="text-text/80 leading-relaxed">It's the residue of many reasonable decisions made without a global view. Here's what putting that view back in place looks like.</p>
+                </a>
+
+                <a href="#" class="group">
+                    <div class="post-cover alt-5 aspect-[4/3] rounded-md mb-5 flex items-end p-5">
+                        <span class="inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Operations</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-text mb-2">8 min read</p>
+                    <h3 class="font-serif text-2xl text-text mb-3 group-hover:text-accentdark transition-colors leading-tight">Why your automation backlog never moves.</h3>
+                    <p class="text-text/80 leading-relaxed">A practical taxonomy for separating proof-of-concept candidates from the few that will actually pay back inside a year.</p>
+                </a>
+
+                <a href="#" class="group">
+                    <div class="post-cover aspect-[4/3] rounded-md mb-5 flex items-end p-5">
+                        <span class="inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Change</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-text mb-2">10 min read</p>
+                    <h3 class="font-serif text-2xl text-text mb-3 group-hover:text-accentdark transition-colors leading-tight">A new tool, a quiet refusal: organisational lag in IT change.</h3>
+                    <p class="text-text/80 leading-relaxed">The 70% of transformation that's organisational, not technical — and the four signals you missed it.</p>
+                </a>
+
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="#" class="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-full border border-bordercolor text-text hover:bg-base transition-colors">
+                    Older posts <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== NEWSLETTER ====== -->
+    <section class="px-6 md:px-12 py-20 md:py-28" style="background-color: #334b60; color: #FFFFFF;">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <h2 class="font-serif text-3xl md:text-5xl text-surface mb-4">Get one note a month, when there's something worth saying.</h2>
+                <p class="text-lg leading-relaxed max-w-xl" style="color: rgba(255,255,255,0.75);">No newsletter cadence theatre. We send when we have something practical to share — usually one piece a month, sometimes less.</p>
+            </div>
+            <div class="md:col-span-5">
+                <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Newsletter signup coming soon.');">
+                    <input type="email" required placeholder="your@email.com" aria-label="Email" class="flex-1 px-4 py-3 rounded-full text-text bg-surface placeholder:text-text/40 focus:outline-none">
+                    <button type="submit" class="text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-full transition-colors" style="background-color: #f19a51; color: #FFFFFF;">
+                        Subscribe
+                    </button>
+                </form>
+                <p class="text-xs mt-3" style="color: rgba(255,255,255,0.5);">No spam. Unsubscribe anytime. GDPR-compliant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-text text-surface px-6 md:px-12 py-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+                <div class="md:col-span-5">
+                    <p class="font-serif text-2xl mb-3">Aventario</p>
+                    <p class="text-sm text-surface/60 max-w-sm">Cost &amp; value optimization for IT and supply chain. We own the outcome, not just the hours.</p>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Contact</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="mailto:office@aventario.com" class="hover:text-accent">office@aventario.com</a></li>
+                        <li>Tuchlauben 7a, 1010 Vienna</li>
+                        <li>+43 134 3354012</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Services</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="services/savings.html" class="hover:text-accent">Savings</a></li>
+                        <li><a href="services/complex-rfx.html" class="hover:text-accent">Complex RFx</a></li>
+                        <li><a href="services/vendor-management.html" class="hover:text-accent">Vendor Management</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Company</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="about.html" class="hover:text-accent">About</a></li>
+                        <li><a href="success-stories.html" class="hover:text-accent">Success Stories</a></li>
+                        <li><a href="blog.html" class="hover:text-accent">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-surface/10 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs text-surface/40 gap-2">
+                <p>&copy; 2026 Aventario Services GmbH</p>
+                <div class="flex gap-6">
+                    <a href="impressum.html" class="hover:text-surface">Imprint</a>
+                    <a href="datenschutz.html" class="hover:text-surface">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+</html>
