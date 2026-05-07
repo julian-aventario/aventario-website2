@@ -20,3 +20,8 @@ CLAUDE.md
 # Generated / temp
 *.docx~
 ~$*
+
+# Secrets — never commit
+.github_token
+.env
+.env.*
