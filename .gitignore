@@ -22,6 +22,6 @@ CLAUDE.md
 ~$*
 
 # Secrets — never commit
-.github_token
+.github_token*
 .env
 .env.*
