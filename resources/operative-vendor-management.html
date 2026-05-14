@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operative IT Vendor Management · Aventario</title>
+    <meta name="description" content="Most organisations lose 11% of contract value after signature. A governance framework, seven core capabilities, and a 12-month path to build an operating model. Free 14-page whitepaper from Aventario.">
+    <link rel="canonical" href="https://aventario-website.vercel.app/resources/operative-vendor-management">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Operative IT Vendor Management · Aventario Whitepaper">
+    <meta property="og:description" content="Most organisations lose 11% of contract value after signature. Download the 14-page whitepaper.">
+    <meta property="og:url" content="https://aventario-website.vercel.app/resources/operative-vendor-management">
+    <meta property="og:site_name" content="Aventario">
+    <meta property="og:image" content="https://aventario-website.vercel.app/images/whitepaper-ovm-cover.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55.42 55.2'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='11.43' y1='48.04' x2='37.22' y2='48.04' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23324a60'/%3E%3Cstop offset='.45' stop-color='%236a9a9b'/%3E%3Cstop offset='1' stop-color='%238dccc0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z' fill='%238dccc0'/%3E%3Cpolygon points='11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15' fill='url(%23g)'/%3E%3Cpath d='M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z' fill='%23324a60'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { base: '#FAFAF7', surface: '#FFFFFF', text: '#334b60', muted: '#5f768b', accent: '#88C9BE', accentdark: '#5FA99D', orange: '#f19a51', pink: '#d15298', bordercolor: 'rgba(51, 75, 96, 0.12)' }, fontFamily: { serif: ['"Lato"', '-apple-system', 'sans-serif'], sans: ['"Lato"', '-apple-system', 'sans-serif'] } } } }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body { background-color: #FAFAF7; color: #334b60; font-family: 'Lato', -apple-system, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, h5, .font-serif { font-family: 'Lato', -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.015em; line-height: 1.05; }
+        .res-cover { background: linear-gradient(135deg, #334b60 0%, #5f768b 100%); }
+        .mockup-page { box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 20px 50px rgba(0,0,0,0.28); border-radius: 4px; transform: rotate(-3deg); transition: transform 0.5s cubic-bezier(0.25,1,0.5,1); }
+        .mockup-page:hover { transform: rotate(0) translateY(-4px); }
+        .form-input { width: 100%; padding: 0.7rem 0.95rem; border: 1px solid rgba(51,75,96,0.18); border-radius: 4px; background: #FFFFFF; color: #334b60; font-size: 0.95rem; font-family: 'Lato', sans-serif; transition: border-color 200ms, box-shadow 200ms; }
+        .form-input:focus { outline: none; border-color: #88C9BE; box-shadow: 0 0 0 3px rgba(136,201,190,0.18); }
+        .form-label { display: block; font-size: 0.78rem; font-weight: 700; color: #334b60; margin-bottom: 0.3rem; }
+        .toc-row { border-bottom: 1px solid rgba(51,75,96,0.10); padding: 1.25rem 0; }
+        .toc-row:last-child { border-bottom: 0; }
+        .stat-block { padding: 1.5rem 0; border-top: 2px solid #88C9BE; }
+        .stat-block.alt-pink { border-top-color: #d15298; }
+        .stat-block.alt-orange { border-top-color: #f19a51; }
+        .stat-block.alt-navy { border-top-color: #334b60; }
+        *:focus-visible { outline: 2px solid #88C9BE; outline-offset: 2px; }
+    </style>
+</head>
+<body>
+
+    <!-- Same nav as the rest of the site -->
+    <nav class="sticky top-0 z-40 bg-base/95 backdrop-blur-sm border-b border-bordercolor px-6 md:px-12 py-4 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center" aria-label="Aventario home">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.29 55.2" class="h-6 md:h-7"><defs><linearGradient id="nav-grad" x1="11.43" y1="48.04" x2="37.22" y2="48.04" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#324a60"/><stop offset=".45" stop-color="#6a9a9b"/><stop offset="1" stop-color="#8dccc0"/></linearGradient></defs><g><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="url(#nav-grad)"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#324a60"/><g fill="#324a60"><path d="M86.05,40.9h-5.18c-.14,0-.26-.09-.3-.22l-1.09-3.31c-.04-.11-.13-.18-.25-.18h-6.41c-.11,0-.21,.07-.25,.18l-1.1,3.35c-.04,.11-.13,.18-.25,.18h-5.22c-.18,0-.31-.18-.24-.35l7.7-20.43c.05-.13,.17-.21,.31-.21h4.54c.12,0,.23,.07,.27,.19l7.71,20.46c.06,.17-.06,.35-.24,.35Zm-8.16-8.34l-1.61-4.89c-.08-.24-.42-.24-.51,0l-1.61,4.9c-.06,.17,.07,.34,.24,.34h3.24c.18,0,.31-.18,.25-.35Z"/><path d="M99.59,25.15l-5.48,15.35c-.04,.1-.13,.17-.24,.17h-4.63c-.11,0-.2-.07-.24-.17l-5.48-15.35c-.06-.17,.06-.34,.24-.34h4.42c.11,0,.2,.07,.24,.17l3.14,8.8,3.14-8.8c.04-.1,.13-.17,.24-.17h4.42c.18,0,.3,.17,.24,.34Z"/><path d="M132.6,31.49v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-8.67c0-1.91-.91-2.72-2.13-2.72s-2.1,.81-2.1,2.72v8.67c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.43c0,.1,.11,.16,.2,.1,3.57-2.46,9.56-.04,9.56,5.59Z"/><path d="M143.71,36.84l-.57,3.75c-.02,.12-.12,.21-.24,.21-.54,.03-2,.11-2.44,.11-3.02,0-4.21-1.43-4.21-4v-7.61c0-.14-.11-.25-.25-.25h-1.65c-.14,0-.25-.11-.25-.25v-3.75c0-.14,.11-.25,.25-.25h1.65c.14,0,.25-.11,.25-.25v-4.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v4.35c0,.14,.11,.25,.25,.25h1.65c.14,0,.25,.11,.25,.25v3.75c0,.14-.11,.25-.25,.25h-1.65c-.14,0-.25,.11-.25,.25v5.36c0,1.42,.42,1.93,1.39,1.93h.86c.15,0,.27,.14,.25,.29Z"/><path d="M162.83,25.06v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-.23c0-.1-.11-.16-.19-.11-1.27,.72-2.71,1.1-4.18,1.1-4.64,0-8.42-3.73-8.42-8.3s3.78-8.3,8.42-8.3c1.47,0,2.91,.38,4.18,1.1,.08,.05,.19-.01,.19-.11v-.48c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm-4.94,7.8c0-2.1-1.48-3.81-3.61-3.81s-3.86,1.71-3.86,3.81,1.73,3.81,3.86,3.81,3.61-1.71,3.61-3.81Z"/><path d="M174.13,25.08l-.15,3.71c0,.15-.13,.26-.28,.24-1.05-.09-3.32-.16-3.32,2.47v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.44c0,.1,.11,.16,.19,.11,1.05-.65,2.29-.79,3.34-.8,.15,0,.26,.12,.26,.26Z"/><path d="M181.06,20.07v3.24c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-3.24c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm0,4.99v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Z"/><path d="M199.29,32.87c0,4.58-3.78,8.3-8.42,8.3s-8.42-3.73-8.42-8.3,3.78-8.3,8.42-8.3,8.42,3.73,8.42,8.3Zm-4.75,0c0-2-1.65-3.62-3.67-3.62s-3.67,1.62-3.67,3.62,1.65,3.62,3.67,3.62,3.67-1.62,3.67-3.62Z"/></g></g></svg>
+        </a>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-bold items-center">
+            <a href="../index.html#services" class="hover:text-accentdark">Services</a>
+            <a href="../success-stories.html" class="hover:text-accentdark">Success Stories</a>
+            <a href="../blog.html" class="hover:text-accentdark">Blog</a>
+            <a href="../about.html" class="hover:text-accentdark">About</a>
+            <a href="../contact.html" class="hover:text-accentdark">Contact</a>
+        </div>
+        <a href="../contact.html" class="hidden md:inline-flex text-xs font-bold uppercase tracking-widest bg-text text-surface px-5 py-2.5 rounded-full">Contact Us</a>
+        <button id="mobileMenuBtn" class="md:hidden w-9 h-9 flex items-center justify-center" aria-label="Toggle menu"><i class="ph ph-list text-2xl"></i></button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden border-b border-bordercolor bg-base px-6 py-4 space-y-2">
+        <a href="../index.html#services" class="block py-2 text-sm font-bold uppercase tracking-widest">Services</a>
+        <a href="../success-stories.html" class="block py-2 text-sm font-bold uppercase tracking-widest">Success Stories</a>
+        <a href="../blog.html" class="block py-2 text-sm font-bold uppercase tracking-widest">Blog</a>
+        <a href="../about.html" class="block py-2 text-sm font-bold uppercase tracking-widest">About</a>
+        <a href="../contact.html" class="block py-2 text-sm font-bold uppercase tracking-widest">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto">
+            <a href="../resources.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-text font-bold mb-10 hover:text-accentdark transition-colors">
+                <i class="ph ph-arrow-left"></i> Back to Resources
+            </a>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+                <div class="md:col-span-7">
+                    <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Whitepaper · 14 pages · PDF</p>
+                    <h1 class="font-serif text-4xl md:text-6xl mb-6 leading-[1.05]">Operative IT Vendor Management.</h1>
+                    <p class="text-lg md:text-xl text-text leading-relaxed mb-5">Most organisations lose <strong>11% of contract value</strong> after signature. For an enterprise with $500M in annual contracted spend, that is up to <strong>$55M every year</strong>.</p>
+                    <p class="text-base md:text-lg text-text leading-relaxed mb-10">The cause is not bad negotiation. It is the absence of an operating model for what happens after the contract is signed. This whitepaper sets out the governance framework, the seven core capabilities, and a 12-month path to build one.</p>
+
+                    <!-- Form -->
+                    <div class="bg-surface border border-bordercolor rounded-md p-6 md:p-8">
+                        <p class="font-serif text-xl md:text-2xl mb-1">Get the whitepaper.</p>
+                        <p class="text-sm text-muted mb-6">Practitioner-grade. No marketing fluff.</p>
+
+                        <!-- ============================================================
+                             HubSpot form embed (portal 25802339, region eu1).
+                             Replace formId with the real ID once the form is built in
+                             HubSpot, then delete the fallback <form> below and let
+                             HubSpot render into #hubspot-form-target.
+                             ============================================================ -->
+                        <div id="hubspot-form-target">
+                            <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); window.location.href='/Vendor_Management_Paper.pdf';">
+                                <div>
+                                    <label class="form-label" for="first-name">First name *</label>
+                                    <input class="form-input" type="text" id="first-name" name="firstname" required autocomplete="given-name">
+                                </div>
+                                <div>
+                                    <label class="form-label" for="last-name">Last name *</label>
+                                    <input class="form-input" type="text" id="last-name" name="lastname" required autocomplete="family-name">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="form-label" for="email">Work email *</label>
+                                    <input class="form-input" type="email" id="email" name="email" required autocomplete="email">
+                                </div>
+                                <div>
+                                    <label class="form-label" for="company">Company *</label>
+                                    <input class="form-input" type="text" id="company" name="company" required autocomplete="organization">
+                                </div>
+                                <div>
+                                    <label class="form-label" for="role">Role</label>
+                                    <input class="form-input" type="text" id="role" name="jobtitle" autocomplete="organization-title" placeholder="e.g. CIO, Head of Procurement">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <button type="submit" class="w-full inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full hover:bg-accentdark transition-colors">
+                                        Download the whitepaper <i class="ph ph-arrow-down"></i>
+                                    </button>
+                                    <p class="text-xs text-muted mt-3 leading-relaxed">By submitting, you agree to receive the whitepaper and occasional updates from Aventario. You can unsubscribe at any time. <a href="../datenschutz.html" class="text-accentdark hover:underline">Privacy policy</a>.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5">
+                    <div class="res-cover aspect-[4/5] rounded-md p-8 md:p-10 flex items-center justify-center">
+                        <img src="../images/whitepaper-ovm-cover.png" alt="Cover of the Operative IT Vendor Management whitepaper" class="mockup-page w-full max-w-[320px]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT IS INSIDE -->
+    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
+            <div class="md:col-span-4">
+                <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Inside the whitepaper</p>
+                <h2 class="font-serif text-3xl md:text-4xl mb-4 leading-tight">What you will learn in 14 pages.</h2>
+                <p class="text-text leading-relaxed">A practitioner reference for IT and procurement leaders. Numbers anchor every claim, sourced from WorldCC, Hackett, Deloitte and Atlassian primary research.</p>
+            </div>
+            <div class="md:col-span-8">
+                <div class="toc-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-2xl text-accentdark">01</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-xl mb-2">Why operative vendor management matters now</h3>
+                        <p class="text-sm text-muted leading-relaxed">The four forces driving vendor dependency, the operator-to-integrator shift, and the four risk categories that surface when governance does not keep pace.</p>
+                    </div>
+                </div>
+                <div class="toc-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-2xl text-accentdark">02</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-xl mb-2">Six operational challenges, the same in every portfolio</h3>
+                        <p class="text-sm text-muted leading-relaxed">Performance transparency, centralised governance, financial control, change and demand, vendor coordination, and reporting rhythms. Each anchored with a verified figure.</p>
+                    </div>
+                </div>
+                <div class="toc-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-2xl text-accentdark">03</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-xl mb-2">The Target Operating Model: governance and seven capabilities</h3>
+                        <p class="text-sm text-muted leading-relaxed">Three governance layers and seven core capabilities, each with a measurable outcome, the key measures, and one watch-out from real engagements.</p>
+                    </div>
+                </div>
+                <div class="toc-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-2xl text-accentdark">04</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-xl mb-2">A 12-month implementation roadmap</h3>
+                        <p class="text-sm text-muted leading-relaxed">Four sequential phases (Assessment, Design, Build and Pilot, Scale and Embed) with named success factors and a defined output per phase.</p>
+                    </div>
+                </div>
+                <div class="toc-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-2xl text-accentdark">05</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-xl mb-2">Where to start this week</h3>
+                        <p class="text-sm text-muted leading-relaxed">A practical starting point. The free Aventario VM-Assessment delivers your maturity level in under 10 minutes and a personalised PDF report within 48 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY NUMBERS -->
+    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-10">
+                <div class="md:col-span-5">
+                    <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Key numbers</p>
+                    <h2 class="font-serif text-3xl md:text-4xl leading-tight">Four numbers that make the case.</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stat-block alt-pink">
+                    <p class="font-serif text-5xl mb-3 leading-none">11%</p>
+                    <p class="text-text leading-relaxed">of contract value lost after signature, on average.</p>
+                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">WorldCC &amp; Ironclad · 2024</p>
+                </div>
+                <div class="stat-block alt-orange">
+                    <p class="font-serif text-5xl mb-3 leading-none">9.2%</p>
+                    <p class="text-text leading-relaxed">post-award value erosion across a decade of WorldCC research.</p>
+                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">WorldCC · Stopping the Leak</p>
+                </div>
+                <div class="stat-block">
+                    <p class="font-serif text-5xl mb-3 leading-none">70%</p>
+                    <p class="text-text leading-relaxed">of executives say their VMO is not fully mature.</p>
+                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">Deloitte Outsourcing Survey · 2024</p>
+                </div>
+                <div class="stat-block alt-navy">
+                    <p class="font-serif text-5xl mb-3 leading-none">2.6&times;</p>
+                    <p class="text-text leading-relaxed">higher ROI for top-quartile procurement through digital-first operations.</p>
+                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">Hackett Group · 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT IS FOR -->
+    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
+            <div class="md:col-span-5">
+                <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Who it is for</p>
+                <h2 class="font-serif text-3xl md:text-4xl mb-4 leading-tight">Built for the people running the portfolio.</h2>
+                <p class="text-text leading-relaxed">Not a CIO essay. Not a CFO pitch. A reference for the IT and procurement leaders who own performance, cost and risk on the day-to-day vendor portfolio.</p>
+            </div>
+            <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                    <i class="ph ph-shield-check text-accentdark text-2xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">Heads of IT vendor management</h3>
+                    <p class="text-sm text-muted leading-relaxed">Building or maturing the operating model that sits between contracts and outcomes.</p>
+                </div>
+                <div>
+                    <i class="ph ph-currency-eur text-accentdark text-2xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">Procurement and sourcing leaders</h3>
+                    <p class="text-sm text-muted leading-relaxed">Closing the post-signature value gap that negotiation alone cannot fix.</p>
+                </div>
+                <div>
+                    <i class="ph ph-kanban text-accentdark text-2xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">IT operations and service managers</h3>
+                    <p class="text-sm text-muted leading-relaxed">Running the SLA, escalation and reporting cycles that the operating model formalises.</p>
+                </div>
+                <div>
+                    <i class="ph ph-magnifying-glass text-accentdark text-2xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">CIOs and CPOs sponsoring the change</h3>
+                    <p class="text-sm text-muted leading-relaxed">Validating the case for a 12-month TOM build and the budget it justifies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / CTA -->
+    <section class="px-6 md:px-12 py-20 md:py-28" style="background-color: #334b60; color: #FFFFFF;">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-7">
+                <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color: #8dccc0;">About the source</p>
+                <h2 class="font-serif text-3xl md:text-5xl text-surface mb-5 leading-tight">Aventario builds these operating models for a living.</h2>
+                <p class="text-base md:text-lg leading-relaxed" style="color: rgba(255,255,255,0.75);">Vienna-based consultancy specialising in cost and value optimisation for IT and supply chain. We work with CIOs, CPOs and procurement leaders at multinational enterprises and mid-market organisations across Europe and worldwide. Outcome-based engagements: we own the result, from strategy to execution to lasting capability. We implement, we do not just advise.</p>
+            </div>
+            <div class="md:col-span-5 grid grid-cols-2 gap-5">
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-3xl md:text-4xl text-surface">25+</p>
+                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">years of industry experience</p>
+                </div>
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-3xl md:text-4xl text-surface">500+</p>
+                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">successful projects delivered</p>
+                </div>
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-3xl md:text-4xl text-surface">&euro;3B+</p>
+                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">in negotiated contract volume</p>
+                </div>
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-3xl md:text-4xl text-surface">10&ndash;40%</p>
+                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">measurable cost savings for clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT CTA -->
+    <section class="px-6 md:px-12 py-20 md:py-28">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <p class="text-xs uppercase tracking-widest text-text font-bold mb-3">Already know where you stand?</p>
+                <h2 class="font-serif text-3xl md:text-5xl mb-4 leading-tight">Take the 10-minute VM-Assessment.</h2>
+                <p class="text-base md:text-lg text-text leading-relaxed max-w-2xl">15 questions across 5 dimensions of vendor management maturity. Your level immediately, a personalised PDF report within 48 hours.</p>
+            </div>
+            <div class="md:col-span-5 flex flex-col sm:flex-row gap-3 md:justify-end">
+                <a href="https://form.typeform.com/to/DEYGPnxW" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-full transition-colors" style="background-color: #f19a51; color: #FFFFFF;">
+                    Start the assessment <i class="ph ph-arrow-right text-sm"></i>
+                </a>
+                <a href="#top" class="inline-flex items-center justify-center text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-full border border-bordercolor text-text hover:bg-surface transition-colors">
+                    Or get the whitepaper
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Same footer as the rest of the site -->
+    <footer class="bg-text text-surface px-6 md:px-12 py-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+                <div class="md:col-span-5">
+                    <p class="font-serif text-2xl mb-3">Aventario</p>
+                    <p class="text-sm text-surface/60 max-w-sm">Cost &amp; value optimization for IT and supply chain. We own the outcome, not just the hours.</p>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Contact</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="mailto:office@aventario.com" class="hover:text-accent">office@aventario.com</a></li>
+                        <li>Tuchlauben 7a, 1010 Vienna</li>
+                        <li>+43 134 3354012</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Services</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="../services/savings.html" class="hover:text-accent">Savings</a></li>
+                        <li><a href="../services/complex-rfx.html" class="hover:text-accent">Complex RFx</a></li>
+                        <li><a href="../services/vendor-management.html" class="hover:text-accent">Vendor Management</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Company</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="../about.html" class="hover:text-accent">About</a></li>
+                        <li><a href="../success-stories.html" class="hover:text-accent">Success Stories</a></li>
+                        <li><a href="../blog.html" class="hover:text-accent">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-surface/10 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs text-surface/40 gap-2">
+                <p>&copy; 2026 Aventario Services GmbH</p>
+                <div class="flex gap-6">
+                    <a href="../impressum.html" class="hover:text-surface">Imprint</a>
+                    <a href="../datenschutz.html" class="hover:text-surface">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+    </script>
+</body>
+</html>
