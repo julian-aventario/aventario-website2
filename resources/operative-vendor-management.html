@@ -31,9 +31,9 @@
         .form-input { width: 100%; padding: 0.7rem 0.95rem; border: 1px solid rgba(51,75,96,0.18); border-radius: 4px; background: #FFFFFF; color: #334b60; font-size: 0.95rem; font-family: 'Lato', sans-serif; transition: border-color 200ms, box-shadow 200ms; }
         .form-input:focus { outline: none; border-color: #88C9BE; box-shadow: 0 0 0 3px rgba(136,201,190,0.18); }
         .form-label { display: block; font-size: 0.78rem; font-weight: 700; color: #334b60; margin-bottom: 0.3rem; }
-        .toc-row { border-bottom: 1px solid rgba(51,75,96,0.10); padding: 1.25rem 0; }
+        .toc-row { border-bottom: 1px solid rgba(51,75,96,0.10); padding: 1rem 0; }
         .toc-row:last-child { border-bottom: 0; }
-        .stat-block { padding: 1.5rem 0; border-top: 2px solid #88C9BE; }
+        .stat-block { padding: 1.25rem 0; border-top: 2px solid #88C9BE; }
         .stat-block.alt-pink { border-top-color: #d15298; }
         .stat-block.alt-orange { border-top-color: #f19a51; }
         .stat-block.alt-navy { border-top-color: #334b60; }
@@ -66,65 +66,44 @@
     </div>
 
     <!-- HERO -->
-    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor">
         <div class="max-w-6xl mx-auto">
-            <a href="../resources.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-text font-bold mb-10 hover:text-accentdark transition-colors">
+            <a href="../resources.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-text font-bold mb-8 hover:text-accentdark transition-colors">
                 <i class="ph ph-arrow-left"></i> Back to Resources
             </a>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
                 <div class="md:col-span-7">
-                    <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Whitepaper · 14 pages · PDF</p>
-                    <h1 class="font-serif text-4xl md:text-6xl mb-6 leading-[1.05]">Operative IT Vendor Management.</h1>
-                    <p class="text-lg md:text-xl text-text leading-relaxed mb-5">Most organisations lose <strong>11% of contract value</strong> after signature. For an enterprise with $500M in annual contracted spend, that is up to <strong>$55M every year</strong>.</p>
-                    <p class="text-base md:text-lg text-text leading-relaxed mb-10">The cause is not bad negotiation. It is the absence of an operating model for what happens after the contract is signed. This whitepaper sets out the governance framework, the seven core capabilities, and a 12-month path to build one.</p>
+                    <p class="text-xs uppercase tracking-widest text-text font-bold mb-3">Whitepaper · 14 pages · PDF</p>
+                    <h1 class="font-serif text-3xl md:text-5xl mb-5 leading-[1.05]">Operative IT Vendor Management.</h1>
+                    <p class="text-base md:text-lg text-text leading-relaxed mb-4">Most organisations lose <strong>11% of contract value</strong> after signature. For an enterprise with $500M in annual contracted spend, that is up to <strong>$55M every year</strong>.</p>
+                    <p class="text-sm md:text-base text-text leading-relaxed mb-8">The cause is not bad negotiation. It is the absence of an operating model for what happens after the contract is signed. This whitepaper sets out the governance framework, the seven core capabilities, and a 12-month path to build one.</p>
 
                     <!-- Form -->
-                    <div class="bg-surface border border-bordercolor rounded-md p-6 md:p-8">
-                        <p class="font-serif text-xl md:text-2xl mb-1">Get the whitepaper.</p>
-                        <p class="text-sm text-muted mb-6">Practitioner-grade. No marketing fluff.</p>
+                    <div class="bg-surface border border-bordercolor rounded-md p-5 md:p-7">
+                        <p class="font-serif text-lg md:text-xl mb-1">Get the whitepaper.</p>
+                        <p class="text-xs text-muted mb-5">Practitioner-grade. No marketing fluff. Delivered as PDF.</p>
 
-                        <!-- ============================================================
-                             HubSpot form embed (portal 25802339, region eu1).
-                             Replace formId with the real ID once the form is built in
-                             HubSpot, then delete the fallback <form> below and let
-                             HubSpot render into #hubspot-form-target.
-                             ============================================================ -->
-                        <div id="hubspot-form-target">
-                            <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); window.location.href='/Vendor_Management_Paper.pdf';">
-                                <div>
-                                    <label class="form-label" for="first-name">First name *</label>
-                                    <input class="form-input" type="text" id="first-name" name="firstname" required autocomplete="given-name">
-                                </div>
-                                <div>
-                                    <label class="form-label" for="last-name">Last name *</label>
-                                    <input class="form-input" type="text" id="last-name" name="lastname" required autocomplete="family-name">
-                                </div>
-                                <div class="sm:col-span-2">
-                                    <label class="form-label" for="email">Work email *</label>
-                                    <input class="form-input" type="email" id="email" name="email" required autocomplete="email">
-                                </div>
-                                <div>
-                                    <label class="form-label" for="company">Company *</label>
-                                    <input class="form-input" type="text" id="company" name="company" required autocomplete="organization">
-                                </div>
-                                <div>
-                                    <label class="form-label" for="role">Role</label>
-                                    <input class="form-input" type="text" id="role" name="jobtitle" autocomplete="organization-title" placeholder="e.g. CIO, Head of Procurement">
-                                </div>
-                                <div class="sm:col-span-2">
-                                    <button type="submit" class="w-full inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full hover:bg-accentdark transition-colors">
-                                        Download the whitepaper <i class="ph ph-arrow-down"></i>
-                                    </button>
-                                    <p class="text-xs text-muted mt-3 leading-relaxed">By submitting, you agree to receive the whitepaper and occasional updates from Aventario. You can unsubscribe at any time. <a href="../datenschutz.html" class="text-accentdark hover:underline">Privacy policy</a>.</p>
-                                </div>
-                            </form>
-                        </div>
+                        <!-- HubSpot form (portal 25802339, formId c158b069-fc55-4d24-bcfb-20060d53a56e, region eu1).
+                             The form renders into #hubspot-form-target. HubSpot handles
+                             validation, lead capture, and the post-submit file delivery. -->
+                        <div id="hubspot-form-target"></div>
+                        <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                          hbspt.forms.create({
+                            portalId: "25802339",
+                            formId: "c158b069-fc55-4d24-bcfb-20060d53a56e",
+                            region: "eu1",
+                            target: "#hubspot-form-target"
+                          });
+                        </script>
+
+                        <p class="text-xs text-muted mt-4 leading-relaxed">By submitting, you agree to receive the whitepaper and occasional updates from Aventario. Unsubscribe any time. <a href="../datenschutz.html" class="text-accentdark hover:underline">Privacy policy</a>.</p>
                     </div>
                 </div>
 
                 <div class="md:col-span-5">
-                    <div class="res-cover aspect-[4/5] rounded-md p-8 md:p-10 flex items-center justify-center">
-                        <img src="../images/whitepaper-ovm-cover.png" alt="Cover of the Operative IT Vendor Management whitepaper" class="mockup-page w-full max-w-[320px]">
+                    <div class="res-cover aspect-[4/5] rounded-md p-12 md:p-16 lg:p-20 flex items-center justify-center">
+                        <img src="../images/whitepaper-ovm-cover.png" alt="Cover of the Operative IT Vendor Management whitepaper" class="mockup-page w-full max-w-[240px]">
                     </div>
                 </div>
             </div>
@@ -132,47 +111,47 @@
     </section>
 
     <!-- WHAT IS INSIDE -->
-    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
             <div class="md:col-span-4">
-                <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Inside the whitepaper</p>
-                <h2 class="font-serif text-3xl md:text-4xl mb-4 leading-tight">What you will learn in 14 pages.</h2>
-                <p class="text-text leading-relaxed">A practitioner reference for IT and procurement leaders. Numbers anchor every claim, sourced from WorldCC, Hackett, Deloitte and Atlassian primary research.</p>
+                <p class="text-xs uppercase tracking-widest text-text font-bold mb-3">Inside the whitepaper</p>
+                <h2 class="font-serif text-2xl md:text-3xl mb-3 leading-tight">What you will learn in 14 pages.</h2>
+                <p class="text-sm text-text leading-relaxed">A practitioner reference for IT and procurement leaders. Numbers anchor every claim, sourced from WorldCC, Hackett, Deloitte and Atlassian primary research.</p>
             </div>
             <div class="md:col-span-8">
                 <div class="toc-row grid grid-cols-12 gap-4">
-                    <div class="col-span-2 font-serif text-2xl text-accentdark">01</div>
+                    <div class="col-span-2 font-serif text-xl text-accentdark">01</div>
                     <div class="col-span-10">
-                        <h3 class="font-serif text-xl mb-2">Why operative vendor management matters now</h3>
-                        <p class="text-sm text-muted leading-relaxed">The four forces driving vendor dependency, the operator-to-integrator shift, and the four risk categories that surface when governance does not keep pace.</p>
+                        <h3 class="font-serif text-lg mb-2">Why operative vendor management matters now</h3>
+                        <p class="text-xs text-muted leading-relaxed">The four forces driving vendor dependency, the operator-to-integrator shift, and the four risk categories that surface when governance does not keep pace.</p>
                     </div>
                 </div>
                 <div class="toc-row grid grid-cols-12 gap-4">
-                    <div class="col-span-2 font-serif text-2xl text-accentdark">02</div>
+                    <div class="col-span-2 font-serif text-xl text-accentdark">02</div>
                     <div class="col-span-10">
-                        <h3 class="font-serif text-xl mb-2">Six operational challenges, the same in every portfolio</h3>
-                        <p class="text-sm text-muted leading-relaxed">Performance transparency, centralised governance, financial control, change and demand, vendor coordination, and reporting rhythms. Each anchored with a verified figure.</p>
+                        <h3 class="font-serif text-lg mb-2">Six operational challenges, the same in every portfolio</h3>
+                        <p class="text-xs text-muted leading-relaxed">Performance transparency, centralised governance, financial control, change and demand, vendor coordination, and reporting rhythms. Each anchored with a verified figure.</p>
                     </div>
                 </div>
                 <div class="toc-row grid grid-cols-12 gap-4">
-                    <div class="col-span-2 font-serif text-2xl text-accentdark">03</div>
+                    <div class="col-span-2 font-serif text-xl text-accentdark">03</div>
                     <div class="col-span-10">
-                        <h3 class="font-serif text-xl mb-2">The Target Operating Model: governance and seven capabilities</h3>
-                        <p class="text-sm text-muted leading-relaxed">Three governance layers and seven core capabilities, each with a measurable outcome, the key measures, and one watch-out from real engagements.</p>
+                        <h3 class="font-serif text-lg mb-2">The Target Operating Model: governance and seven capabilities</h3>
+                        <p class="text-xs text-muted leading-relaxed">Three governance layers and seven core capabilities, each with a measurable outcome, the key measures, and one watch-out from real engagements.</p>
                     </div>
                 </div>
                 <div class="toc-row grid grid-cols-12 gap-4">
-                    <div class="col-span-2 font-serif text-2xl text-accentdark">04</div>
+                    <div class="col-span-2 font-serif text-xl text-accentdark">04</div>
                     <div class="col-span-10">
-                        <h3 class="font-serif text-xl mb-2">A 12-month implementation roadmap</h3>
-                        <p class="text-sm text-muted leading-relaxed">Four sequential phases (Assessment, Design, Build and Pilot, Scale and Embed) with named success factors and a defined output per phase.</p>
+                        <h3 class="font-serif text-lg mb-2">A 12-month implementation roadmap</h3>
+                        <p class="text-xs text-muted leading-relaxed">Four sequential phases (Assessment, Design, Build and Pilot, Scale and Embed) with named success factors and a defined output per phase.</p>
                     </div>
                 </div>
                 <div class="toc-row grid grid-cols-12 gap-4">
-                    <div class="col-span-2 font-serif text-2xl text-accentdark">05</div>
+                    <div class="col-span-2 font-serif text-xl text-accentdark">05</div>
                     <div class="col-span-10">
-                        <h3 class="font-serif text-xl mb-2">Where to start this week</h3>
-                        <p class="text-sm text-muted leading-relaxed">A practical starting point. The free Aventario VM-Assessment delivers your maturity level in under 10 minutes and a personalised PDF report within 48 hours.</p>
+                        <h3 class="font-serif text-lg mb-2">Where to start this week</h3>
+                        <p class="text-xs text-muted leading-relaxed">A practical starting point. The free Aventario VM-Assessment delivers your maturity level in under 10 minutes and a personalised PDF report within 48 hours.</p>
                     </div>
                 </div>
             </div>
@@ -180,108 +159,108 @@
     </section>
 
     <!-- KEY NUMBERS -->
-    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 mb-8">
                 <div class="md:col-span-5">
-                    <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Key numbers</p>
-                    <h2 class="font-serif text-3xl md:text-4xl leading-tight">Four numbers that make the case.</h2>
+                    <p class="text-xs uppercase tracking-widest text-text font-bold mb-3">Key numbers</p>
+                    <h2 class="font-serif text-2xl md:text-3xl leading-tight">Four numbers that make the case.</h2>
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div class="stat-block alt-pink">
-                    <p class="font-serif text-5xl mb-3 leading-none">11%</p>
-                    <p class="text-text leading-relaxed">of contract value lost after signature, on average.</p>
-                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">WorldCC &amp; Ironclad · 2024</p>
+                    <p class="font-serif text-4xl mb-2 leading-none">11%</p>
+                    <p class="text-sm text-text leading-relaxed">of contract value lost after signature, on average.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-muted font-bold mt-3">WorldCC &amp; Ironclad · 2024</p>
                 </div>
                 <div class="stat-block alt-orange">
-                    <p class="font-serif text-5xl mb-3 leading-none">9.2%</p>
-                    <p class="text-text leading-relaxed">post-award value erosion across a decade of WorldCC research.</p>
-                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">WorldCC · Stopping the Leak</p>
+                    <p class="font-serif text-4xl mb-2 leading-none">9.2%</p>
+                    <p class="text-sm text-text leading-relaxed">post-award value erosion across a decade of WorldCC research.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-muted font-bold mt-3">WorldCC · Stopping the Leak</p>
                 </div>
                 <div class="stat-block">
-                    <p class="font-serif text-5xl mb-3 leading-none">70%</p>
-                    <p class="text-text leading-relaxed">of executives say their VMO is not fully mature.</p>
-                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">Deloitte Outsourcing Survey · 2024</p>
+                    <p class="font-serif text-4xl mb-2 leading-none">70%</p>
+                    <p class="text-sm text-text leading-relaxed">of executives say their VMO is not fully mature.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-muted font-bold mt-3">Deloitte Outsourcing Survey · 2024</p>
                 </div>
                 <div class="stat-block alt-navy">
-                    <p class="font-serif text-5xl mb-3 leading-none">2.6&times;</p>
-                    <p class="text-text leading-relaxed">higher ROI for top-quartile procurement through digital-first operations.</p>
-                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-4">Hackett Group · 2025</p>
+                    <p class="font-serif text-4xl mb-2 leading-none">2.6&times;</p>
+                    <p class="text-sm text-text leading-relaxed">higher ROI for top-quartile procurement through digital-first operations.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-muted font-bold mt-3">Hackett Group · 2025</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- WHO IT IS FOR -->
-    <section class="px-6 md:px-12 py-16 md:py-24 border-b border-bordercolor">
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
             <div class="md:col-span-5">
-                <p class="text-xs uppercase tracking-widest text-text font-bold mb-4">Who it is for</p>
-                <h2 class="font-serif text-3xl md:text-4xl mb-4 leading-tight">Built for the people running the portfolio.</h2>
-                <p class="text-text leading-relaxed">Not a CIO essay. Not a CFO pitch. A reference for the IT and procurement leaders who own performance, cost and risk on the day-to-day vendor portfolio.</p>
+                <p class="text-xs uppercase tracking-widest text-text font-bold mb-3">Who it is for</p>
+                <h2 class="font-serif text-2xl md:text-3xl mb-3 leading-tight">Built for the people running the portfolio.</h2>
+                <p class="text-sm text-text leading-relaxed">Not a CIO essay. Not a CFO pitch. A reference for the IT and procurement leaders who own performance, cost and risk on the day-to-day vendor portfolio.</p>
             </div>
-            <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                    <i class="ph ph-shield-check text-accentdark text-2xl mb-3"></i>
-                    <h3 class="font-serif text-xl mb-2">Heads of IT vendor management</h3>
-                    <p class="text-sm text-muted leading-relaxed">Building or maturing the operating model that sits between contracts and outcomes.</p>
+                    <i class="ph ph-shield-check text-accentdark text-xl mb-2"></i>
+                    <h3 class="font-serif text-lg mb-1.5">Heads of IT vendor management</h3>
+                    <p class="text-xs text-muted leading-relaxed">Building or maturing the operating model that sits between contracts and outcomes.</p>
                 </div>
                 <div>
-                    <i class="ph ph-currency-eur text-accentdark text-2xl mb-3"></i>
-                    <h3 class="font-serif text-xl mb-2">Procurement and sourcing leaders</h3>
-                    <p class="text-sm text-muted leading-relaxed">Closing the post-signature value gap that negotiation alone cannot fix.</p>
+                    <i class="ph ph-currency-eur text-accentdark text-xl mb-2"></i>
+                    <h3 class="font-serif text-lg mb-1.5">Procurement and sourcing leaders</h3>
+                    <p class="text-xs text-muted leading-relaxed">Closing the post-signature value gap that negotiation alone cannot fix.</p>
                 </div>
                 <div>
-                    <i class="ph ph-kanban text-accentdark text-2xl mb-3"></i>
-                    <h3 class="font-serif text-xl mb-2">IT operations and service managers</h3>
-                    <p class="text-sm text-muted leading-relaxed">Running the SLA, escalation and reporting cycles that the operating model formalises.</p>
+                    <i class="ph ph-kanban text-accentdark text-xl mb-2"></i>
+                    <h3 class="font-serif text-lg mb-1.5">IT operations and service managers</h3>
+                    <p class="text-xs text-muted leading-relaxed">Running the SLA, escalation and reporting cycles that the operating model formalises.</p>
                 </div>
                 <div>
-                    <i class="ph ph-magnifying-glass text-accentdark text-2xl mb-3"></i>
-                    <h3 class="font-serif text-xl mb-2">CIOs and CPOs sponsoring the change</h3>
-                    <p class="text-sm text-muted leading-relaxed">Validating the case for a 12-month TOM build and the budget it justifies.</p>
+                    <i class="ph ph-magnifying-glass text-accentdark text-xl mb-2"></i>
+                    <h3 class="font-serif text-lg mb-1.5">CIOs and CPOs sponsoring the change</h3>
+                    <p class="text-xs text-muted leading-relaxed">Validating the case for a 12-month TOM build and the budget it justifies.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ABOUT / CTA -->
-    <section class="px-6 md:px-12 py-20 md:py-28" style="background-color: #334b60; color: #FFFFFF;">
+    <section class="px-6 md:px-12 py-16 md:py-24" style="background-color: #334b60; color: #FFFFFF;">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             <div class="md:col-span-7">
-                <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color: #8dccc0;">About the source</p>
-                <h2 class="font-serif text-3xl md:text-5xl text-surface mb-5 leading-tight">Aventario builds these operating models for a living.</h2>
-                <p class="text-base md:text-lg leading-relaxed" style="color: rgba(255,255,255,0.75);">Vienna-based consultancy specialising in cost and value optimisation for IT and supply chain. We work with CIOs, CPOs and procurement leaders at multinational enterprises and mid-market organisations across Europe and worldwide. Outcome-based engagements: we own the result, from strategy to execution to lasting capability. We implement, we do not just advise.</p>
+                <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color: #8dccc0;">About the source</p>
+                <h2 class="font-serif text-2xl md:text-4xl text-surface mb-4 leading-tight">Aventario builds these operating models for a living.</h2>
+                <p class="text-sm md:text-base leading-relaxed" style="color: rgba(255,255,255,0.75);">Vienna-based consultancy specialising in cost and value optimisation for IT and supply chain. We work with CIOs, CPOs and procurement leaders at multinational enterprises and mid-market organisations across Europe and worldwide. Outcome-based engagements: we own the result, from strategy to execution to lasting capability. We implement, we do not just advise.</p>
             </div>
-            <div class="md:col-span-5 grid grid-cols-2 gap-5">
-                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
-                    <p class="font-serif text-3xl md:text-4xl text-surface">25+</p>
-                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">years of industry experience</p>
+            <div class="md:col-span-5 grid grid-cols-2 gap-4">
+                <div class="border-t pt-3" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-2xl md:text-3xl text-surface">25+</p>
+                    <p class="text-[11px] mt-1.5" style="color: rgba(255,255,255,0.6);">years of industry experience</p>
                 </div>
-                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
-                    <p class="font-serif text-3xl md:text-4xl text-surface">500+</p>
-                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">successful projects delivered</p>
+                <div class="border-t pt-3" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-2xl md:text-3xl text-surface">500+</p>
+                    <p class="text-[11px] mt-1.5" style="color: rgba(255,255,255,0.6);">successful projects delivered</p>
                 </div>
-                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
-                    <p class="font-serif text-3xl md:text-4xl text-surface">&euro;3B+</p>
-                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">in negotiated contract volume</p>
+                <div class="border-t pt-3" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-2xl md:text-3xl text-surface">&euro;3B+</p>
+                    <p class="text-[11px] mt-1.5" style="color: rgba(255,255,255,0.6);">in negotiated contract volume</p>
                 </div>
-                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
-                    <p class="font-serif text-3xl md:text-4xl text-surface">10&ndash;40%</p>
-                    <p class="text-xs mt-2" style="color: rgba(255,255,255,0.6);">measurable cost savings for clients</p>
+                <div class="border-t pt-3" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-2xl md:text-3xl text-surface">10&ndash;40%</p>
+                    <p class="text-[11px] mt-1.5" style="color: rgba(255,255,255,0.6);">measurable cost savings for clients</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ASSESSMENT CTA -->
-    <section class="px-6 md:px-12 py-20 md:py-28">
+    <section class="px-6 md:px-12 py-16 md:py-24">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div class="md:col-span-7">
-                <p class="text-xs uppercase tracking-widest text-text font-bold mb-3">Already know where you stand?</p>
-                <h2 class="font-serif text-3xl md:text-5xl mb-4 leading-tight">Take the 10-minute VM-Assessment.</h2>
-                <p class="text-base md:text-lg text-text leading-relaxed max-w-2xl">15 questions across 5 dimensions of vendor management maturity. Your level immediately, a personalised PDF report within 48 hours.</p>
+                <p class="text-xs uppercase tracking-widest text-text font-bold mb-2">Already know where you stand?</p>
+                <h2 class="font-serif text-2xl md:text-4xl mb-3 leading-tight">Take the 10-minute VM-Assessment.</h2>
+                <p class="text-sm md:text-base text-text leading-relaxed max-w-2xl">15 questions across 5 dimensions of vendor management maturity. Your level immediately, a personalised PDF report within 48 hours.</p>
             </div>
             <div class="md:col-span-5 flex flex-col sm:flex-row gap-3 md:justify-end">
                 <a href="https://form.typeform.com/to/DEYGPnxW" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-full transition-colors" style="background-color: #f19a51; color: #FFFFFF;">
