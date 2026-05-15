@@ -2,6 +2,10 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/success-stories", "destination": "/impact", "permanent": true },
+    { "source": "/success-stories/:slug", "destination": "/impact/:slug", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
