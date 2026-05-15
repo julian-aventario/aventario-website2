@@ -68,11 +68,15 @@
 
   .frame {
     width: 1700px;
-    height: 4500px;
     border: 0;
     display: block;
     background:#FBFAF6;
   }
+  /* Measured rendered heights at 1700px viewport (Playwright, May 2026). */
+  .frame.v01 { height: 5560px; }
+  .frame.v02 { height: 5720px; }
+  .frame.v03 { height: 4400px; }
+  .frame.v04 { height: 7850px; }
 
   .legend {
     padding: 14px 32px;
@@ -123,7 +127,7 @@
       </div>
       <a class="openlink" href="variants/v01-editorial.html" target="_blank" rel="noopener">Open full →</a>
     </div>
-    <iframe class="frame" src="variants/v01-editorial.html" loading="lazy" title="Editorial variant"></iframe>
+    <iframe class="frame v01" src="variants/v01-editorial.html" loading="lazy" title="Editorial variant"></iframe>
   </section>
 
   <section class="col">
@@ -134,7 +138,7 @@
       </div>
       <a class="openlink" href="variants/v02-brutalist.html" target="_blank" rel="noopener">Open full →</a>
     </div>
-    <iframe class="frame" src="variants/v02-brutalist.html" loading="lazy" title="Brutalist variant"></iframe>
+    <iframe class="frame v02" src="variants/v02-brutalist.html" loading="lazy" title="Brutalist variant"></iframe>
   </section>
 
   <section class="col">
@@ -145,7 +149,7 @@
       </div>
       <a class="openlink" href="variants/v03-diagrammatic.html" target="_blank" rel="noopener">Open full →</a>
     </div>
-    <iframe class="frame" src="variants/v03-diagrammatic.html" loading="lazy" title="Diagrammatic variant"></iframe>
+    <iframe class="frame v03" src="variants/v03-diagrammatic.html" loading="lazy" title="Diagrammatic variant"></iframe>
   </section>
 
   <section class="col">
@@ -156,7 +160,7 @@
       </div>
       <a class="openlink" href="variants/v04-considered.html" target="_blank" rel="noopener">Open full →</a>
     </div>
-    <iframe class="frame" src="variants/v04-considered.html" loading="lazy" title="Considered variant"></iframe>
+    <iframe class="frame v04" src="variants/v04-considered.html" loading="lazy" title="Considered variant"></iframe>
   </section>
 
 </div>
