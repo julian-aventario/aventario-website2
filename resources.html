@@ -42,6 +42,8 @@
         .res-chip { color: #334b60; background: #fff; border-color: rgba(51,75,96,0.18); }
         .res-chip:hover { background: #FAFAF7; border-color: #5FA99D; }
         .res-chip-active { background: #334b60 !important; color: #FAFAF7 !important; border-color: #334b60 !important; }
+        /* Force high-quality scaling on resource thumbnails — defaults can render pixelated in Chrome when the source is downscaled aggressively */
+        .res-cover img { image-rendering: -webkit-optimize-contrast; image-rendering: auto; }
     </style>
     <script type="application/ld+json">
 [
@@ -186,7 +188,7 @@
                 <!-- Whitepaper: OVM -->
                 <a href="resources/operative-vendor-management" data-kind="whitepaper" class="res-card group">
                     <div class="res-cover aspect-[4/3] rounded-md mb-5 relative overflow-hidden flex items-end p-5">
-                        <img src="images/whitepaper-ovm-cover.png" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[58%] max-h-[78%] rounded-sm" style="box-shadow: 0 12px 36px rgba(0,0,0,0.35); transform: translate(-50%, -50%) rotate(-3deg);" loading="lazy">
+                        <img src="images/whitepaper-ovm-cover.png" alt="Operative IT Vendor Management whitepaper cover" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[58%] max-h-[78%] rounded-sm" style="box-shadow: 0 12px 36px rgba(0,0,0,0.35); transform: translate(-50%, -50%) rotate(-3deg);" decoding="async">
                         <span class="relative z-10 inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Whitepaper</span>
                     </div>
                     <p class="text-xs uppercase tracking-widest text-text mb-2">14 pages &middot; PDF</p>
@@ -197,7 +199,7 @@
                 <!-- Assessment: Vendor Maturity -->
                 <a href="https://form.typeform.com/to/qmNOmu5v" target="_blank" rel="noopener" data-kind="assessment" class="res-card group">
                     <div class="res-cover alt-1 aspect-[4/3] rounded-md mb-5 relative overflow-hidden flex items-end p-5">
-                        <img src="images/resources/assessment-cards.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300" loading="lazy" onload="this.style.opacity=1" onerror="this.remove()">
+                        <img src="images/resources/assessment-cards.png" alt="Vendor Maturity Assessment mockup" class="absolute inset-0 w-full h-full object-cover" decoding="async">
                         <span class="relative z-10 inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Assessment</span>
                     </div>
                     <p class="text-xs uppercase tracking-widest text-text mb-2">5-minute interactive</p>
@@ -208,7 +210,7 @@
                 <!-- Webinar: Building a Smart Vendor Strategy -->
                 <a href="https://event.webinarjam.com/9yn3p/register/mmxr2by" target="_blank" rel="noopener" data-kind="webinar" class="res-card group">
                     <div class="res-cover alt-2 aspect-[4/3] rounded-md mb-5 relative overflow-hidden flex items-end p-5">
-                        <img src="images/resources/webinar-vendor-strategy.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300" loading="lazy" onload="this.style.opacity=1" onerror="this.remove()">
+                        <img src="images/resources/webinar-vendor-strategy.png" alt="Building a Smart Vendor Strategy webinar mockup" class="absolute inset-0 w-full h-full object-cover" decoding="async">
                         <span class="relative z-10 inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Webinar &middot; Register</span>
                     </div>
                     <p class="text-xs uppercase tracking-widest text-text mb-2">Live &middot; with Nico Burtzlaff</p>
@@ -219,7 +221,7 @@
                 <!-- Webinar: Contracts -->
                 <a href="https://event.webinarjam.com/9yn3p/register/rgz04bw" target="_blank" rel="noopener" data-kind="webinar" class="res-card group">
                     <div class="res-cover aspect-[4/3] rounded-md mb-5 relative overflow-hidden flex items-end p-5">
-                        <img src="images/resources/webinar-contracts.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300" loading="lazy" onload="this.style.opacity=1" onerror="this.remove()">
+                        <img src="images/resources/webinar-contracts.png" alt="Contracts That Close Deals Faster webinar mockup" class="absolute inset-0 w-full h-full object-cover" decoding="async">
                         <span class="relative z-10 inline-block text-xs uppercase tracking-widest font-bold px-2.5 py-1 rounded-full bg-surface/15 text-surface backdrop-blur-sm border border-surface/20">Webinar &middot; Register</span>
                     </div>
                     <p class="text-xs uppercase tracking-widest text-text mb-2">Live &middot; with Margit Györfi &amp; Martin Chalkley</p>
