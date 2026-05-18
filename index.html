@@ -51,12 +51,10 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <style>
-        /* Glassy shrinking nav on scroll */
-        nav#mainNav { transition: padding 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
-        nav#mainNav.scrolled { background-color: transparent !important; border-color: transparent !important; padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; }
-        nav#mainNav .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; transition: max-width 0.25s ease, padding 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, border-radius 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease; }
-        nav#mainNav.scrolled .nav-inner { max-width: 1100px !important; margin: 0 auto !important; padding: 0.5rem 1.5rem !important; background-color: rgba(250, 250, 247, 0.78) !important; -webkit-backdrop-filter: saturate(160%) blur(18px) !important; backdrop-filter: saturate(160%) blur(18px) !important; border: 1px solid rgba(51, 75, 96, 0.12) !important; border-radius: 9999px !important; box-shadow: 0 12px 36px -14px rgba(51, 75, 96, 0.28) !important; }
-        nav#mainNav.scrolled .nav-logo { transform: scale(0.82); transform-origin: left center; }
+        /* Sticky nav: hides on scroll down, shows on scroll up */
+        nav#mainNav { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+        nav#mainNav.nav-hidden { transform: translateY(-100%); }
+        nav#mainNav .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
         body {
             background-color: #FAFAF7;
@@ -395,7 +393,7 @@
                     <div>
                         <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-4">References</p>
                         <h2 class="font-serif text-5xl md:text-6xl max-w-3xl">Real results from real engagements.</h2>
-                        <p class="text-text max-w-xl text-lg md:text-xl mt-4">A taste of the work. All clients anonymised to industry only.</p>
+                        <p class="text-text max-w-xl text-lg md:text-xl mt-4">Three anchor projects per service area. All clients anonymised to industry only.</p>
                     </div>
                 </div>
 
@@ -448,7 +446,74 @@
                         </a>
                     </div>
 
-                    <!-- Trimmed for landing — full set on impact.html -->
+                    <!-- Row: Service & Vendor Consolidation -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
+                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color: #8dccc0;">Service area</p>
+                            <h3 class="font-serif text-xl md:text-2xl">Service &amp; Vendor<br>Consolidation</h3>
+                        </div>
+                        <a href="impact/pharma-facilities-consolidation.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Engineering &amp; Facilities Consolidation</p>
+                            <p class="text-sm text-muted">8,500 staff &middot; 3 years</p>
+                        </a>
+                        <a href="impact/automotive-global-it-rollout.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Automotive</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global IT Client Rollout</p>
+                            <p class="text-sm text-muted">22 countries &middot; 25,000+ users</p>
+                        </a>
+                        <a href="impact/aviation-multi-generation-outsourcing.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Aviation Infrastructure</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Multi-Generation Infrastructure Outsourcing</p>
+                            <p class="text-sm text-muted">20+ years &middot; Frame contracts</p>
+                        </a>
+                    </div>
+
+                    <!-- Row: Complex RFx -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
+                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color: #8dccc0;">Service area</p>
+                            <h3 class="font-serif text-xl md:text-2xl">Complex RFx</h3>
+                        </div>
+                        <a href="impact/public-transport-passenger-counter.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Public Transport</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Passenger Counter Platform Tender</p>
+                            <p class="text-sm text-muted">BVergG &middot; &gt;&euro;1M contract value</p>
+                        </a>
+                        <a href="impact/public-transport-onboard-portal.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Public Transport</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Onboard Information Platform Tender</p>
+                            <p class="text-sm text-muted">Sector contractor &middot; 18 months</p>
+                        </a>
+                        <a href="impact/food-industry-it-sourcing.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Food Industry</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">IT Infrastructure Sourcing in 4 Months</p>
+                            <p class="text-sm text-muted">Sourcing strategy &middot; RFI/RFP &middot; Negotiations</p>
+                        </a>
+                    </div>
+
+                    <!-- Row: Vendor Management -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
+                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color: #8dccc0;">Service area</p>
+                            <h3 class="font-serif text-xl md:text-2xl">Vendor Management</h3>
+                        </div>
+                        <a href="impact/aviation-it-outsourcing-tender.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Aviation Infrastructure</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">22-Domain Outsourcing Governance</p>
+                            <p class="text-sm text-muted">Post-tender service governance</p>
+                        </a>
+                        <a href="impact/pharma-device-standardization.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Standardization Programme Governance</p>
+                            <p class="text-sm text-muted">28 months &middot; Steering &amp; supplier oversight</p>
+                        </a>
+                        <a href="impact/pharma-portfolio-management.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
+                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Portfolio &amp; Programme Management</p>
+                            <p class="text-sm text-muted">320 projects &middot; 26 programmes &middot; 15 portfolios</p>
+                        </a>
+                    </div>
 
                 </div>
 
@@ -585,22 +650,28 @@
     </main>
 
     <script>
-        // Glassy shrinking nav on scroll
-        (function(){ const n = document.getElementById('mainNav'); if(!n) return; const upd = () => n.classList.toggle('scrolled', window.scrollY > 80); upd(); window.addEventListener('scroll', upd, { passive: true }); })();
-
-        // Nav scroll background
-        const nav = document.getElementById('mainNav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-base/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-bordercolor');
-                nav.classList.remove('py-6');
-                nav.classList.add('py-4');
+        // Sticky nav: hide on scroll down, show on scroll up (standard pattern)
+        (function(){
+          const n = document.getElementById('mainNav'); if (!n) return;
+          let lastY = window.scrollY;
+          let ticking = false;
+          const DELTA = 6;          // ignore tiny jitter
+          const TOP_SAFE = 80;      // always show within 80px of top
+          const upd = () => {
+            const y = window.scrollY;
+            if (Math.abs(y - lastY) < DELTA) { ticking = false; return; }
+            if (y > lastY && y > TOP_SAFE) {
+              n.classList.add('nav-hidden');
             } else {
-                nav.classList.remove('bg-base/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-bordercolor');
-                nav.classList.remove('py-4');
-                nav.classList.add('py-6');
+              n.classList.remove('nav-hidden');
             }
-        });
+            lastY = y;
+            ticking = false;
+          };
+          window.addEventListener('scroll', () => {
+            if (!ticking) { window.requestAnimationFrame(upd); ticking = true; }
+          }, { passive: true });
+        })();
 
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');

@@ -27,12 +27,10 @@
     </script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        /* Glassy shrinking nav on scroll */
-        nav#mainNav { transition: padding 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
-        nav#mainNav.scrolled { background-color: transparent !important; border-color: transparent !important; padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; }
-        nav#mainNav .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; transition: max-width 0.25s ease, padding 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, border-radius 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease; }
-        nav#mainNav.scrolled .nav-inner { max-width: 1100px !important; margin: 0 auto !important; padding: 0.5rem 1.5rem !important; background-color: rgba(250, 250, 247, 0.78) !important; -webkit-backdrop-filter: saturate(160%) blur(18px) !important; backdrop-filter: saturate(160%) blur(18px) !important; border: 1px solid rgba(51, 75, 96, 0.12) !important; border-radius: 9999px !important; box-shadow: 0 12px 36px -14px rgba(51, 75, 96, 0.28) !important; }
-        nav#mainNav.scrolled .nav-logo { transform: scale(0.82); transform-origin: left center; }
+        /* Sticky nav: hides on scroll down, shows on scroll up */
+        nav#mainNav { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+        nav#mainNav.nav-hidden { transform: translateY(-100%); }
+        nav#mainNav .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
         body { background-color: #FAFAF7; color: #334b60; font-family: 'Lato', -apple-system, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
         h1, h2, h3, h4, h5, .font-serif { font-family: 'Lato', -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.015em; line-height: 1.05; }
@@ -327,9 +325,28 @@
     </footer>
 
     <script>
-        // Glassy shrinking nav on scroll
-        (function(){ const n = document.getElementById('mainNav'); if(!n) return; const upd = () => n.classList.toggle('scrolled', window.scrollY > 80); upd(); window.addEventListener('scroll', upd, { passive: true }); })();
-
+        // Sticky nav: hide on scroll down, show on scroll up (standard pattern)
+        (function(){
+          const n = document.getElementById('mainNav'); if (!n) return;
+          let lastY = window.scrollY;
+          let ticking = false;
+          const DELTA = 6;
+          const TOP_SAFE = 80;
+          const upd = () => {
+            const y = window.scrollY;
+            if (Math.abs(y - lastY) < DELTA) { ticking = false; return; }
+            if (y > lastY && y > TOP_SAFE) {
+              n.classList.add('nav-hidden');
+            } else {
+              n.classList.remove('nav-hidden');
+            }
+            lastY = y;
+            ticking = false;
+          };
+          window.addEventListener('scroll', () => {
+            if (!ticking) { window.requestAnimationFrame(upd); ticking = true; }
+          }, { passive: true });
+        })();
         const btn = document.getElementById('mobileMenuBtn');
         const menu = document.getElementById('mobileMenu');
         if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
