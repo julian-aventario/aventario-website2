@@ -220,18 +220,55 @@
         </div>
     </section>
 
-    <!-- Team offsite editorial image (Lisbon, Oct 2024) -->
-    <section class="px-6 md:px-12 py-10 md:py-12 border-b border-bordercolor">
-        <div class="max-w-6xl mx-auto">
-            <picture>
-                <source media="(min-width: 768px)" srcset="images/team/lisbon-team-hero-desktop.jpg">
-                <img src="images/team/lisbon-team-hero-mobile.jpg"
-                     alt="Aventario team at the Lisbon offsite, October 2024"
-                     class="w-full h-auto rounded-md object-cover"
-                     style="max-height: 560px;"
-                     loading="lazy">
-            </picture>
-            <p class="mt-3 text-xs uppercase tracking-widest text-muted font-bold">Aventario offsite &middot; Lisbon, October 2024</p>
+    <!-- Team offsite + Our Values, side by side on desktop -->
+    <section class="px-6 md:px-12 py-12 md:py-16 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+            <!-- Team photo -->
+            <div class="lg:col-span-7">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/team/lisbon-team-hero-desktop.jpg">
+                    <img src="images/team/lisbon-team-hero-mobile.jpg"
+                         alt="Aventario team at the Lisbon offsite, October 2024"
+                         class="w-full h-auto rounded-md object-cover"
+                         style="max-height: 560px;"
+                         loading="lazy">
+                </picture>
+                <p class="mt-3 text-xs uppercase tracking-widest text-muted font-bold">Aventario offsite &middot; Lisbon, October 2024</p>
+            </div>
+
+            <!-- Our Values -->
+            <div class="lg:col-span-5">
+                <p class="text-xs uppercase tracking-widest text-accentdark font-bold mb-3">What we stand for</p>
+                <h2 class="font-serif text-3xl md:text-4xl mb-8">Our Values</h2>
+                <ul class="space-y-5">
+                    <li class="border-l-2 pl-4 py-1" style="border-color: #88C9BE;">
+                        <p class="font-bold text-base text-text">Authentic relationships built on trust</p>
+                        <p class="text-sm text-muted leading-relaxed mt-1">Genuine, long-lasting partnerships built on transparency and mutual respect.</p>
+                    </li>
+                    <li class="border-l-2 pl-4 py-1" style="border-color: #88C9BE;">
+                        <p class="font-bold text-base text-text">Pragmatism &mdash; listen, simplify, deliver</p>
+                        <p class="text-sm text-muted leading-relaxed mt-1">We listen, cut through complexity, and deliver practical solutions that work.</p>
+                    </li>
+                    <li class="border-l-2 pl-4 py-1" style="border-color: #88C9BE;">
+                        <p class="font-bold text-base text-text">Service excellence, tailored to you</p>
+                        <p class="text-sm text-muted leading-relaxed mt-1">Every solution customised to your specific requirements &mdash; your success is the metric.</p>
+                    </li>
+                    <li class="border-l-2 pl-4 py-1" style="border-color: #88C9BE;">
+                        <p class="font-bold text-base text-text">Accountability &mdash; we keep our word</p>
+                        <p class="text-sm text-muted leading-relaxed mt-1">When we commit, we deliver. Our reputation is built on reliability.</p>
+                    </li>
+                    <li class="border-l-2 pl-4 py-1" style="border-color: #88C9BE;">
+                        <p class="font-bold text-base text-text">Empowering collaboration</p>
+                        <p class="text-sm text-muted leading-relaxed mt-1">We work alongside your team and leave behind the tools and knowledge they need.</p>
+                    </li>
+                    <li class="border-l-2 pl-4 py-1" style="border-color: #88C9BE;">
+                        <p class="font-bold text-base text-text">Curiosity. Growth. Innovation.</p>
+                        <p class="text-sm text-muted leading-relaxed mt-1">A passion for learning and continuous improvement &mdash; how we keep finding better answers.</p>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
@@ -256,24 +293,21 @@
         </div>
     </section>
 
-    <!-- ============ Markus Kern letter — elegant standalone moment ============ -->
+    <!-- ============ Founder quote — image + words, nothing else ============ -->
     <section class="px-6 md:px-12 py-24 md:py-32 border-b border-bordercolor" style="background-color: #FBFAF6;">
-        <div class="max-w-4xl mx-auto">
-            <div class="flex items-center gap-4 mb-10">
-                <img src="images/team/markus-kern.jpg" alt="Markus Kern, CEO of Aventario" class="w-20 h-20 rounded-full object-cover border border-bordercolor shrink-0" style="object-position: center top;" loading="lazy">
-                <div>
-                    <p class="font-serif text-2xl text-text leading-tight">Markus Kern</p>
-                    <p class="text-xs uppercase tracking-widest text-muted font-bold mt-1">Founder &amp; CEO</p>
-                </div>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+            <div class="md:col-span-5">
+                <img src="images/team/markus-kern.jpg"
+                     alt="Markus Kern"
+                     class="w-full h-auto rounded-md object-cover shadow-xl"
+                     style="aspect-ratio: 4/5; object-position: center top;"
+                     loading="lazy">
             </div>
-            <p class="text-xs uppercase tracking-widest font-bold text-accentdark mb-6">A letter from our founder</p>
-            <blockquote class="font-serif text-2xl md:text-3xl text-text leading-[1.4]" style="text-wrap: balance;">
-                <span class="font-serif text-7xl text-accentdark leading-none align-top mr-2" aria-hidden="true">&ldquo;</span>At Aventario, we believe that organisational change thrives when the right suppliers and subject-matter experts are part of the journey. These experts are essential for overcoming critical hurdles and driving growth.<br><br>We&rsquo;ve experienced this firsthand, and we&rsquo;re convinced that having the right expertise is key to taking companies to the next level.&rdquo;
+            <blockquote class="md:col-span-7 font-serif text-3xl md:text-4xl lg:text-5xl text-text leading-[1.25]" style="text-wrap: balance; font-weight: 900;">
+                <span class="block text-7xl md:text-8xl leading-none mb-2" style="color: #88C9BE;" aria-hidden="true">&ldquo;</span>
+                Organisational change <span style="color: #5FA99D;">thrives</span> when the right suppliers and subject-matter experts are part of the journey.<br><br>
+                Having the <span style="color: #d15298;">right expertise</span> is the key to taking companies to the next level.&rdquo;
             </blockquote>
-            <div class="mt-12 pt-8 border-t border-bordercolor flex items-center justify-between">
-                <p class="text-sm text-muted">Markus Kern &middot; Vienna, 2026</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.42 55.2" class="h-7 opacity-50"><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="#8dccc0"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#324a60"/></svg>
-            </div>
         </div>
     </section>
 
