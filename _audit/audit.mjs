@@ -35,11 +35,11 @@ const report = {
   ranAt: new Date().toISOString(),
   pages: {},
   interactionTests: {},
-  summary: { errors: 0, warnings: 0, info: 0 },
+  summary: { errors: 0, warnings: 0, infos: 0 },
 };
 
 function add(level, where, msg, detail) {
-  const bucket = report.pages[where] ||= { errors: [], warnings: [], info: [] };
+  const bucket = report.pages[where] ||= { errors: [], warnings: [], infos: [] };
   bucket[level + 's'].push(detail ? { msg, detail } : { msg });
   report.summary[level + 's']++;
 }
@@ -100,9 +100,11 @@ async function auditPage(browser, path, vp) {
     );
     missingAlt.forEach(s => add('warning', where, 'img missing alt', s));
 
-    // Empty alt on visible content imgs (only flag if image is large enough to seem important)
+    // Empty alt on visible content imgs — skip explicitly decorative ones (role=presentation)
     const emptyAlt = await page.$$eval('img', imgs => imgs
-      .filter(i => i.getBoundingClientRect().width > 200 && i.getAttribute('alt') === '')
+      .filter(i => i.getBoundingClientRect().width > 200
+                && i.getAttribute('alt') === ''
+                && i.getAttribute('role') !== 'presentation')
       .map(i => i.getAttribute('src'))
     );
     emptyAlt.forEach(s => add('info', where, 'large img has empty alt (decorative?)', s));

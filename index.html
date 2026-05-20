@@ -241,7 +241,7 @@
                         We empower resilient organizations by improving operational smartness, technological awareness and cost and value balance in IT and supply chain.
                     </p>
 
-                    <div class="flex flex-wrap gap-x-10 gap-y-6 max-w-2xl border-t pt-8" style="border-color: rgba(250,250,247,0.22);">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-6 max-w-2xl border-t pt-8" style="border-color: rgba(250,250,247,0.22);">
                         <div>
                             <div class="font-serif text-2xl md:text-3xl whitespace-nowrap" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">25+</div>
                             <div class="text-xs uppercase tracking-widest mt-1" style="color: rgba(250,250,247,0.85); text-shadow: 0 1px 10px rgba(0,0,0,0.7);">exciting years</div>
@@ -255,7 +255,7 @@
                             <div class="text-xs uppercase tracking-widest mt-1" style="color: rgba(250,250,247,0.85); text-shadow: 0 1px 10px rgba(0,0,0,0.7);">successful projects</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap" style="color: #f19a51; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">10&ndash;40%</div>
+                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">10&ndash;40%</div>
                             <div class="text-xs uppercase tracking-widest mt-1" style="color: rgba(250,250,247,0.85); text-shadow: 0 1px 10px rgba(0,0,0,0.7);">sustainable improvements</div>
                         </div>
                     </div>
@@ -268,14 +268,24 @@
         <section id="services" class="py-24 md:py-28 px-6 md:px-12 max-w-[1400px] mx-auto">
             <div class="border-t border-bordercolor pt-16">
 
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-10 items-start">
                     <div class="md:col-span-5">
                         <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-4">Our services</p>
                         <h2 class="font-serif text-5xl md:text-6xl">As a Service.<br>End to end.</h2>
                     </div>
-                    <div class="md:col-span-7 space-y-5 text-lg md:text-xl text-text leading-relaxed">
+                    <div class="md:col-span-5 space-y-5 text-lg md:text-xl text-text leading-relaxed">
                         <p>Five areas of expertise across the top. Twelve specific solutions inside them. Three cross-functional services that run alongside every engagement &mdash; and one software platform underneath.</p>
                         <p>Every engagement draws from the same matrix, so you get one integrated team across strategy, sourcing and run &mdash; not a sequence of hand-offs. <a href="portfolio.html" class="text-accentdark font-bold hover:underline">Open the full Services page &rarr;</a></p>
+                    </div>
+                    <!-- Mountain helping-hand illustration: 'we own the result' / 'spark to turnkey' -->
+                    <div class="md:col-span-2 hidden md:flex items-start justify-end">
+                        <img src="images/illustrations/helping-hand-sm.png"
+                             srcset="images/illustrations/helping-hand-sm.png 1x, images/illustrations/helping-hand.png 2x"
+                             alt=""
+                             role="presentation"
+                             class="w-full max-w-[180px] h-auto"
+                             loading="lazy"
+                             decoding="async">
                     </div>
                 </div>
 
@@ -396,111 +406,111 @@
 
                     <!-- Row: Operational Excellence -->
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
-                            <h3 class="font-serif text-xl md:text-2xl">Operational<br>Excellence</h3>
+                        <div class="md:col-span-3 rounded-md p-4 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <h3 class="font-serif text-base md:text-lg leading-tight">Operational<br>Excellence</h3>
                         </div>
-                        <a href="impact/pharma-global-fleet-electrification.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Fleet Electrification</p>
-                            <p class="text-sm text-muted">1,500 vehicles &middot; 22 months</p>
+                        <a href="impact/pharma-global-fleet-electrification.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Pharma</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Global Fleet Electrification</p>
+                            <p class="text-xs text-muted">1,500 vehicles &middot; 22 months</p>
                         </a>
-                        <a href="impact/global-services-unified-itsm.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Global Services</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Unified Global IT Service Management</p>
-                            <p class="text-sm text-muted">400,000+ employees &middot; 24 months</p>
+                        <a href="impact/global-services-unified-itsm.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <img src="images/logos/clients/sodexo.svg" alt="Sodexo" class="h-4 w-auto mb-2 opacity-80" loading="lazy">
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Unified Global IT Service Management</p>
+                            <p class="text-xs text-muted">400,000+ employees &middot; 24 months</p>
                         </a>
-                        <a href="impact/pharma-it-landscape-harmonization.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">IT Landscape Harmonization</p>
-                            <p class="text-sm text-muted">9,000 systems &middot; 110 capabilities</p>
+                        <a href="impact/pharma-it-landscape-harmonization.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Pharma</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">IT Landscape Harmonization</p>
+                            <p class="text-xs text-muted">9,000 systems &middot; 110 capabilities</p>
                         </a>
                     </div>
 
                     <!-- Row: Savings -->
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
-                            <h3 class="font-serif text-xl md:text-2xl">Savings</h3>
+                        <div class="md:col-span-3 rounded-md p-4 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <h3 class="font-serif text-base md:text-lg leading-tight">Savings</h3>
                         </div>
-                        <a href="impact/pharma-device-standardization.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Device Standardization Program</p>
-                            <p class="text-sm text-muted">Lab equipment &middot; 28 months</p>
+                        <a href="impact/pharma-device-standardization.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Pharma</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Global Device Standardization Program</p>
+                            <p class="text-xs text-muted">Lab equipment &middot; 28 months</p>
                         </a>
-                        <a href="impact/pharma-it-infrastructure-consolidation.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">IT Infrastructure Consolidation &amp; RFI</p>
-                            <p class="text-sm text-muted">13 service domains &middot; TCO analysis</p>
+                        <a href="impact/pharma-it-infrastructure-consolidation.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Pharma</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">IT Infrastructure Consolidation &amp; RFI</p>
+                            <p class="text-xs text-muted">13 service domains &middot; TCO analysis</p>
                         </a>
-                        <a href="impact/aviation-it-outsourcing-tender.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Aviation Infrastructure</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">22-Domain IT Service Tender</p>
-                            <p class="text-sm text-muted">Datacenter, Cloud, Network &middot; 13 months</p>
+                        <a href="impact/aviation-it-outsourcing-tender.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <img src="images/logos/clients/fraport.svg" alt="Fraport" class="h-4 w-auto mb-2 opacity-80" loading="lazy">
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">22-Domain IT Service Tender</p>
+                            <p class="text-xs text-muted">Datacenter, Cloud, Network &middot; 13 months</p>
                         </a>
                     </div>
 
                     <!-- Row: Service & Vendor Consolidation -->
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
-                            <h3 class="font-serif text-xl md:text-2xl">Service &amp; Vendor<br>Consolidation</h3>
+                        <div class="md:col-span-3 rounded-md p-4 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <h3 class="font-serif text-base md:text-lg leading-tight">Service &amp; Vendor<br>Consolidation</h3>
                         </div>
-                        <a href="impact/pharma-facilities-consolidation.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Engineering &amp; Facilities Consolidation</p>
-                            <p class="text-sm text-muted">8,500 staff &middot; 3 years</p>
+                        <a href="impact/pharma-facilities-consolidation.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Pharma</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Global Engineering &amp; Facilities Consolidation</p>
+                            <p class="text-xs text-muted">8,500 staff &middot; 3 years</p>
                         </a>
-                        <a href="impact/automotive-global-it-rollout.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Automotive</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global IT Client Rollout</p>
-                            <p class="text-sm text-muted">22 countries &middot; 25,000+ users</p>
+                        <a href="impact/automotive-global-it-rollout.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Automotive</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Global IT Client Rollout</p>
+                            <p class="text-xs text-muted">22 countries &middot; 25,000+ users</p>
                         </a>
-                        <a href="impact/aviation-multi-generation-outsourcing.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Aviation Infrastructure</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Multi-Generation Infrastructure Outsourcing</p>
-                            <p class="text-sm text-muted">20+ years &middot; Frame contracts</p>
+                        <a href="impact/aviation-multi-generation-outsourcing.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Aviation Infrastructure</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Multi-Generation Infrastructure Outsourcing</p>
+                            <p class="text-xs text-muted">20+ years &middot; Frame contracts</p>
                         </a>
                     </div>
 
                     <!-- Row: Complex RFx -->
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
-                            <h3 class="font-serif text-xl md:text-2xl">Complex RFx</h3>
+                        <div class="md:col-span-3 rounded-md p-4 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <h3 class="font-serif text-base md:text-lg leading-tight">Complex RFx</h3>
                         </div>
-                        <a href="impact/public-transport-passenger-counter.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Public Transport</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Passenger Counter Platform Tender</p>
-                            <p class="text-sm text-muted">BVergG &middot; &gt;&euro;1M contract value</p>
+                        <a href="impact/public-transport-passenger-counter.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Public Transport</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Passenger Counter Platform Tender</p>
+                            <p class="text-xs text-muted">BVergG &middot; &gt;&euro;1M contract value</p>
                         </a>
-                        <a href="impact/public-transport-onboard-portal.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Public Transport</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Onboard Information Platform Tender</p>
-                            <p class="text-sm text-muted">Sector contractor &middot; 18 months</p>
+                        <a href="impact/public-transport-onboard-portal.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Public Transport</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Onboard Information Platform Tender</p>
+                            <p class="text-xs text-muted">Sector contractor &middot; 18 months</p>
                         </a>
-                        <a href="impact/food-industry-it-sourcing.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Food Industry</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">IT Infrastructure Sourcing in 4 Months</p>
-                            <p class="text-sm text-muted">Sourcing strategy &middot; RFI/RFP &middot; Negotiations</p>
+                        <a href="impact/food-industry-it-sourcing.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Food Industry</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">IT Infrastructure Sourcing in 4 Months</p>
+                            <p class="text-xs text-muted">Sourcing strategy &middot; RFI/RFP &middot; Negotiations</p>
                         </a>
                     </div>
 
                     <!-- Row: Vendor Management -->
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-                        <div class="md:col-span-3 rounded-md p-6 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
-                            <h3 class="font-serif text-xl md:text-2xl">Vendor Management</h3>
+                        <div class="md:col-span-3 rounded-md p-4 flex flex-col justify-center" style="background-color: #334b60; color: #FAFAF7;">
+                            <h3 class="font-serif text-base md:text-lg leading-tight">Vendor Management</h3>
                         </div>
-                        <a href="impact/aviation-it-outsourcing-tender.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Aviation Infrastructure</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">22-Domain Outsourcing Governance</p>
-                            <p class="text-sm text-muted">Post-tender service governance</p>
+                        <a href="impact/aviation-it-outsourcing-tender.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <img src="images/logos/clients/fraport.svg" alt="Fraport" class="h-4 w-auto mb-2 opacity-80" loading="lazy">
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">22-Domain Outsourcing Governance</p>
+                            <p class="text-xs text-muted">Post-tender service governance</p>
                         </a>
-                        <a href="impact/pharma-device-standardization.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Standardization Programme Governance</p>
-                            <p class="text-sm text-muted">28 months &middot; Steering &amp; supplier oversight</p>
+                        <a href="impact/pharma-device-standardization.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Pharma</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Global Standardization Programme Governance</p>
+                            <p class="text-xs text-muted">28 months &middot; Steering &amp; supplier oversight</p>
                         </a>
-                        <a href="impact/pharma-portfolio-management.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-5 hover:border-accent transition-colors group">
-                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2.5 py-1 rounded mb-3">Pharma</span>
-                            <p class="font-serif text-lg md:text-xl text-text leading-snug mb-2 group-hover:text-accentdark transition-colors">Global Portfolio &amp; Programme Management</p>
-                            <p class="text-sm text-muted">320 projects &middot; 26 programmes &middot; 15 portfolios</p>
+                        <a href="impact/pharma-portfolio-management.html" class="md:col-span-3 bg-surface border border-bordercolor rounded-md p-4 hover:border-accent transition-colors group">
+                            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-0.5 rounded mb-2">Pharma</span>
+                            <p class="font-serif text-base md:text-lg text-text leading-snug mb-1 group-hover:text-accentdark transition-colors">Global Portfolio &amp; Programme Management</p>
+                            <p class="text-xs text-muted">320 projects &middot; 26 programmes &middot; 15 portfolios</p>
                         </a>
                     </div>
 
@@ -520,6 +530,14 @@
         <section id="book" class="px-6 md:px-12 py-20 md:py-28" style="background-color: #f4f7fa;">
             <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
                 <div class="lg:col-span-5">
+                    <!-- Summit-flag accent: getting to the top together -->
+                    <img src="images/illustrations/summit-flag-sm.png"
+                         srcset="images/illustrations/summit-flag-sm.png 1x, images/illustrations/summit-flag.png 2x"
+                         alt=""
+                         role="presentation"
+                         class="hidden md:block w-32 h-auto mb-6 rounded-md"
+                         loading="lazy"
+                         decoding="async">
                     <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-4">Book a conversation</p>
                     <h2 class="font-serif text-4xl md:text-5xl mb-6">30 minutes. Real answers.</h2>
                     <p class="text-lg md:text-xl text-text leading-relaxed mb-6">No discovery-call theatre. Tell us where the value is leaking &mdash; vendor sprawl, contract drift, opaque IT spend &mdash; and we&rsquo;ll come back with whether and how we can help.</p>
