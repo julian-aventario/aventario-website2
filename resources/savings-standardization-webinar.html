@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Savings aaS Webinar · Standardization · 26 June 2026 · Aventario</title>
+    <meta name="description" content="A 90-minute live session for CIOs, CPOs and CFOs at multi-site companies. The 47-fridge case study, the trade-offs, and the playbook to recover 15-25% on indirect spend. Friday 26 June 2026, 14:00 CET.">
+    <link rel="canonical" href="https://aventario-website.vercel.app/resources/savings-standardization-webinar">
+    <meta property="og:type" content="event">
+    <meta property="og:title" content="The Savings aaS Webinar · Standardization · Free 90-min live session">
+    <meta property="og:description" content="One client. Four sub-projects. €20M+ saved over 10 years. Friday 26 June 2026, 14:00 CET. Free registration.">
+    <meta property="og:url" content="https://aventario-website.vercel.app/resources/savings-standardization-webinar">
+    <meta property="og:site_name" content="Aventario">
+    <meta property="og:image" content="https://aventario-website.vercel.app/images/webinar-standardization-hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55.42 55.2'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='11.43' y1='48.04' x2='37.22' y2='48.04' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23324a60'/%3E%3Cstop offset='.45' stop-color='%236a9a9b'/%3E%3Cstop offset='1' stop-color='%238dccc0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z' fill='%238dccc0'/%3E%3Cpolygon points='11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15' fill='url(%23g)'/%3E%3Cpath d='M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z' fill='%23324a60'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { base: '#FAFAF7', surface: '#FFFFFF', text: '#334b60', muted: '#5f768b', accent: '#88C9BE', accentdark: '#5FA99D', orange: '#f19a51', pink: '#d15298', yellow: '#E9C547', bordercolor: 'rgba(51, 75, 96, 0.12)' }, fontFamily: { serif: ['"Lato"', '-apple-system', 'sans-serif'], sans: ['"Lato"', '-apple-system', 'sans-serif'] } } } }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body { background-color: #FAFAF7; color: #334b60; font-family: 'Lato', -apple-system, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, h5, .font-serif { font-family: 'Lato', -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.015em; line-height: 1.05; }
+
+        /* Decorative accent shapes (matching the LinkedIn-post visual language) */
+        .corner-yellow { position: absolute; right: 0; bottom: 0; width: 120px; height: 120px; background: #E9C547; transform: rotate(-8deg) translate(30%, 30%); z-index: 0; }
+        .corner-seafoam { position: absolute; right: 0; bottom: 0; width: 120px; height: 120px; background: #88C9BE; transform: rotate(-8deg) translate(30%, 30%); z-index: 0; }
+        .corner-pink { position: absolute; right: 0; bottom: 0; width: 120px; height: 120px; background: #d15298; transform: rotate(-8deg) translate(30%, 30%); z-index: 0; }
+        .dot-grid { position: absolute; top: 1.5rem; right: 2rem; width: 70px; height: 70px; background-image: radial-gradient(#5FA99D 1.5px, transparent 1.5px); background-size: 12px 12px; opacity: 0.65; z-index: 0; }
+        .kicker-line { display: inline-block; width: 28px; height: 2.5px; background: #5FA99D; vertical-align: middle; margin-right: 10px; }
+
+        /* Hero CTA — primary navy fill with bold magenta highlight */
+        .cta-primary { background: #d15298; color: #FFFFFF; padding: 1rem 2.25rem; border-radius: 999px; font-weight: 900; letter-spacing: 0.06em; font-size: 0.9rem; text-transform: uppercase; transition: background 0.2s ease, transform 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .cta-primary:hover { background: #b9407f; transform: translateY(-1px); }
+        .cta-secondary { background: #334b60; color: #FFFFFF; padding: 1rem 2.25rem; border-radius: 999px; font-weight: 900; letter-spacing: 0.06em; font-size: 0.9rem; text-transform: uppercase; transition: background 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .cta-secondary:hover { background: #5FA99D; }
+
+        .stat-block { padding: 1.25rem 0; border-top: 2px solid #88C9BE; }
+        .stat-block.alt-pink { border-top-color: #d15298; }
+        .stat-block.alt-orange { border-top-color: #f19a51; }
+        .stat-block.alt-yellow { border-top-color: #E9C547; }
+        .stat-block.alt-navy { border-top-color: #334b60; }
+
+        .agenda-row { border-bottom: 1px solid rgba(51,75,96,0.10); padding: 1.1rem 0; }
+        .agenda-row:last-child { border-bottom: 0; }
+
+        .date-card { position: relative; background: #334b60; color: #FAFAF7; padding: 2rem 1.75rem; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 20px 50px rgba(0,0,0,0.20); overflow: hidden; }
+        .date-card::after { content: ""; position: absolute; right: -25px; bottom: -25px; width: 110px; height: 110px; background: #E9C547; transform: rotate(-8deg); z-index: 0; }
+        .date-card > * { position: relative; z-index: 1; }
+
+        *:focus-visible { outline: 2px solid #88C9BE; outline-offset: 2px; }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "The Savings aaS Webinar — Standardization for Multi-Site Companies",
+  "description": "A 90-minute live session on the standardization playbook. The 47-fridge case study, four sub-projects, more than €20 million saved over 10 years. For CIOs, CPOs, CFOs and technical leaders at multi-site companies.",
+  "startDate": "2026-06-26T14:00:00+02:00",
+  "endDate": "2026-06-26T15:30:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "location": {
+    "@type": "VirtualLocation",
+    "url": "https://aventario-website.vercel.app/resources/savings-standardization-webinar"
+  },
+  "image": "https://aventario-website.vercel.app/images/webinar-standardization-hero.png",
+  "organizer": {
+    "@type": "Organization",
+    "name": "Aventario",
+    "url": "https://aventario.com",
+    "logo": "https://aventario.com/logos/aventario-logo-CMYK.png"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://aventario-website.vercel.app/resources/savings-standardization-webinar",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-05-22T00:00:00+02:00"
+  },
+  "performer": [
+    { "@type": "Person", "name": "Markus Kern" },
+    { "@type": "Person", "name": "Markus Jaksch" },
+    { "@type": "Person", "name": "Margit Györfi" }
+  ],
+  "inLanguage": "en"
+}
+    </script>
+</head>
+<body>
+
+    <!-- NAV (same as the rest of the site) -->
+    <nav class="sticky top-0 z-40 bg-base/95 backdrop-blur-sm border-b border-bordercolor px-6 md:px-12 py-4 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.29 55.2" class="h-8 md:h-10"><g><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="#8dccc0"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#324a60"/></g></svg></a>
+        <div class="hidden lg:flex space-x-8 text-sm uppercase tracking-widest font-bold items-center">
+            <a href="../impact.html" class="hover:text-accentdark">Impact</a>
+            <a href="../resources.html" class="text-accentdark">Resources</a>
+            <a href="../about.html" class="hover:text-accentdark">Team</a>
+            <a href="../blog.html" class="hover:text-accentdark">Blog</a>
+        </div>
+        <a href="#register" class="hidden md:inline-flex text-xs font-bold uppercase tracking-widest bg-text text-surface px-5 py-2.5 rounded-full hover:bg-accentdark transition-colors">Register</a>
+        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 flex items-center justify-center" aria-label="Toggle menu"><i class="ph ph-list text-2xl"></i></button>
+    </nav>
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-bordercolor bg-base px-6 py-4 space-y-2">
+        <a href="../impact.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Impact</a>
+        <a href="../resources.html" class="block py-2 text-sm font-bold uppercase tracking-widest text-accentdark">Resources</a>
+        <a href="../about.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Team</a>
+        <a href="../blog.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Blog</a>
+        <a href="#register" class="block mt-3 text-center text-xs font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full">Register</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="px-6 md:px-12 pt-6 pb-10 md:pt-8 md:pb-14 border-b border-bordercolor relative overflow-hidden">
+        <div class="max-w-6xl mx-auto relative">
+            <a href="../resources.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-text font-bold mb-5 hover:text-accentdark transition-colors">
+                <i class="ph ph-arrow-left"></i> Back to Resources
+            </a>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-center">
+                <div class="md:col-span-7">
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-4"><span class="kicker-line"></span>Free webinar · Friday 26 June 2026 · 14:00 CET</p>
+                    <h1 class="font-serif text-5xl md:text-7xl mb-5 leading-[1.02]">47 fridges. <span class="text-pink">€20M saved.</span><br>Here is how.</h1>
+                    <p class="text-lg md:text-2xl text-text leading-snug mb-4">A 90-minute live session on standardization for multi-site companies. The case study, the trade-offs, and the playbook one of our clients used to recover more than €20 million across four sub-projects in ten years.</p>
+                    <p class="text-base md:text-lg text-muted leading-snug mb-7">Live in English. Recording sent to every registered participant.</p>
+
+                    <div id="register" class="bg-surface border border-bordercolor rounded-md p-6 md:p-8 relative overflow-hidden">
+                        <div class="dot-grid"></div>
+                        <p class="font-serif text-xl md:text-2xl mb-3">Reserve your seat.</p>
+                        <p class="text-base text-muted mb-6 leading-snug">No payment, no obligation. One click to register through our webinar platform.</p>
+
+                        <a href="#" id="registerButton" class="cta-primary w-full justify-center" style="font-size:1rem; padding:1.15rem 2.25rem;">Register Here <i class="ph ph-arrow-right"></i></a>
+
+                        <p class="text-sm text-muted mt-5 leading-snug">By registering, you agree to receive the calendar invite, the live link, and the recording. We will not add you to a mailing list without your consent. <a href="../datenschutz.html" class="text-accentdark hover:underline">Privacy</a>.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 flex items-center justify-center">
+                    <img src="../images/webinar-standardization-hero.png" alt="Standardization webinar — visual concept showing the fragmentation of decentralised purchasing" class="w-full max-w-[440px] rounded-md shadow-xl" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATE / TIME CARD STRIP -->
+    <section class="px-6 md:px-12 py-10 md:py-14 border-b border-bordercolor bg-surface">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-stretch">
+            <div class="md:col-span-4">
+                <div class="date-card">
+                    <p class="text-sm uppercase tracking-widest font-bold mb-3" style="color: #88C9BE;">When</p>
+                    <p class="font-serif text-5xl md:text-6xl mb-1">Fri 26 Jun</p>
+                    <p class="font-serif text-5xl md:text-6xl mb-5">2026</p>
+                    <p class="text-lg" style="color: rgba(255,255,255,0.9);">14:00–15:30 CET</p>
+                    <p class="text-sm mt-2" style="color: rgba(255,255,255,0.7);">08:00 New York · 21:00 Singapore</p>
+                </div>
+            </div>
+            <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+                <div>
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-2"><span class="kicker-line"></span>Format</p>
+                    <h3 class="font-serif text-2xl mb-2">90 minutes, live, English</h3>
+                    <p class="text-base text-text leading-snug">Three secrets, one Q&amp;A block, one clear next step. No slides for the sake of slides.</p>
+                </div>
+                <div>
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-2"><span class="kicker-line"></span>Who it is for</p>
+                    <h3 class="font-serif text-2xl mb-2">CIOs · CPOs · CFOs · Heads of Procurement</h3>
+                    <p class="text-base text-text leading-snug">Multi-site companies with 1,000+ employees, where purchasing decisions still happen locally.</p>
+                </div>
+                <div>
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-2"><span class="kicker-line"></span>What you keep</p>
+                    <h3 class="font-serif text-2xl mb-2">Recording · Slides · Audit template</h3>
+                    <p class="text-base text-text leading-snug">All assets delivered after the session. Yours to share inside your team.</p>
+                </div>
+                <div>
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-2"><span class="kicker-line"></span>Cost</p>
+                    <h3 class="font-serif text-2xl mb-2">Free</h3>
+                    <p class="text-base text-text leading-snug">No payment, no mailing list opt-in. Register, attend or get the recording.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY NUMBERS -->
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 mb-8">
+                <div class="md:col-span-7">
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-3"><span class="kicker-line"></span>The diagnosis most enterprises miss</p>
+                    <h2 class="font-serif text-4xl md:text-6xl leading-tight mb-4">Decentralised buying quietly costs 15&ndash;25%.</h2>
+                    <p class="text-lg md:text-xl text-text leading-snug max-w-3xl">Each site funds its own overhead. Each supplier charges what each site will accept. Nobody is negotiating as one customer. The numbers below come from a real ten-year programme at a 50,000-employee global manufacturer.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stat-block alt-pink">
+                    <p class="font-serif text-5xl md:text-6xl mb-3 leading-none">€20M+</p>
+                    <p class="text-base text-text leading-relaxed">total saved across four standardization sub-projects in 10 years.</p>
+                </div>
+                <div class="stat-block alt-yellow">
+                    <p class="font-serif text-5xl md:text-6xl mb-3 leading-none">€8.4M</p>
+                    <p class="text-base text-text leading-relaxed">on fridges alone. Plus 25&ndash;50% energy reduction.</p>
+                </div>
+                <div class="stat-block alt-orange">
+                    <p class="font-serif text-5xl md:text-6xl mb-3 leading-none">10&ndash;60%</p>
+                    <p class="text-base text-text leading-relaxed">cheaper at other dealers, on 80% of air-filter SKUs.</p>
+                </div>
+                <div class="stat-block alt-navy">
+                    <p class="font-serif text-5xl md:text-6xl mb-3 leading-none">6</p>
+                    <p class="text-base text-text leading-relaxed">use-cases replaced hundreds of compressor variants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU WILL LEARN -->
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
+            <div class="md:col-span-4">
+                <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-3"><span class="kicker-line"></span>The agenda</p>
+                <h2 class="font-serif text-3xl md:text-5xl mb-4 leading-tight">What you walk out with.</h2>
+                <p class="text-base text-text leading-relaxed">Three secrets we have learned across hundreds of standardization engagements. Honest about what works, honest about what backfires.</p>
+            </div>
+            <div class="md:col-span-8">
+                <div class="agenda-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-3xl" style="color: #d15298;">01</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-2xl mb-2">Where the money actually hides</h3>
+                        <p class="text-base text-text leading-relaxed">The three concrete ways decentralised buying leaks margin. Overhead duplication. Asymmetric pricing. No global negotiating power. Why none of it shows up cleanly on the P&amp;L.</p>
+                    </div>
+                </div>
+                <div class="agenda-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-3xl" style="color: #f19a51;">02</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-2xl mb-2">The four trade-offs nobody warns you about</h3>
+                        <p class="text-base text-text leading-relaxed">People losing decision power. Some regions getting pricier. Slow buying processes that kill the savings. Single-vendor risk. Each one anchored with a real case from the engagement.</p>
+                    </div>
+                </div>
+                <div class="agenda-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-3xl" style="color: #E9C547;">03</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-2xl mb-2">Two ways to run a standardization project</h3>
+                        <p class="text-base text-text leading-relaxed">Data-heavy versus trust-based. Six months to two years versus six to twelve. When to pick which, and why one ends in board-defensible savings while the other ends in faster cash.</p>
+                    </div>
+                </div>
+                <div class="agenda-row grid grid-cols-12 gap-4">
+                    <div class="col-span-2 font-serif text-3xl" style="color: #88C9BE;">04</div>
+                    <div class="col-span-10">
+                        <h3 class="font-serif text-2xl mb-2">A scoping framework for your own savings</h3>
+                        <p class="text-base text-text leading-relaxed">Walk out with a defensible range for one of your indirect categories. We share the questions and the rough multipliers we use in a paid scoping call.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT IS FOR -->
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor bg-surface">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
+            <div class="md:col-span-5">
+                <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-3"><span class="kicker-line"></span>Who should attend</p>
+                <h2 class="font-serif text-3xl md:text-5xl mb-4 leading-tight">Built for the people on the hook for the cost cuts.</h2>
+                <p class="text-base text-text leading-relaxed">Not a procurement-101 webinar. A session for senior leaders running indirect spend across multiple sites or countries, where the board has already asked for the number.</p>
+            </div>
+            <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                    <i class="ph ph-buildings text-pink text-3xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">CIOs at multi-site companies</h3>
+                    <p class="text-base text-text leading-relaxed">Standardizing equipment, services and software across regions, while keeping local autonomy.</p>
+                </div>
+                <div>
+                    <i class="ph ph-handshake text-orange text-3xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">CPOs and Heads of Procurement</h3>
+                    <p class="text-base text-text leading-relaxed">Recovering the post-signature value gap that local negotiation cannot reach.</p>
+                </div>
+                <div>
+                    <i class="ph ph-currency-eur text-yellow text-3xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">CFOs sponsoring the cost programme</h3>
+                    <p class="text-base text-text leading-relaxed">Defending the 12-month spend reduction case to the board with anchored, real-world numbers.</p>
+                </div>
+                <div>
+                    <i class="ph ph-gear text-accent text-3xl mb-3"></i>
+                    <h3 class="font-serif text-xl mb-2">Technical &amp; operations directors</h3>
+                    <p class="text-base text-text leading-relaxed">Owning the equipment portfolio, the maintenance contracts, and the standard owner roles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section class="px-6 md:px-12 py-12 md:py-20 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 mb-8">
+                <div class="md:col-span-8">
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-3"><span class="kicker-line"></span>Hosted by</p>
+                    <h2 class="font-serif text-3xl md:text-5xl leading-tight mb-3">Three operators. Twenty-five years each. €3B+ in negotiated contract volume between them.</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-surface border border-bordercolor rounded-md p-6">
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-2">CEO</p>
+                    <h3 class="font-serif text-2xl mb-2">Markus Kern</h3>
+                    <p class="text-base text-text leading-relaxed">Career-long focus on IT sourcing transformation programmes at multinationals. The standardization playbook is his domain.</p>
+                </div>
+                <div class="bg-surface border border-bordercolor rounded-md p-6">
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-2">COO</p>
+                    <h3 class="font-serif text-2xl mb-2">Markus Jaksch</h3>
+                    <p class="text-base text-text leading-relaxed">Operational lead on the engagement model. Owns the change-management work that decides whether a standardization rollout sticks.</p>
+                </div>
+                <div class="bg-surface border border-bordercolor rounded-md p-6">
+                    <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-2">CPO</p>
+                    <h3 class="font-serif text-2xl mb-2">Margit Györfi</h3>
+                    <p class="text-base text-text leading-relaxed">Programme architect. Designed the data analysis, workshop method and tender approach behind the four sub-projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT AVENTARIO + PROOF POINTS -->
+    <section class="px-6 md:px-12 py-16 md:py-24" style="background-color: #334b60; color: #FFFFFF;">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-7">
+                <p class="text-sm uppercase tracking-widest font-bold mb-3" style="color: #8dccc0;"><span class="kicker-line"></span>About Aventario</p>
+                <h2 class="font-serif text-3xl md:text-5xl text-surface mb-5 leading-tight">We work as an extension of your team, not as a slide vendor.</h2>
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.85);">Vienna-based consultancy focused on cost and value optimisation for IT and supply chain. Outcome-based engagements: we own the result, not just the hours. We implement, we do not just advise.</p>
+            </div>
+            <div class="md:col-span-5 grid grid-cols-2 gap-5">
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-4xl md:text-5xl text-surface">25+</p>
+                    <p class="text-sm mt-2" style="color: rgba(255,255,255,0.7);">years of industry experience</p>
+                </div>
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-4xl md:text-5xl text-surface">500+</p>
+                    <p class="text-sm mt-2" style="color: rgba(255,255,255,0.7);">successful projects delivered</p>
+                </div>
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-4xl md:text-5xl text-surface">&euro;3B+</p>
+                    <p class="text-sm mt-2" style="color: rgba(255,255,255,0.7);">in negotiated contract volume</p>
+                </div>
+                <div class="border-t pt-4" style="border-color: rgba(141,204,192,0.4);">
+                    <p class="font-serif text-4xl md:text-5xl text-surface">10&ndash;40%</p>
+                    <p class="text-sm mt-2" style="color: rgba(255,255,255,0.7);">measurable cost savings for clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="px-6 md:px-12 py-16 md:py-24">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <p class="text-sm uppercase tracking-widest text-accentdark font-bold mb-3"><span class="kicker-line"></span>Last call</p>
+                <h2 class="font-serif text-3xl md:text-6xl mb-4 leading-tight">Friday 26 June, 14:00 CET. 90 minutes. Free.</h2>
+                <p class="text-lg md:text-xl text-text leading-relaxed max-w-3xl">If your indirect spend feels heavier than the P&amp;L suggests, the leak is probably in standardization. Reserve the slot. If you cannot attend, we will send the recording.</p>
+            </div>
+            <div class="md:col-span-5 flex flex-col sm:flex-row gap-3 md:justify-end">
+                <a href="#register" class="cta-primary" style="font-size:1rem; padding:1.15rem 2.25rem;">Register Here <i class="ph ph-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (same as the rest of the site) -->
+    <footer class="px-6 md:px-12 pt-16 pb-8" style="background-color: #334b60; color: #FAFAF7;">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+                <div class="lg:col-span-3">
+                    <a href="../index.html" class="inline-flex items-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.29 55.2" class="h-8"><g><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="#8dccc0"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#FAFAF7"/></g></svg></a>
+                    <p class="text-sm leading-relaxed mb-6" style="color: rgba(250,250,247,0.75);">We help enterprises master complexity in service-cost optimization, sourcing &amp; transformation.</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.85);">
+                        <li class="flex items-center gap-2.5"><i class="ph ph-envelope-simple text-base" style="color: #8dccc0;"></i> <a href="mailto:office@aventario.com" class="hover:text-accent">office@aventario.com</a></li>
+                        <li class="flex items-center gap-2.5"><i class="ph ph-phone text-base" style="color: #8dccc0;"></i> +43 134 3354012</li>
+                        <li class="flex items-center gap-2.5"><i class="ph ph-map-pin text-base" style="color: #8dccc0;"></i> Tuchlauben 7a, 1010 Vienna</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color: rgba(250,250,247,0.55);">Services</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.9);">
+                        <li><a href="../services/savings.html" class="hover:text-accent">Savings</a></li>
+                        <li><a href="../services/operational-excellence.html" class="hover:text-accent">Operational Excellence</a></li>
+                        <li><a href="../services/vendor-consolidation.html" class="hover:text-accent">Vendor Consolidation</a></li>
+                        <li><a href="../services/complex-rfx.html" class="hover:text-accent">Complex RFx</a></li>
+                        <li><a href="../services/vendor-management.html" class="hover:text-accent">Vendor Management</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color: rgba(250,250,247,0.55);">Resources</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.9);">
+                        <li><a href="../resources.html" class="hover:text-accent">Whitepapers</a></li>
+                        <li><a href="../resources.html" class="hover:text-accent">Webinars</a></li>
+                        <li><a href="../impact.html" class="hover:text-accent">Case Studies</a></li>
+                        <li><a href="../blog.html" class="hover:text-accent">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color: rgba(250,250,247,0.55);">Company</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.9);">
+                        <li><a href="../about.html" class="hover:text-accent">About Us</a></li>
+                        <li><a href="../contact.html" class="hover:text-accent">Contact</a></li>
+                    </ul>
+                    <p class="text-xs uppercase tracking-widest font-bold mt-8 mb-4" style="color: rgba(250,250,247,0.55);">Legal</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.9);">
+                        <li><a href="../datenschutz.html" class="hover:text-accent">Data Policy</a></li>
+                        <li><a href="../impressum.html" class="hover:text-accent">Imprint &amp; T&amp;C</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3 space-y-4">
+                    <div class="rounded-md p-5" style="background-color: rgba(255,255,255,0.04); border: 1px solid rgba(250,250,247,0.15);">
+                        <p class="font-serif text-lg mb-2" style="color: #FAFAF7;">Monthly Newsletter</p>
+                        <p class="text-sm leading-relaxed mb-4" style="color: rgba(250,250,247,0.8);">Stay updated with the latest vendor management trends, insights, and best practices.</p>
+                        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed';" class="flex flex-col sm:flex-row gap-2">
+                            <input type="email" required placeholder="you@company.com" class="flex-1 text-sm px-4 py-2 rounded-full bg-transparent placeholder:text-white/40" style="border: 1px solid rgba(250,250,247,0.25); color: #FAFAF7;">
+                            <button type="submit" class="text-xs font-bold uppercase tracking-widest whitespace-nowrap px-4 py-2 rounded-full" style="background-color: #FAFAF7; color: #334b60;">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs gap-3" style="border-color: rgba(250,250,247,0.12); color: rgba(250,250,247,0.55);">
+                <p>&copy; 2026 Aventario Services GmbH. All rights reserved.</p>
+                <a href="../contact.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full transition-colors hover:bg-white/5" style="border: 1px solid rgba(250,250,247,0.35); color: #FAFAF7;">Talk to an Expert <i class="ph ph-arrow-right text-xs"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+        // Placeholder note for Julian: replace href="#" on #registerButton with the EverWebinar registration URL when ready.
+    </script>
+</body>
+</html>
