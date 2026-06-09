@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const B='http://localhost:8899', OUT='_audit/qa';
+const b=await chromium.launch();
+const ctx=await b.newContext({viewport:{width:1100,height:720},deviceScaleFactor:1});
+const p=await ctx.newPage();
+await p.goto(`${B}/contact.html`,{waitUntil:'networkidle'});await p.waitForTimeout(400);
+await p.screenshot({path:`${OUT}/fb-contact-top.png`});
+await p.evaluate(()=>window.scrollTo(0,820));await p.waitForTimeout(300);
+await p.screenshot({path:`${OUT}/fb-contact-sched.png`});
+await ctx.close(); await b.close(); console.log('done');

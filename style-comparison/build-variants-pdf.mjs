@@ -6,8 +6,8 @@ import path from 'node:path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const HTML = 'C:/Users/robid/Desktop/Aventario Claude/Aventario-Website-Draft/Aventario-Website/style-comparison/landing-page-variants.html';
-const OUT  = 'C:/Users/robid/Desktop/Aventario Claude/Aventario-Website-Draft/Aventario-Website/style-comparison/Aventario_Homepage_Variants.pdf';
+const HTML = 'C:/Users/robid/Desktop/Aventario Claude/website/style-comparison/landing-page-variants.html';
+const OUT  = 'C:/Users/robid/Desktop/Aventario Claude/website/style-comparison/Aventario_Homepage_Variants.pdf';
 
 const fileUrl = 'file:///' + HTML.replace(/\\/g, '/');
 console.log('Launching Chromium...');

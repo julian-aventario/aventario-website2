@@ -1,9 +1,6 @@
 {
-  "name": "aventario-website",
-  "version": "1.0.0",
+  "name": "aventario-website-audit",
+  "version": "0.0.0",
   "private": true,
-  "description": "Aventario corporate website — static HTML, no build step.",
-  "scripts": {
-    "build": "echo 'Static site — no build needed.'"
-  }
+  "type": "module"
 }

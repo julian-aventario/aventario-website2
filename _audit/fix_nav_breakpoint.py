@@ -7,7 +7,7 @@ all other md: utilities elsewhere on the page are left alone.
 """
 from pathlib import Path
 
-ROOT = Path(r"C:\Users\robid\Desktop\Aventario Claude\Aventario-Website-Draft\Aventario-Website")
+ROOT = Path(r"C:\Users\robid\Desktop\Aventario Claude\website")
 
 # (old, new) pairs — uniquely identify nav classes by their wider context so we don't
 # touch unrelated md:flex / md:hidden / md:inline-flex utilities elsewhere.

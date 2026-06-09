@@ -67,7 +67,7 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [{"@type": "Question", "name": "What is process mining?", "acceptedAnswer": {"@type": "Answer", "text": "The practice of reconstructing actual process behaviour from system event logs, rather than from documented process maps or interviews."}}, {"@type": "Question", "name": "What does process mining typically find?", "acceptedAnswer": {"@type": "Answer", "text": "That the documented process and the actual process are reliably different. Typical findings: 10–20% of process volume runs through paths that add no value, including rework loops, unnecessary approvals, manual workarounds, and duplicate work."}}, {"@type": "Question", "name": "What tools are used for process mining?", "acceptedAnswer": {"@type": "Answer", "text": "Dedicated platforms include Celonis (category leader), Signavio (SAP), UiPath Process Mining, and Software AG ARIS. For smaller-scale analysis, modern data tooling can produce meaningful results without specialised software."}}]
+      "mainEntity": [{"@type": "Question", "name": "What is process mining?", "acceptedAnswer": {"@type": "Answer", "text": "The practice of reconstructing actual process behaviour from system event logs, rather than from documented process maps or interviews."}}, {"@type": "Question", "name": "What does process mining typically find?", "acceptedAnswer": {"@type": "Answer", "text": "That the documented process and the actual process are reliably different. Typical findings: 10–20% of process volume runs through paths that add no value, including rework loops, unnecessary approvals, manual workarounds, and duplicate work."}}, {"@type": "Question", "name": "What tools are used for process mining?", "acceptedAnswer": {"@type": "Answer", "text": "Dedicated platforms include Celonis (category leader), Signavio (SAP), UiPath Process Mining, and Software AG ARIS. For smaller-scale analysis, modern data tooling can produce meaningful results without specialized software."}}]
     }
     </script>
 </head>
@@ -114,7 +114,7 @@
 
     <article class="px-6 md:px-12 pb-16">
         <div class="max-w-3xl mx-auto prose-aventario">
-            <div class="answer-box"><p>Process mining is the practice of reconstructing how a business or IT process actually behaves by analysing system event logs — incident records, ERP transactions, ITSM tickets, workflow timestamps — rather than relying on how the process is documented. The technique reliably reveals that the documented process and the actual process diverge, with 10–20% of process volume typically running through paths that add no value.</p></div>
+            <div class="answer-box"><p>Process mining is the practice of reconstructing how a business or IT process actually behaves by analyzing system event logs — incident records, ERP transactions, ITSM tickets, workflow timestamps — rather than relying on how the process is documented. The technique reliably reveals that the documented process and the actual process diverge, with 10–20% of process volume typically running through paths that add no value.</p></div>
 <h2>What process mining does.</h2>
 <p>Every system that handles a business process generates events: a ticket is created, assigned, escalated, resolved; a purchase order is raised, approved, fulfilled, invoiced; a change request is submitted, reviewed, deployed. Each event has a timestamp, an actor, and a state. Process mining tools ingest these events, link them by case ID, and reconstruct the actual flow each case took through the process.</p>
 <p>The output is a process map drawn from data — not from documentation, not from interviews, not from how anyone says the process works. The map shows every variant of the path, the frequency of each, the average duration of each step, and the rework loops.</p>
@@ -131,17 +131,17 @@
 <h2>Where it's useful.</h2>
 <ul>
 <li><strong>Operational efficiency.</strong> Identifying the 10–20% of process volume that doesn't add value. The starting point for most efficiency programmes.</li>
-<li><strong>Automation candidate selection.</strong> Process mining identifies which processes are stable enough, standardised enough, and high-volume enough to be worth automating.</li>
+<li><strong>Automation candidate selection.</strong> Process mining identifies which processes are stable enough, standardized enough, and high-volume enough to be worth automating.</li>
 <li><strong>Compliance auditing.</strong> Detecting cases that bypassed controls, approvals that weren't recorded, segregation-of-duties violations.</li>
 <li><strong>Vendor performance verification.</strong> Reconciling vendor-reported SLAs against actual ticket-level event data. The most common gap we find in outsourcing arrangements.</li>
-<li><strong>Process harmonisation.</strong> Comparing how the same process runs in different geographies or business units. Often reveals that "the global standard" is theory rather than practice.</li>
+<li><strong>Process harmonization.</strong> Comparing how the same process runs in different geographies or business units. Often reveals that "the global standard" is theory rather than practice.</li>
 </ul>
 <h2>Tools and capability.</h2>
-<p>The dedicated process-mining platforms — Celonis is the category leader, alongside Signavio (now SAP), UiPath Process Mining, Software AG ARIS, and several others — handle large event-log volumes and produce sophisticated visualisations. For smaller-scale work, modern data tooling (dbt, Python pandas, BI platforms) can produce meaningful process-mining analysis without specialised software.</p>
+<p>The dedicated process-mining platforms — Celonis is the category leader, alongside Signavio (now SAP), UiPath Process Mining, Software AG ARIS, and several others — handle large event-log volumes and produce sophisticated visualizations. For smaller-scale work, modern data tooling (dbt, Python pandas, BI platforms) can produce meaningful process-mining analysis without specialized software.</p>
 <p>The interesting capability in 2026 is not the tool but the analyst skill: someone who understands the business process, knows what to look for in the variants, and can translate process-mining findings into actionable changes. The tool produces the map; the analyst produces the insight.</p>
 <h2>Common pitfalls.</h2>
 <ul>
-<li><strong>Bad data.</strong> Process mining is only as good as the event log. Missing timestamps, inconsistent case IDs, unsynchronised system clocks — all produce maps that look authoritative but are wrong.</li>
+<li><strong>Bad data.</strong> Process mining is only as good as the event log. Missing timestamps, inconsistent case IDs, unsynchronized system clocks — all produce maps that look authoritative but are wrong.</li>
 <li><strong>Tool-led rather than question-led.</strong> "We have Celonis, what should we do with it" is the wrong starting point. "We need to know why P1 incident resolution time has drifted" is the right one.</li>
 <li><strong>Mistaking variation for waste.</strong> Some process variation is legitimate. The analyst's job is to distinguish necessary variation from accidental complexity.</li>
 </ul>
@@ -151,7 +151,7 @@
 <h3>What does process mining typically find?</h3>
 <p>That the documented process and the actual process are reliably different. Typical findings: 10–20% of process volume runs through paths that add no value (rework loops, unnecessary approvals, manual workarounds, duplicate work).</p>
 <h3>What tools are used for process mining?</h3>
-<p>Dedicated platforms include Celonis (category leader), Signavio (SAP), UiPath Process Mining, and Software AG ARIS. For smaller-scale analysis, modern data tooling can produce meaningful results without specialised software.</p>
+<p>Dedicated platforms include Celonis (category leader), Signavio (SAP), UiPath Process Mining, and Software AG ARIS. For smaller-scale analysis, modern data tooling can produce meaningful results without specialized software.</p>
             <div class="mt-12 p-6 bg-surface border border-bordercolor rounded-md">
                 <p class="text-xs uppercase tracking-widest text-text font-bold mb-3">Related</p>
                 <ul class="space-y-2">

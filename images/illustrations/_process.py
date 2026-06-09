@@ -7,7 +7,7 @@ Process the 5 Higgsfield mountain illustrations:
 from PIL import Image
 from pathlib import Path
 
-D = Path(r"C:\Users\robid\Desktop\Aventario Claude\Aventario-Website-Draft\Aventario-Website\images\illustrations")
+D = Path(r"C:\Users\robid\Desktop\Aventario Claude\website\images\illustrations")
 WHITE_THRESHOLD = 240  # pixels with all RGB above this become transparent
 FUZZ = 18              # tolerance band for partial transparency on near-white pixels
 

@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const p = await (await b.newContext({viewport:{width:1440,height:900}})).newPage();
+await p.goto('http://localhost:8895/index.html',{waitUntil:'networkidle'});
+await p.addStyleTag({content:'.illu{opacity:1!important;transform:none!important}'});
+await p.waitForTimeout(400);
+const el = await p.$('#book');
+await el.screenshot({path:'_audit/diag/idx-book.png'});
+console.log('done');
+await b.close();
