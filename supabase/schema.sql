@@ -1,10 +1,9 @@
 -- Aventario website — lead capture schema for Supabase.
--- Run this once in the Supabase SQL editor (Dashboard -> SQL Editor -> New query -> Run).
+-- Run once: Supabase Dashboard -> SQL Editor -> New query -> paste -> Run.
 --
--- Design: one table, Row-Level Security ON with NO public policies. Only the
--- service_role key (used server-side by the Vercel /api/lead function) can read or
--- write. The anon/public key cannot touch this table, so the lead list is never
--- exposed to the browser. service_role bypasses RLS by design.
+-- The website inserts leads from the browser using the PUBLISHABLE key (safe to expose).
+-- RLS is ON with an INSERT-ONLY policy: the public can add a lead but can never read,
+-- update, or delete the table. You view leads in Dashboard -> Table editor -> leads.
 
 create extension if not exists "pgcrypto";
 
@@ -25,5 +24,12 @@ create index if not exists leads_created_at_idx on public.leads (created_at desc
 create index if not exists leads_type_idx       on public.leads (type);
 
 alter table public.leads enable row level security;
--- Intentionally NO anon/authenticated policies. Reads/writes happen only via the
--- service_role key from the server. To view leads, use the Supabase Table editor.
+
+-- Allow anonymous INSERT only (the browser submits with the publishable/anon key).
+-- No SELECT/UPDATE/DELETE policy => the public can add a lead but never read the table.
+drop policy if exists "Public can submit a lead" on public.leads;
+create policy "Public can submit a lead"
+  on public.leads
+  for insert
+  to anon
+  with check (true);

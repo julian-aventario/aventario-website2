@@ -195,7 +195,7 @@
                     <div class="bg-surface border border-bordercolor rounded-md p-4 md:p-5">
                         <p class="font-serif text-base md:text-lg mb-3">Get the whitepaper.</p>
 
-                        <!-- Whitepaper gate -> /api/lead (Supabase). On success the PDF download starts. -->
+                        <!-- Whitepaper gate -> Supabase (publishable key, insert-only RLS). On success the PDF download starts. -->
                         <form id="wpForm" class="space-y-2.5">
                             <label class="sr-only" for="wp-name">Name</label>
                             <input id="wp-name" name="name" type="text" required placeholder="Name" autocomplete="name" class="w-full text-sm px-3.5 py-2.5 rounded-md bg-base border border-bordercolor focus:border-accentdark outline-none transition-colors">
@@ -212,6 +212,8 @@
                         </form>
                         <script>
                           (function () {
+                            var SB_URL = 'https://zpuywttjadohtxvaloyq.supabase.co';
+                            var SB_KEY = 'sb_publishable_0R1ZCaygbhIA4xY3MhpN6w_qOFeRhoa';
                             var form = document.getElementById('wpForm'); if (!form) return;
                             var status = document.getElementById('wp-status');
                             var btn = form.querySelector('button[type=submit]');
@@ -224,11 +226,10 @@
                               var data = { type: 'whitepaper', name: (fd.get('name') || '').toString().trim(), email: (fd.get('email') || '').toString().trim(), company: (fd.get('company') || '').toString().trim(), consent: !!fd.get('consent'), source: 'operative-vendor-management' };
                               var orig = btn.textContent; btn.disabled = true; btn.textContent = 'Preparing…';
                               try {
-                                var r = await fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-                                var j = await r.json().catch(function () { return {}; });
+                                var r = await fetch(SB_URL + '/rest/v1/leads', { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY, Prefer: 'return=minimal' }, body: JSON.stringify(data) });
                                 if (!r.ok) throw new Error('status ' + r.status);
                                 show('Thanks — your download is starting.', true);
-                                window.location.href = j.download || PDF;
+                                window.location.href = PDF;
                                 form.reset();
                               } catch (err) {
                                 show('Starting your download…', true);
