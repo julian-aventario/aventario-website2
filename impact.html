@@ -679,7 +679,18 @@
             if (fCaret) { fCaret.classList.toggle('ph-caret-down'); fCaret.classList.toggle('ph-caret-up'); }
         });
         applyFilters();
-    
+
+        // Deep link: ?area=<slug> from the homepage references matrix preselects that filter
+        (function(){
+            const area = new URLSearchParams(window.location.search).get('area');
+            if (!area) return;
+            const btn = areaRow.querySelector('button[data-area="' + area + '"]');
+            if (!btn) return;
+            btn.click();
+            const target = areaRow.closest('section') || document.getElementById('impact-grid');
+            if (target) window.requestAnimationFrame(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+        })();
+
         // Transparent-over-hero nav: toggle .past-hero AND set inline background/border directly to win over Tailwind CDN cascade
         (function(){
           const n = document.getElementById('mainNav');
