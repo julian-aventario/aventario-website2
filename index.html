@@ -124,6 +124,14 @@
         .illu { opacity: 0; transform: translateY(24px) scale(0.96); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); will-change: opacity, transform; }
         .illu.in-view { opacity: 1; transform: translateY(0) scale(1); }
         @media (prefers-reduced-motion: reduce) { .illu { opacity: 1; transform: none; transition: none; } }
+
+        /* Subtle hero reveal — fades up on load, staggered */
+        .hero-reveal { opacity: 0; transform: translateY(14px); animation: heroUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        .hero-reveal-1 { animation-delay: 0.05s; }
+        .hero-reveal-2 { animation-delay: 0.20s; }
+        .hero-reveal-3 { animation-delay: 0.36s; }
+        @keyframes heroUp { to { opacity: 1; transform: translateY(0); } }
+        @media (prefers-reduced-motion: reduce) { .hero-reveal { opacity: 1 !important; transform: none !important; animation: none !important; } }
 </style>
     <script type="application/ld+json">
 [
@@ -259,25 +267,25 @@
             <div class="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col justify-center" style="min-height: 100vh;">
                 <div class="w-full md:w-[55%] pt-28 pb-16">
 
-                    <h1 class="font-serif" style="color: #FAFAF7; font-size: clamp(2.2rem, 4.2vw, 3.8rem); line-height: 1.05; letter-spacing: -0.015em; text-shadow: 0 2px 28px rgba(0,0,0,0.7);">
+                    <h1 class="font-serif hero-reveal hero-reveal-1" style="color: #FAFAF7; font-size: clamp(2.2rem, 4.2vw, 3.8rem); line-height: 1.05; letter-spacing: -0.015em; text-shadow: 0 2px 28px rgba(0,0,0,0.7);">
                         Cost &amp; value<br>optimization for<br>IT and supply chain.
                     </h1>
 
-                    <p class="mt-6 mb-10 leading-relaxed text-base md:text-lg" style="color: rgba(250,250,247,0.94); max-width: 540px; text-shadow: 0 1px 18px rgba(0,0,0,0.7);">
+                    <p class="mt-6 mb-10 leading-relaxed text-base md:text-lg hero-reveal hero-reveal-2" style="color: rgba(250,250,247,0.94); max-width: 540px; text-shadow: 0 1px 18px rgba(0,0,0,0.7);">
                         IT and supply chain costs rise faster than the value behind them. We close that gap and stay accountable for the outcome we deliver.
                     </p>
 
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-6 max-w-2xl border-t pt-8" style="border-color: rgba(250,250,247,0.22);">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-6 max-w-2xl border-t pt-8 hero-reveal hero-reveal-3" style="border-color: rgba(250,250,247,0.22);">
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">25+</div>
+                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap hero-stat-num" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">25+</div>
                             <div class="text-xs uppercase tracking-widest mt-1" style="color: rgba(250,250,247,0.85); text-shadow: 0 1px 10px rgba(0,0,0,0.7);">years of experience</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">30+</div>
+                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap hero-stat-num" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">30+</div>
                             <div class="text-xs uppercase tracking-widest mt-1" style="color: rgba(250,250,247,0.85); text-shadow: 0 1px 10px rgba(0,0,0,0.7);">hand-picked experts</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">500+</div>
+                            <div class="font-serif text-2xl md:text-3xl whitespace-nowrap hero-stat-num" style="color: #FAFAF7; text-shadow: 0 1px 14px rgba(0,0,0,0.7);">500+</div>
                             <div class="text-xs uppercase tracking-widest mt-1" style="color: rgba(250,250,247,0.85); text-shadow: 0 1px 10px rgba(0,0,0,0.7);">successful projects</div>
                         </div>
                         <div>
@@ -786,6 +794,30 @@
             entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
           }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
           els.forEach(el => io.observe(el));
+        })();
+    </script>
+    <script>
+        // Subtle hero number count-up (skips ranges like 10–40%); respects reduced-motion
+        (function(){
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          const nums = document.querySelectorAll('.hero-stat-num');
+          const run = () => nums.forEach(el => {
+            const m = el.textContent.trim().match(/^(\d+)(\D*)$/);
+            if (!m) return;
+            const target = parseInt(m[1], 10), suffix = m[2];
+            const dur = 1100; let startT = null;
+            el.textContent = '0' + suffix;
+            const tick = (now) => {
+              if (startT === null) startT = now;
+              const t = Math.min(1, (now - startT) / dur);
+              const eased = 1 - Math.pow(1 - t, 3);
+              el.textContent = Math.round(eased * target) + suffix;
+              if (t < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          });
+          // start as the stat row fades in
+          setTimeout(run, 350);
         })();
     </script>
 </body>
