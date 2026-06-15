@@ -1,4 +1,5 @@
 # Local-only audit artefacts + backup drafts
+_backup*/
 _audit/screens/
 _audit/report.json
 _audit/node_modules/
