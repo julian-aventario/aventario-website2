@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Aventario</title>
+    <meta name="description" content="Praxisnotizen zu IT Vendor Management, strukturierten Ausschreibungen, Governance und Savings. Praxisnah geschrieben vom Team, das die Projekte umsetzt. Nach Thema und Format filterbar.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog — Aventario">
+    <meta property="og:description" content="Praxisnotizen zu IT Vendor Management, strukturierten Ausschreibungen, Governance und Savings. Praxisnah geschrieben vom Team, das die Projekte umsetzt. Nach Thema und Format filterbar.">
+    <meta property="og:url" content="https://aventario.com/blog.html">
+    <meta property="og:site_name" content="Aventario">
+    <meta property="og:image" content="https://aventario.com/og-image.png">
+    <meta property="og:locale" content="en">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — Aventario">
+    <meta name="twitter:description" content="Praxisnotizen zu IT Vendor Management, strukturierten Ausschreibungen, Governance und Savings. Praxisnah geschrieben vom Team, das die Projekte umsetzt. Nach Thema und Format filterbar.">
+    <meta name="twitter:image" content="https://aventario.com/og-image.png">
+    <link rel="canonical" href="https://aventario.com/blog.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55.42 55.2'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='11.43' y1='48.04' x2='37.22' y2='48.04' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23324a60'/%3E%3Cstop offset='.45' stop-color='%236a9a9b'/%3E%3Cstop offset='1' stop-color='%238dccc0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z' fill='%238dccc0'/%3E%3Cpolygon points='11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15' fill='url(%23g)'/%3E%3Cpath d='M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z' fill='%23324a60'/%3E%3C/svg%3E">
+    <link href="/assets/fonts/lato.css" rel="stylesheet">
+    <script src="/assets/vendor/tailwind.js"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { base: '#FAFAF7', surface: '#FFFFFF', text: '#334b60', muted: '#5f768b', accent: '#88C9BE', accentdark: '#5FA99D', orange: '#f19a51', bordercolor: 'rgba(51, 75, 96, 0.12)' }, fontFamily: { serif: ['"Lato"', '-apple-system', 'sans-serif'], sans: ['"Lato"', '-apple-system', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="/assets/vendor/phosphor/phosphor.css">
+    <style>
+        /* Keyboard focus visibility (a11y) */
+        :focus-visible { outline: 2px solid #5FA99D; outline-offset: 2px; border-radius: 3px; }
+        :focus:not(:focus-visible) { outline: none; }
+
+        /* Sticky nav: hides on scroll down, shows on scroll up */
+        nav#mainNav { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+        nav#mainNav.nav-hidden { transform: translateY(-100%); }
+        nav#mainNav .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
+        body { background-color: #FAFAF7; color: #334b60; font-family: 'Lato', -apple-system, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, h5, .font-serif { font-family: 'Lato', -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.015em; line-height: 1.05; }
+        .pc-1 { background: linear-gradient(135deg, #334b60 0%, #50757f 50%, #88c9be 100%); }
+        .pc-2 { background: linear-gradient(135deg, #88c9be 0%, #5fa99d 100%); }
+        .pc-3 { background: linear-gradient(135deg, #f19a51 0%, #d15298 100%); }
+        .pc-4 { background: linear-gradient(135deg, #334b60 0%, #d15298 100%); }
+        .pc-5 { background: linear-gradient(135deg, #5fa99d 0%, #334b60 100%); }
+        .pc-6 { background: linear-gradient(135deg, #334b60 0%, #5f768b 100%); }
+        .pc-7 { background: linear-gradient(135deg, #f19a51 0%, #334b60 100%); }
+        .pc-8 { background: linear-gradient(135deg, #334b60 0%, #88c9be 100%); }
+        .pc-9 { background: linear-gradient(135deg, #d15298 0%, #5fa99d 100%); }
+        .pc-10 { background: linear-gradient(135deg, #5f768b 0%, #88c9be 100%); }
+        .chip { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; padding: 0.45rem 0.9rem; border-radius: 9999px; border: 1px solid rgba(51, 75, 96, 0.18); background: #FFFFFF; color: #334b60; cursor: pointer; transition: all 0.15s ease; white-space: nowrap; }
+        .chip:hover { background: #F0F4F2; border-color: rgba(51, 75, 96, 0.35); }
+        .chip[aria-pressed="true"] { background: #334b60; color: #FFFFFF; border-color: #334b60; }
+        .chip .count { font-size: 0.65rem; opacity: 0.6; font-weight: 700; }
+        .chip[aria-pressed="true"] .count { opacity: 0.85; }
+        .chip-sm { font-size: 0.65rem; padding: 0.3rem 0.6rem; gap: 0.3rem; letter-spacing: 0.06em; }
+        .chip-sm .count { font-size: 0.55rem; }
+        .search-input-sm { padding: 0.4rem 0.6rem 0.4rem 1.8rem; font-size: 0.75rem; }
+        .article-card { transition: transform 0.18s ease, box-shadow 0.18s ease; display: flex; flex-direction: column; justify-content: space-between; min-height: 300px; padding: 1.4rem; border-radius: 0.5rem; position: relative; overflow: hidden; box-shadow: 0 1px 2px rgba(51,75,96,0.08); }
+        @media (min-width: 768px) { .article-card { min-height: 340px; padding: 1.6rem; } }
+        .article-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px -10px rgba(51,75,96,0.35); }
+        .article-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.32) 100%); pointer-events: none; border-radius: inherit; }
+        .article-card > * { position: relative; z-index: 1; }
+        .card-badge { display: inline-block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; padding: 0.35rem 0.7rem; border-radius: 9999px; background: rgba(255,255,255,0.16); color: #FFFFFF; backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.28); }
+        .card-meta { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: rgba(255,255,255,0.78); text-shadow: 0 1px 6px rgba(0,0,0,0.4); }
+        .card-title { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 1.15rem; line-height: 1.18; letter-spacing: -0.01em; color: #FFFFFF; margin-bottom: 0.5rem; text-shadow: 0 2px 14px rgba(0,0,0,0.4); }
+        @media (min-width: 768px) { .card-title { font-size: 1.3rem; } }
+        .card-desc { font-size: 0.82rem; line-height: 1.55; color: rgba(255,255,255,0.9); text-shadow: 0 1px 8px rgba(0,0,0,0.45); }
+        .search-input { background: #FFFFFF; border: 1px solid rgba(51, 75, 96, 0.18); border-radius: 9999px; padding: 0.55rem 1rem 0.55rem 2.5rem; font-size: 0.9rem; color: #334b60; outline: none; width: 100%; transition: border-color 0.15s ease; }
+        .search-input:focus { border-color: #5FA99D; }
+        .search-input::placeholder { color: rgba(51, 75, 96, 0.45); }
+        .article-card.hidden { display: none; }
+        #empty-state { display: none; }
+        #empty-state.visible { display: block; }
+        .filter-bar { transition: box-shadow 0.2s ease; }
+        .filter-bar.scrolled { box-shadow: 0 4px 12px -8px rgba(51, 75, 96, 0.15); }
+    
+        /* Hand-drawn illustration entrance — fades up + scales in on scroll */
+        .illu { opacity: 0; transform: translateY(24px) scale(0.96); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); will-change: opacity, transform; }
+        .illu.in-view { opacity: 1; transform: translateY(0) scale(1); }
+        @media (prefers-reduced-motion: reduce) { .illu { opacity: 1; transform: none; transition: none; } }
+</style>
+    <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://aventario.com#organization",
+    "name": "Aventario",
+    "legalName": "Aventario Services GmbH",
+    "url": "https://aventario.com/",
+    "logo": "https://aventario.com/logos/aventario-logo-CMYK.png",
+    "description": "Vienna-based consultancy specializing in cost and value optimization for IT and supply chain. Outcome-based engagements: we own the result, from strategy to execution to lasting capability.",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tuchlauben 7a",
+      "addressLocality": "Vienna",
+      "postalCode": "1010",
+      "addressCountry": "AT"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+43-134-3354012",
+        "email": "office@aventario.com",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "en",
+          "de"
+        ],
+        "areaServed": [
+          "AT",
+          "DE",
+          "CH",
+          "EU"
+        ]
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/aventario"
+    ],
+    "knowsAbout": [
+      "IT Vendor Management",
+      "Supplier Cost Optimization",
+      "Complex RFX",
+      "Strategic Sourcing",
+      "Vendor Consolidation",
+      "IT Operational Excellence",
+      "Transition Management",
+      "Change Management",
+      "Procurement Strategy",
+      "Vendor Performance Management",
+      "Contract Lifecycle Management",
+      "Vendor Management Office (VMO)"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Markus Kern",
+        "jobTitle": "CEO"
+      },
+      {
+        "@type": "Person",
+        "name": "Markus Jaksch",
+        "jobTitle": "COO"
+      },
+      {
+        "@type": "Person",
+        "name": "Margit Györfi",
+        "jobTitle": "CPO"
+      }
+    ],
+    "areaServed": [
+      "AT",
+      "DE",
+      "CH",
+      "EU"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "url": "https://aventario.com/blog.html",
+    "name": "Blog — Aventario",
+    "description": "IT vendor management and procurement field notes",
+    "isPartOf": {
+      "@id": "https://aventario.com#website"
+    },
+    "publisher": {
+      "@id": "https://aventario.com#organization"
+    }
+  }
+]
+    </script>
+</head>
+<body>
+
+    <nav id="mainNav" class="sticky top-0 z-50 bg-base/95 backdrop-blur-sm border-b border-bordercolor px-6 md:px-12 py-4 flex justify-between items-center"><div class="nav-inner">
+        <a href="/de/index.html" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.29 55.2" class="h-11 md:h-14"><g><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="#8dccc0"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#324a60"/><path d="M86.05,40.9h-5.18c-.14,0-.26-.09-.3-.22l-1.09-3.31c-.04-.11-.13-.18-.25-.18h-6.41c-.11,0-.21,.07-.25,.18l-1.1,3.35c-.04,.11-.13,.18-.25,.18h-5.22c-.18,0-.31-.18-.24-.35l7.7-20.43c.05-.13,.17-.21,.31-.21h4.54c.12,0,.23,.07,.27,.19l7.71,20.46c.06,.17-.06,.35-.24,.35Zm-8.16-8.34l-1.61-4.89c-.08-.24-.42-.24-.51,0l-1.61,4.9c-.06,.17,.07,.34,.24,.34h3.24c.18,0,.31-.18,.25-.35Z" fill="#324a60"/><path d="M99.59,25.15l-5.48,15.35c-.04,.1-.13,.17-.24,.17h-4.63c-.11,0-.2-.07-.24-.17l-5.48-15.35c-.06-.17,.06-.34,.24-.34h4.42c.11,0,.2,.07,.24,.17l3.14,8.8,3.14-8.8c.04-.1,.13-.17,.24-.17h4.42c.18,0,.3,.17,.24,.34Z" fill="#324a60"/><path d="M116.31,32.86c0,.46-.05,1-.14,1.47-.02,.12-.13,.21-.25,.21h-11.11c-.2,0-.32,.21-.22,.38,.68,1.16,1.9,1.88,3.25,1.88,1.15,0,2.22-.5,2.98-1.48,.06-.08,.15-.11,.25-.1l4.25,.76c.16,.03,.26,.21,.18,.36-1.34,2.66-4.01,4.5-7.13,4.5-4.43,0-8.04-3.71-8.04-8.3s3.61-8.3,8.04-8.3,8.04,3.71,8.04,8.3Zm-4.96-2.1c-.2-1.17-1.55-2.08-3.27-2.08-1.56,0-3.05,.9-3.27,2.08-.03,.16,.09,.3,.25,.3h6.04c.16,0,.28-.14,.25-.3Z" fill="#324a60"/><path d="M132.6,31.49v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-8.67c0-.59-.03-1.26-.28-1.81-.11-.23-.26-.42-.44-.56-.3-.23-.68-.35-1.17-.35-.91,0-1.62,.31-1.84,.82-.26,.55-.26,1.3-.26,1.9v8.67c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.43c0,.1,.11,.16,.2,.1,3.57-2.46,7.05,.27,7.08,.3,.13,.1,.25,.21,.36,.31,1.62,1.63,1.89,2.94,1.89,5.28Z" fill="#324a60"/><path d="M143.71,36.84l-.57,3.75c-.02,.12-.12,.21-.24,.21-.54,.03-2,.11-2.44,.11-.04,0-.06,0-.09,0-2.69-.14-4.12-1.52-4.12-4v-7.61c0-.14-.11-.25-.25-.25h-1.65c-.14,0-.25-.11-.25-.25v-3.75c0-.14,.11-.25,.25-.25h1.65c.14,0,.25-.11,.25-.25v-4.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v4.35c0,.14,.11,.25,.25,.25h1.65c.14,0,.25,.11,.25,.25v3.75c0,.14-.11,.25-.25,.25h-1.65c-.14,0-.25,.11-.25,.25,0,1.32,0,5.21,0,5.25v.11c-.02,.48-.04,1.14,.34,1.54,.23,.23,.58,.35,1.05,.35h.86c.15,0,.27,.14,.25,.29Z" fill="#324a60"/><path d="M162.83,25.06v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-.23c0-.1-.11-.16-.19-.11-1.27,.72-2.71,1.1-4.18,1.1-4.64,0-8.42-3.73-8.42-8.3s3.78-8.3,8.42-8.3c1.47,0,2.91,.38,4.18,1.1,.08,.05,.19-.01,.19-.11v-.48c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm-4.94,7.8c0-2.1-1.48-3.81-3.61-3.81s-3.86,1.71-3.86,3.81,1.73,3.81,3.86,3.81,3.61-1.71,3.61-3.81Z" fill="#324a60"/><path d="M174.13,25.08l-.15,3.71c0,.15-.13,.26-.28,.24-.43-.04-1.3-.1-1.81,.03-.57,.14-.9,.58-1,.79-.26,.55-.26,1.03-.26,1.65v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.44c0,.1,.11,.16,.19,.11,1.05-.65,2.29-.79,3.34-.8,.15,0,.26,.12,.26,.26Z" fill="#324a60"/><path d="M181.06,20.07v3.24c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-3.24c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm0,4.99v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Z" fill="#324a60"/><path d="M199.29,32.87c0,4.58-3.78,8.3-8.42,8.3s-8.42-3.73-8.42-8.3,3.78-8.3,8.42-8.3,8.42,3.73,8.42,8.3Zm-4.75,0c0-2-1.65-3.62-3.67-3.62s-3.67,1.62-3.67,3.62,1.65,3.62,3.67,3.62,3.67-1.62,3.67-3.62Z" fill="#324a60"/></g></svg></a>
+        <div class="hidden lg:flex space-x-8 text-sm uppercase tracking-widest font-bold items-center">
+            <a href="/de/impact.html" class="hover:text-accentdark">Referenzen</a>
+            <a href="/de/resources.html" class="hover:text-accentdark">Ressourcen</a>
+            <a href="/de/about.html" class="hover:text-accentdark">Team</a>
+            <a href="/" class="hover:text-accentdark opacity-70" title="English version">EN</a>
+            <a href="/de/blog.html" class="text-accentdark">Blog</a>
+        </div>
+        <a href="/de/contact.html" class="hidden lg:inline-flex text-sm font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full hover:bg-accentdark transition-colors">Kontakt</a>
+        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 flex items-center justify-center" aria-label="Toggle menu"><i class="ph ph-list text-2xl"></i></button>
+    </div></nav>
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-bordercolor bg-base px-6 py-4 space-y-2">
+        <a href="/de/impact.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Referenzen</a>
+        <a href="/de/resources.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Ressourcen</a>
+        <a href="/de/about.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Team</a>
+        <a href="/de/blog.html" class="block py-2 text-base font-bold uppercase tracking-widest text-accentdark">Blog</a>
+        <a href="/de/contact.html" class="block mt-3 text-center text-sm font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full">Kontakt</a>
+    </div>
+
+    <section class="px-6 md:px-12 pt-16 md:pt-24 pb-12 md:pb-14 border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-start">
+            <div class="lg:col-span-2">
+                <h1 class="font-serif text-5xl md:text-7xl mb-6">Blog.</h1>
+                <p class="text-lg md:text-xl text-text leading-relaxed max-w-2xl">Was wir aus über 500 Projekten in IT Sourcing, Vendor Management und Transformation gelernt haben, geschrieben von den Menschen, die sie umgesetzt haben. Filter rechts.</p>
+            </div>
+            <aside id="filterBar" class="filter-bar lg:col-span-1 bg-surface border border-bordercolor rounded-md p-4 text-[13px]">
+                <div class="flex items-center justify-between mb-3">
+                    <p class="text-[10px] uppercase tracking-widest text-text/60 font-bold">Filter</p>
+                    <p class="text-[10px] uppercase tracking-widest text-text/50 font-bold"><span id="resultCount">40</span> Artikel</p>
+                </div>
+                <div class="mb-3">
+                    <p class="text-[10px] uppercase tracking-widest text-text/50 font-bold mb-1.5">Format</p>
+                    <div class="flex gap-1.5 flex-wrap" data-filter-group="format">
+                        <button class="chip chip-sm" data-filter="all" aria-pressed="true">Alle <span class="count" id="count-all"></span></button>
+                        <button class="chip chip-sm" data-filter="pillar" aria-pressed="false">Pillar <span class="count" id="count-pillar"></span></button>
+                        <button class="chip chip-sm" data-filter="cluster" aria-pressed="false">Cluster <span class="count" id="count-cluster"></span></button>
+                        <button class="chip chip-sm" data-filter="faq" aria-pressed="false">FAQ <span class="count" id="count-faq"></span></button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <p class="text-[10px] uppercase tracking-widest text-text/50 font-bold mb-1.5">Thema</p>
+                    <div class="flex gap-1.5 flex-wrap" data-filter-group="topic">
+                        <button class="chip chip-sm" data-filter="all" aria-pressed="true">Alle</button>
+                        <button class="chip chip-sm" data-filter="vendor-management" aria-pressed="false">Vendor Mgmt</button>
+                        <button class="chip chip-sm" data-filter="savings" aria-pressed="false">Savings</button>
+                        <button class="chip chip-sm" data-filter="rfx" aria-pressed="false">RFX</button>
+                        <button class="chip chip-sm" data-filter="governance" aria-pressed="false">Governance</button>
+                        <button class="chip chip-sm" data-filter="contracts" aria-pressed="false">Verträge</button>
+                        <button class="chip chip-sm" data-filter="srm" aria-pressed="false">SRM</button>
+                        <button class="chip chip-sm" data-filter="operations" aria-pressed="false">Operations</button>
+                        <button class="chip chip-sm" data-filter="strategy" aria-pressed="false">Strategie</button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 pt-2 border-t border-bordercolor">
+                    <div class="relative flex-1 min-w-0">
+                        <i class="ph ph-magnifying-glass absolute left-2.5 top-1/2 -translate-y-1/2 text-text/40 text-sm"></i>
+                        <input id="searchInput" class="search-input search-input-sm" type="text" placeholder="Suchen…" aria-label="Artikel durchsuchen">
+                    </div>
+                    <button id="resetFilters" class="text-[10px] uppercase tracking-widest font-bold text-text/60 hover:text-text underline-offset-4 hover:underline shrink-0">Zurücksetzen</button>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="px-6 md:px-12 py-12 md:py-16">
+        <div class="max-w-6xl mx-auto">
+
+            <div id="articleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+
+                <a href="/de/blog/it-vendor-management" class="article-card pc-1" data-format="pillar" data-topic="vendor-management,governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar &middot; Vendor Management</span>
+                        <span class="card-meta">14 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Der komplette Leitfaden zum IT Vendor Management.</h3>
+                        <p class="card-desc">Strategie, Frameworks und was funktioniert, aus über 500 Projekten und 3 Mrd. Euro verhandeltem Vertragsvolumen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-vendor-spend-optimization" class="article-card pc-2" data-format="pillar" data-topic="savings">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · Savings</span>
+                        <span class="card-meta">13 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">IT-Lieferantenausgaben optimieren: 10–40 % Ihres IT-Budgets zurückholen.</h3>
+                        <p class="card-desc">Die 8 Kategorien, in denen sich Überzahlungen verstecken, der Nachverhandlungsspielraum, das 30/60/90-Playbook.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-rfp-guide" class="article-card pc-3" data-format="pillar" data-topic="rfx">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · RFX</span>
+                        <span class="card-meta">15 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Eine komplexe IT-Ausschreibung in 6–8 Wochen durchführen.</h3>
+                        <p class="card-desc">Zero Vendor Deviation™: die Methodik, die Lieferantenangebote Zeile für Zeile vergleichbar macht.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-vendor-consolidation" class="article-card pc-4" data-format="pillar" data-topic="strategy,vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · Consolidation</span>
+                        <span class="card-meta">12 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Von 47 Lieferanten auf 5 strategische Partner.</h3>
+                        <p class="card-desc">Warum Vendor Sprawl kein Einkaufsproblem ist, und auf welcher Architektur Rationalisierung landet.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-contract-management" class="article-card pc-5" data-format="pillar" data-topic="contracts">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · Contracts</span>
+                        <span class="card-meta">12 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Von der Unterschrift zu den Savings: ein praktischer Leitfaden.</h3>
+                        <p class="card-desc">Der 7-stufige Lebenszyklus, die 8 Verlängerungsfallen und was eine KI-gestützte Vertragsanalyse wirklich findet.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/supplier-relationship-management" class="article-card pc-6" data-format="pillar" data-topic="srm">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · SRM</span>
+                        <span class="card-meta">11 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">SRM: das CRM, das Sie für Ihre Lieferanten nicht haben.</h3>
+                        <p class="card-desc">Die Asymmetrie zwischen der Steuerung von Kunden und Lieferanten, und wie Sie sie schließen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-operational-excellence" class="article-card pc-7" data-format="pillar" data-topic="operations">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · Operations</span>
+                        <span class="card-meta">12 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Die 20 %, die Ihre Prozesse verschwenden, finden und beseitigen.</h3>
+                        <p class="card-desc">Die Säule IT Operational Excellence: Landschaftsanalyse, Process Mining, Anwendungsrationalisierung.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-vendor-governance" class="article-card pc-8" data-format="pillar" data-topic="governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · Governance</span>
+                        <span class="card-meta">12 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Das Framework, das Lieferanten in der Verantwortung hält.</h3>
+                        <p class="card-desc">Dreistufige Vendor Governance, Scorecards, die tatsächlich Verhalten steuern, und der Rhythmus, der Entscheidungen hervorbringt.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/digital-transformation-sourcing" class="article-card pc-9" data-format="pillar" data-topic="strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · Strategy</span>
+                        <span class="card-meta">12 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Digitale Transformation ohne Vendor-Chaos.</h3>
+                        <p class="card-desc">Der Sourcing-Leitfaden für IT-Verantwortliche: Cloud Governance, Hyperscaler-Steuerung, Transformation, die skaliert.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-software" class="article-card pc-10" data-format="pillar" data-topic="srm">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Pillar · SRM Tools</span>
+                        <span class="card-meta">13 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Vendor-Management-Software: der Einkaufsleitfaden 2026.</h3>
+                        <p class="card-desc">SRM vs. CLM vs. VMS, die Bewertungskriterien, die zählen, die 5 wiederkehrenden Fehlerquellen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/what-is-it-vendor-management" class="article-card pc-6" data-format="cluster" data-topic="vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Definition</span>
+                        <span class="card-meta">9 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist IT Vendor Management? Eine vollständige Definition für CIOs.</h3>
+                        <p class="card-desc">Die Funktion, der Umfang, die fünf Kompetenzsäulen. Was Vendor Management vom Einkauf unterscheidet.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-lifecycle" class="article-card pc-1" data-format="cluster" data-topic="vendor-management,governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Lifecycle</span>
+                        <span class="card-meta">10 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Der 7-stufige Lebenszyklus im IT Vendor Management.</h3>
+                        <p class="card-desc">Praxisnahes Framework, keine Theorie. Jede Stufe mit ihren Fehlerquellen und den Kontrollen, die sie abfangen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/how-to-build-vmo" class="article-card pc-3" data-format="cluster" data-topic="vendor-management,strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · VMO-Aufbau</span>
+                        <span class="card-meta">10 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Ein Vendor Management Office aufbauen, Schritt für Schritt.</h3>
+                        <p class="card-desc">Ein Aufbauweg über 12 Monate. Umfang, Struktur, Kompetenzen, Tooling, in der Reihenfolge, die früh Wert schafft.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/three-tier-governance-model" class="article-card pc-5" data-format="cluster" data-topic="governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Governance-Modell</span>
+                        <span class="card-meta">9 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Das dreistufige Vendor-Governance-Modell erklärt.</h3>
+                        <p class="card-desc">Drei Ebenen, drei Rhythmen, drei Sätze an Entscheidungen. Eine Ebene zu überspringen ist die häufigste Ursache für den Verfall der Governance.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-kpis" class="article-card pc-2" data-format="cluster" data-topic="governance,vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · KPIs</span>
+                        <span class="card-meta">10 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">15 KPIs im IT Vendor Management, die Leistung wirklich messen.</h3>
+                        <p class="card-desc">Fünf Dimensionen: Delivery, Kommerzielles, Risiko, Beziehung, Innovation. Dazu die Kennzahlen, die seriös wirken, aber nichts aussagen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-vs-supplier-management" class="article-card pc-7" data-format="cluster" data-topic="vendor-management,srm">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Terminologie</span>
+                        <span class="card-meta">7 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Vendor Management vs. Supplier Management.</h3>
+                        <p class="card-desc">Werden synonym verwendet. Sollten sie nicht. In reifen Organisationen sind es unterschiedliche Funktionen mit unterschiedlichem Umfang und unterschiedlicher Governance.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/hidden-cost-of-poor-vendor-management" class="article-card pc-4" data-format="cluster" data-topic="savings,vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Versteckte Kosten</span>
+                        <span class="card-meta">9 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Die versteckten Kosten von schlechtem IT Vendor Management.</h3>
+                        <p class="card-desc">Über mehr als 500 Projekte hinweg: 15–25 % der Lieferantenausgaben versickern über sieben konkrete Kanäle. Kaum etwas davon taucht im Budget auf.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-maturity-assessment" class="article-card pc-8" data-format="cluster" data-topic="vendor-management,strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Reifegrad</span>
+                        <span class="card-meta">10 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Reifegrad im Vendor Management: wo stehen Sie wirklich?</h3>
+                        <p class="card-desc">25 diagnostische Fragen. Die ehrliche Bewertung, die die meisten Selbsteinschätzungen nicht liefern.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/how-to-choose-it-vendors" class="article-card pc-9" data-format="cluster" data-topic="rfx,vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Lieferantenauswahl</span>
+                        <span class="card-meta">9 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Die richtigen Lieferanten für Ihr IT-Portfolio auswählen.</h3>
+                        <p class="card-desc">Fünf Bewertungsdimensionen. Das Framework, das echte Unterschiede sichtbar macht. Dazu die vier Fehlerquellen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-mid-market-dach" class="article-card pc-10" data-format="cluster" data-topic="vendor-management,strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Mid-Market</span>
+                        <span class="card-meta">8 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Vendor Management für mittelständische Unternehmen im DACH-Raum.</h3>
+                        <p class="card-desc">Zu komplex für KMU-Ansätze, zu klein für Enterprise-VMOs. Das hybride Modell, das wirklich passt.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-governance-vacuum" class="article-card pc-4" data-format="cluster" data-topic="governance,strategy,savings">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Manifest</span>
+                        <span class="card-meta">11 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Das Vendor Governance Vacuum™.</h3>
+                        <p class="card-desc">Wo 15–25 % der IT-Lieferantenausgaben versickern. Die strukturelle Lücke zwischen Vertragsunterschrift und Vertragserfüllung. Benannt, quantifiziert und schließbar.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-vendor-risk-framework" class="article-card pc-5" data-format="cluster" data-topic="governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Risiko-Framework</span>
+                        <span class="card-meta">10 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Ein praktisches Framework für IT-Lieferantenrisiken.</h3>
+                        <p class="card-desc">Sieben Kategorien. Je fünf Bewertungssignale. Drei Eskalationsschwellen. Ab dem ersten Tag einsatzbereit.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-performance-reviews" class="article-card pc-1" data-format="cluster" data-topic="governance,vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Performance Reviews</span>
+                        <span class="card-meta">8 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Vendor Performance Reviews, die wirklich Verbesserung bewirken.</h3>
+                        <p class="card-desc">Die meisten Reviews sind Theater. So führen Sie eines, das Entscheidungen statt Foliensätze hervorbringt.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/why-youre-overpaying-it-vendors" class="article-card pc-2" data-format="cluster" data-topic="savings">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Überzahlung</span>
+                        <span class="card-meta">8 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Warum Sie Ihre IT-Lieferanten um 10–40 % überbezahlen.</h3>
+                        <p class="card-desc">Kein Ausnahmebefund. Der strukturelle Normalfall. Wo es sich versteckt, und warum Sie es ohne externen Benchmark fast nie sehen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-contract-auto-renewal-trap" class="article-card pc-7" data-format="cluster" data-topic="savings,contracts">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">Cluster · Automatische Verlängerung</span>
+                        <span class="card-meta">8 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Die Falle der automatischen Verlängerung.</h3>
+                        <p class="card-desc">Der zuverlässigste Mechanismus, um einmalige Entscheidungen in dauerhafte Überzahlungen zu verwandeln. Steckt in über 60 % der Portfolios mittelständischer Unternehmen.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-office" class="article-card pc-3" data-format="faq" data-topic="vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · VMO</span>
+                        <span class="card-meta">6 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist ein Vendor Management Office (VMO)?</h3>
+                        <p class="card-desc">Die Funktion, die das Lieferantenportfolio über den gesamten Lebenszyklus verantwortet. Oft mit dem Einkauf verwechselt.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/zero-vendor-deviation" class="article-card pc-4" data-format="faq" data-topic="rfx">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Methodik</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist Zero Vendor Deviation™?</h3>
+                        <p class="card-desc">Die RFP-Methodik von Aventario. So aufgebaut, dass Lieferanten nicht von der Struktur der Frage abweichen können.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/sla-vs-ola-vs-kpi" class="article-card pc-5" data-format="faq" data-topic="contracts,governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Definitionen</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">SLA vs. OLA vs. KPI: die Unterschiede, die zählen.</h3>
+                        <p class="card-desc">Drei Begriffe, drei Aufgaben. In der Verwechslung zwischen ihnen liegen die meisten SLA-Streitigkeiten.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/kraljic-matrix" class="article-card pc-6" data-format="faq" data-topic="vendor-management,strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Framework</span>
+                        <span class="card-meta">6 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist die Kraljic-Matrix?</h3>
+                        <p class="card-desc">Das Standardwerkzeug zur Lieferantensegmentierung, auf die IT angewendet. Vier Quadranten, vier Ansätze, ein entscheidender Fehler.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-vendor-risk" class="article-card pc-7" data-format="faq" data-topic="governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Risiko</span>
+                        <span class="card-meta">6 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist IT-Lieferantenrisiko?</h3>
+                        <p class="card-desc">Sieben Kategorien. Jede hat ein anderes Signal, einen anderen Rhythmus und ein anderes Gremium.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/frame-contract-it" class="article-card pc-8" data-format="faq" data-topic="contracts">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Contracts</span>
+                        <span class="card-meta">6 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist ein Rahmenvertrag im IT Sourcing?</h3>
+                        <p class="card-desc">Eine Rahmenvereinbarung, die Konditionen vorab verhandelt. Ein Hebel, wenn gut gestaltet; eine Lock-in-Falle, wenn schlecht gestaltet.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/strategic-vs-tactical-supplier" class="article-card pc-9" data-format="faq" data-topic="vendor-management,strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Segmentierung</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Strategischer vs. taktischer Lieferant, der Unterschied.</h3>
+                        <p class="card-desc">Zwei unterschiedliche Aufgaben, zwei unterschiedliche Steuerungsmodelle. Den einen für den anderen zu halten, vernichtet zuverlässig Wert.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-sprawl" class="article-card pc-10" data-format="faq" data-topic="vendor-management">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Portfolio</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist Vendor Sprawl?</h3>
+                        <p class="card-desc">Der Bodensatz vieler nachvollziehbarer lokaler Entscheidungen, getroffen ohne Gesamtüberblick. Unsichtbar, bis es das nicht mehr ist.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/it-outsourcing-governance" class="article-card pc-1" data-format="faq" data-topic="governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Governance</span>
+                        <span class="card-meta">6 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist IT-Outsourcing-Governance?</h3>
+                        <p class="card-desc">Die Kompetenz auf Kundenseite, die einen Outsourcing-Anbieter in der Verantwortung hält. Häufig wird angenommen, sie komme mit dem Vertrag.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/process-mining-it" class="article-card pc-2" data-format="faq" data-topic="operations">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Operations</span>
+                        <span class="card-meta">6 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist Process Mining?</h3>
+                        <p class="card-desc">Das tatsächliche Prozessverhalten aus Systemereignisprotokollen rekonstruieren. Der dokumentierte und der reale Prozess unterscheiden sich.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/change-request-management" class="article-card pc-3" data-format="faq" data-topic="contracts,governance">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Contracts</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist Change Request Management?</h3>
+                        <p class="card-desc">Der Mechanismus, der laufende Umfangsänderungen steuert. Zuverlässig die größte Quelle für unkontrolliertes Kostenwachstum im IT-Outsourcing.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/rfp-weighted-evaluation-matrix" class="article-card pc-4" data-format="faq" data-topic="rfx">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · RFX</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist eine gewichtete Bewertungsmatrix?</h3>
+                        <p class="card-desc">Das Bewertungswerkzeug, das qualitative Antworten in ein belastbares Ranking überführt. Auch dort schleichen sich in den meisten RFPs Verzerrungen ein.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/supplier-segmentation" class="article-card pc-5" data-format="faq" data-topic="vendor-management,strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Segmentierung</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist Lieferantensegmentierung?</h3>
+                        <p class="card-desc">Die Disziplin, Lieferanten nach strategischem Wert zu gruppieren, sodass der Steuerungsaufwand zum Wert der Beziehung passt.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/contract-lifecycle-management-it" class="article-card pc-6" data-format="faq" data-topic="contracts,srm">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · CLM</span>
+                        <span class="card-meta">5 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Was ist Contract Lifecycle Management für IT?</h3>
+                        <p class="card-desc">Der strukturierte Prozess, IT-Verträge von der Anfrage bis zur Verlängerung zu steuern. Die meisten Organisationen glauben, ihn zu haben; nur wenige haben ihn wirklich.</p>
+                    </div>
+                </a>
+
+                <a href="/de/blog/vendor-management-maturity-model" class="article-card pc-7" data-format="faq" data-topic="vendor-management,strategy">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="card-badge">FAQ · Reifegrad</span>
+                        <span class="card-meta">6 Min.</span>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Das Reifegradmodell im Vendor Management.</h3>
+                        <p class="card-desc">Fünf Stufen: reaktiv, definiert, gesteuert, integriert, optimiert. Die meisten mittelständischen Unternehmen im DACH-Raum liegen auf Stufe 2.</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div id="empty-state" class="text-center py-20">
+                <img src="/images/illustrations/v2/shrugger.png"
+                     alt=""
+                     role="presentation"
+                     class="illu in-view w-full max-w-[280px] h-auto mx-auto mb-6"
+                     loading="lazy"
+                     decoding="async">
+                <h3 class="font-serif text-2xl text-text mb-2">Keine Artikel passen zu diesen Filtern.</h3>
+                <p class="text-text/60 mb-6">Entfernen Sie einen Filter oder setzen Sie die Suche zurück.</p>
+                <button id="emptyReset" class="text-sm font-bold uppercase tracking-widest bg-text text-surface px-5 py-2.5 rounded-full hover:bg-accentdark transition-colors">Filter zurücksetzen</button>
+            </div>
+
+            <div class="text-center mt-20 pt-12 border-t border-bordercolor">
+                <p class="text-sm text-text/60">Weitere Artikel erscheinen über die nächsten 18 Monate. 244 von 284 geplanten Artikeln stehen noch aus.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="relative overflow-hidden">
+        <img src="/images/cta-ridge.jpg" alt="" role="presentation" class="absolute inset-0 w-full h-full object-cover" style="object-position:center 52%;" loading="lazy" decoding="async">
+        <div class="absolute inset-0" style="background:linear-gradient(90deg, rgba(15,22,35,0.76) 0%, rgba(15,22,35,0.42) 50%, rgba(15,22,35,0.20) 100%);"></div>
+        <div class="relative max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-36 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <h2 class="font-serif text-4xl md:text-6xl leading-tight" style="color:#FAFAF7; text-shadow: 0 2px 18px rgba(0,0,0,0.55);">Sprechen wir.</h2>
+            <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+                <a href="/de/contact.html" class="inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest px-8 py-4 rounded-full transition-colors" style="background-color:#FAFAF7; color:#334b60;">Kontakt aufnehmen <i class="ph ph-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-text text-surface px-6 md:px-12 py-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+                <div class="md:col-span-5">
+                    <p class="font-serif text-2xl mb-3">Aventario</p>
+                    <p class="text-sm text-surface/60 max-w-sm">Kosten- und Wertoptimierung für IT und Supply Chain. Wir verantworten das Ergebnis, nicht nur die Stunden.</p>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Kontakt</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="mailto:office@aventario.com" class="hover:text-accent">office@aventario.com</a></li>
+                        <li>Tuchlauben 7a, 1010 Vienna</li>
+                        <li>+43 134 3354012</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Entdecken</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="/de/impact.html" class="hover:text-accent">Referenzen</a></li>
+                        <li><a href="/de/resources.html" class="hover:text-accent">Ressourcen</a></li>
+                        <li><a href="/de/about.html" class="hover:text-accent">Team</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-xs uppercase tracking-widest text-surface/40 mb-4 font-bold">Unternehmen</p>
+                    <ul class="space-y-2 text-sm text-surface/80">
+                        <li><a href="/de/contact.html" class="hover:text-accent">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-surface/10 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs text-surface/40 gap-2">
+                <p>&copy; 2026 Aventario Services GmbH</p>
+                <div class="flex gap-6">
+                    <a href="/de/impressum.html" class="hover:text-surface">Impressum</a>
+                    <a href="/de/datenschutz.html" class="hover:text-surface">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky nav: hide on scroll down, show on scroll up (standard pattern)
+        (function(){
+          const n = document.getElementById('mainNav'); if (!n) return;
+          let lastY = window.scrollY;
+          let ticking = false;
+          const DELTA = 6;
+          const TOP_SAFE = 80;
+          const upd = () => {
+            const y = window.scrollY;
+            if (Math.abs(y - lastY) < DELTA) { ticking = false; return; }
+            if (y > lastY && y > TOP_SAFE) {
+              n.classList.add('nav-hidden');
+            } else {
+              n.classList.remove('nav-hidden');
+            }
+            lastY = y;
+            ticking = false;
+          };
+          window.addEventListener('scroll', () => {
+            if (!ticking) { window.requestAnimationFrame(upd); ticking = true; }
+          }, { passive: true });
+        })();
+        (function() {
+            const cards = Array.from(document.querySelectorAll('.article-card'));
+            const formatChips = document.querySelectorAll('[data-filter-group="format"] .chip');
+            const topicChips = document.querySelectorAll('[data-filter-group="topic"] .chip');
+            const searchInput = document.getElementById('searchInput');
+            const resetBtn = document.getElementById('resetFilters');
+            const emptyResetBtn = document.getElementById('emptyReset');
+            const resultCount = document.getElementById('resultCount');
+            const emptyState = document.getElementById('empty-state');
+            const grid = document.getElementById('articleGrid');
+            const filterBar = document.getElementById('filterBar');
+
+            let activeFormat = 'all';
+            let activeTopic = 'all';
+            let activeSearch = '';
+
+            const counts = { all: cards.length, pillar: 0, cluster: 0, faq: 0 };
+            cards.forEach(c => { const f = c.dataset.format; if (counts[f] !== undefined) counts[f]++; });
+            document.getElementById('count-all').textContent = counts.all;
+            document.getElementById('count-pillar').textContent = counts.pillar;
+            document.getElementById('count-cluster').textContent = counts.cluster;
+            document.getElementById('count-faq').textContent = counts.faq;
+
+            function applyFilters() {
+                let shown = 0;
+                cards.forEach(card => {
+                    const matchFormat = activeFormat === 'all' || card.dataset.format === activeFormat;
+                    const matchTopic = activeTopic === 'all' || card.dataset.topic.split(',').includes(activeTopic);
+                    const text = (card.textContent || '').toLowerCase();
+                    const matchSearch = !activeSearch || text.includes(activeSearch);
+                    const visible = matchFormat && matchTopic && matchSearch;
+                    card.classList.toggle('hidden', !visible);
+                    if (visible) shown++;
+                });
+                resultCount.textContent = shown;
+                emptyState.classList.toggle('visible', shown === 0);
+                grid.classList.toggle('hidden', shown === 0);
+            }
+
+            function activate(chips, value) {
+                chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === value ? 'true' : 'false'));
+            }
+
+            formatChips.forEach(chip => chip.addEventListener('click', () => {
+                activeFormat = chip.dataset.filter;
+                activate(formatChips, activeFormat);
+                applyFilters();
+            }));
+
+            topicChips.forEach(chip => chip.addEventListener('click', () => {
+                activeTopic = chip.dataset.filter;
+                activate(topicChips, activeTopic);
+                applyFilters();
+            }));
+
+            searchInput.addEventListener('input', e => {
+                activeSearch = e.target.value.trim().toLowerCase();
+                applyFilters();
+            });
+
+            function resetAll() {
+                activeFormat = 'all';
+                activeTopic = 'all';
+                activeSearch = '';
+                searchInput.value = '';
+                activate(formatChips, 'all');
+                activate(topicChips, 'all');
+                applyFilters();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            resetBtn.addEventListener('click', resetAll);
+            emptyResetBtn.addEventListener('click', resetAll);
+
+            // Filter panel now lives inside hero (non-sticky) — scroll-shadow observer no longer needed.
+
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+
+            applyFilters();
+        })();
+    
+        // Fade-up + scale-in for hand-drawn illustrations
+        (function(){
+          const els = document.querySelectorAll('.illu');
+          if (!els.length || !('IntersectionObserver' in window)) {
+            els.forEach(el => el.classList.add('in-view'));
+            return;
+          }
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+          }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+          els.forEach(el => io.observe(el));
+        })();
+    </script>
+</body>
+</html>

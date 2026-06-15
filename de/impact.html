@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referenzen — Aventario</title>
+    <meta name="description" content="Eine Auswahl von Aventario-Projekten, anonymisiert nach Branche. Filtern Sie nach Kompetenzbereich oder konkreter Lösung, um den Fall zu finden, der Ihrem am nächsten kommt.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Referenzen — Aventario">
+    <meta property="og:description" content="Eine Auswahl von Aventario-Projekten, anonymisiert nach Branche. Filtern Sie nach Kompetenzbereich oder konkreter Lösung, um den Fall zu finden, der Ihrem am nächsten kommt.">
+    <meta property="og:url" content="https://aventario.com/impact">
+    <meta property="og:site_name" content="Aventario">
+    <meta property="og:image" content="https://aventario.com/og-image.png">
+    <meta property="og:locale" content="en">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Referenzen — Aventario">
+    <meta name="twitter:description" content="Eine Auswahl von Aventario-Projekten, anonymisiert nach Branche. Filtern Sie nach Kompetenzbereich oder konkreter Lösung, um den Fall zu finden, der Ihrem am nächsten kommt.">
+    <meta name="twitter:image" content="https://aventario.com/og-image.png">
+    <link rel="canonical" href="https://aventario.com/impact">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55.42 55.2'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='11.43' y1='48.04' x2='37.22' y2='48.04' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23324a60'/%3E%3Cstop offset='.45' stop-color='%236a9a9b'/%3E%3Cstop offset='1' stop-color='%238dccc0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z' fill='%238dccc0'/%3E%3Cpolygon points='11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15' fill='url(%23g)'/%3E%3Cpath d='M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z' fill='%23324a60'/%3E%3C/svg%3E">
+    <link href="/assets/fonts/lato.css" rel="stylesheet">
+    <script src="/assets/vendor/tailwind.js"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { base: '#FAFAF7', surface: '#FFFFFF', text: '#334b60', muted: '#5f768b', accent: '#88C9BE', accentdark: '#5FA99D', orange: '#f19a51', bordercolor: 'rgba(51, 75, 96, 0.12)' }, fontFamily: { serif: ['"Lato"', '-apple-system', 'sans-serif'], sans: ['"Lato"', '-apple-system', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="/assets/vendor/phosphor/phosphor.css">
+    <style>
+        /* Keyboard focus visibility (a11y) */
+        :focus-visible { outline: 2px solid #5FA99D; outline-offset: 2px; border-radius: 3px; }
+        :focus:not(:focus-visible) { outline: none; }
+
+        /* Sticky nav: hides on scroll down, shows on scroll up */
+        nav#mainNav { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+        nav#mainNav.nav-hidden { transform: translateY(-100%); }
+        nav#mainNav .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
+        /* Over-hero nav lives ON top of the hero image. JS toggles inline styles for the past-hero state. */
+        nav#mainNav[data-over-hero] { transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        nav#mainNav[data-over-hero] .nav-inner a.nav-link { color: rgba(250,250,247,0.95); text-shadow: 0 1px 8px rgba(0,0,0,0.5); transition: color 0.25s ease, text-shadow 0.25s ease; }
+        nav#mainNav[data-over-hero].past-hero .nav-inner a.nav-link { color: #334b60; text-shadow: none; }
+        nav#mainNav[data-over-hero] .nav-inner a.nav-cta { background-color: rgba(250,250,247,0.18) !important; border: 1px solid rgba(250,250,247,0.45) !important; color: #FAFAF7 !important; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+        nav#mainNav[data-over-hero].past-hero .nav-inner a.nav-cta { background-color: #334b60 !important; border-color: #334b60 !important; color: #FAFAF7 !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
+        /* Mobile burger icon over hero: white when transparent, navy when past-hero */
+        nav#mainNav[data-over-hero] #mobileMenuBtn { color: #FAFAF7; text-shadow: 0 1px 8px rgba(0,0,0,0.5); transition: color 0.25s ease, text-shadow 0.25s ease; }
+        nav#mainNav[data-over-hero].past-hero #mobileMenuBtn { color: #334b60; text-shadow: none; }
+        /* Pull the first hero section up behind the transparent nav so the image is truly full-bleed top */
+        body:has(nav#mainNav[data-over-hero]) main > section:first-child,
+        body:has(nav#mainNav[data-over-hero]) > section:first-of-type { margin-top: -88px; }
+        @media (max-width: 1023px) {
+          body:has(nav#mainNav[data-over-hero]) main > section:first-child,
+          body:has(nav#mainNav[data-over-hero]) > section:first-of-type { margin-top: -76px; }
+        }
+
+
+
+
+
+        body { background-color: #FAFAF7; color: #334b60; font-family: 'Lato', -apple-system, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, h5, .font-serif { font-family: 'Lato', -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.015em; line-height: 1.05; }
+        /* Chips live ON the dark hero photo — translucent + light text */
+        .impact-chip { color: rgba(250,250,247,0.92); background-color: rgba(250,250,247,0.10); border: 1px solid rgba(250,250,247,0.28); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: all 0.15s; }
+        .impact-chip:hover { background-color: rgba(250,250,247,0.20); border-color: rgba(136,201,190,0.85); color: #FAFAF7; }
+        .impact-chip.active { background-color: #FAFAF7; color: #334b60; border-color: #FAFAF7; }
+        /* light filter-bar chips */
+        .fchip { color:#334b60; background:#ffffff; border:1px solid rgba(51,75,96,0.18); transition: all 0.15s; cursor:pointer; }
+        .fchip:hover { border-color:#5FA99D; color:#5FA99D; }
+        .fchip.active { background-color:#334b60; color:#FAFAF7; border-color:#334b60; }
+    
+        /* Hand-drawn illustration entrance — fades up + scales in on scroll */
+        .illu { opacity: 0; transform: translateY(24px) scale(0.96); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); will-change: opacity, transform; }
+        .illu.in-view { opacity: 1; transform: translateY(0) scale(1); }
+        @media (prefers-reduced-motion: reduce) { .illu { opacity: 1; transform: none; transition: none; } }
+</style>
+    <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://aventario.com#organization",
+    "name": "Aventario",
+    "legalName": "Aventario Services GmbH",
+    "url": "https://aventario.com/",
+    "logo": "https://aventario.com/logos/aventario-logo-CMYK.png",
+    "description": "Vienna-based consultancy specializing in cost and value optimization for IT and supply chain. Outcome-based engagements: we own the result, from strategy to execution to lasting capability.",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tuchlauben 7a",
+      "addressLocality": "Vienna",
+      "postalCode": "1010",
+      "addressCountry": "AT"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+43-134-3354012",
+        "email": "office@aventario.com",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "en",
+          "de"
+        ],
+        "areaServed": [
+          "AT",
+          "DE",
+          "CH",
+          "EU"
+        ]
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/aventario"
+    ],
+    "knowsAbout": [
+      "IT Vendor Management",
+      "Supplier Cost Optimization",
+      "Complex RFX",
+      "Strategic Sourcing",
+      "Vendor Consolidation",
+      "IT Operational Excellence",
+      "Transition Management",
+      "Change Management",
+      "Procurement Strategy",
+      "Vendor Performance Management",
+      "Contract Lifecycle Management",
+      "Vendor Management Office (VMO)"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Markus Kern",
+        "jobTitle": "CEO"
+      },
+      {
+        "@type": "Person",
+        "name": "Markus Jaksch",
+        "jobTitle": "COO"
+      },
+      {
+        "@type": "Person",
+        "name": "Margit Györfi",
+        "jobTitle": "CPO"
+      }
+    ],
+    "areaServed": [
+      "AT",
+      "DE",
+      "CH",
+      "EU"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "url": "https://aventario.com/impact",
+    "name": "Impact — Aventario References",
+    "description": "Aventario client engagements",
+    "isPartOf": {
+      "@id": "https://aventario.com#website"
+    },
+    "publisher": {
+      "@id": "https://aventario.com#organization"
+    }
+  }
+]
+    </script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="mainNav" data-over-hero="1" class="sticky top-0 z-40 bg-base/95 backdrop-blur-sm border-b border-bordercolor px-6 md:px-12 py-4 flex justify-between items-center"><div class="nav-inner">
+        <a href="/de/index.html" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.29 55.2" class="h-11 md:h-14"><g><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="#8dccc0"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#324a60"/><path d="M86.05,40.9h-5.18c-.14,0-.26-.09-.3-.22l-1.09-3.31c-.04-.11-.13-.18-.25-.18h-6.41c-.11,0-.21,.07-.25,.18l-1.1,3.35c-.04,.11-.13,.18-.25,.18h-5.22c-.18,0-.31-.18-.24-.35l7.7-20.43c.05-.13,.17-.21,.31-.21h4.54c.12,0,.23,.07,.27,.19l7.71,20.46c.06,.17-.06,.35-.24,.35Zm-8.16-8.34l-1.61-4.89c-.08-.24-.42-.24-.51,0l-1.61,4.9c-.06,.17,.07,.34,.24,.34h3.24c.18,0,.31-.18,.25-.35Z" fill="#324a60"/><path d="M99.59,25.15l-5.48,15.35c-.04,.1-.13,.17-.24,.17h-4.63c-.11,0-.2-.07-.24-.17l-5.48-15.35c-.06-.17,.06-.34,.24-.34h4.42c.11,0,.2,.07,.24,.17l3.14,8.8,3.14-8.8c.04-.1,.13-.17,.24-.17h4.42c.18,0,.3,.17,.24,.34Z" fill="#324a60"/><path d="M116.31,32.86c0,.46-.05,1-.14,1.47-.02,.12-.13,.21-.25,.21h-11.11c-.2,0-.32,.21-.22,.38,.68,1.16,1.9,1.88,3.25,1.88,1.15,0,2.22-.5,2.98-1.48,.06-.08,.15-.11,.25-.1l4.25,.76c.16,.03,.26,.21,.18,.36-1.34,2.66-4.01,4.5-7.13,4.5-4.43,0-8.04-3.71-8.04-8.3s3.61-8.3,8.04-8.3,8.04,3.71,8.04,8.3Zm-4.96-2.1c-.2-1.17-1.55-2.08-3.27-2.08-1.56,0-3.05,.9-3.27,2.08-.03,.16,.09,.3,.25,.3h6.04c.16,0,.28-.14,.25-.3Z" fill="#324a60"/><path d="M132.6,31.49v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-8.67c0-.59-.03-1.26-.28-1.81-.11-.23-.26-.42-.44-.56-.3-.23-.68-.35-1.17-.35-.91,0-1.62,.31-1.84,.82-.26,.55-.26,1.3-.26,1.9v8.67c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.43c0,.1,.11,.16,.2,.1,3.57-2.46,7.05,.27,7.08,.3,.13,.1,.25,.21,.36,.31,1.62,1.63,1.89,2.94,1.89,5.28Z" fill="#324a60"/><path d="M143.71,36.84l-.57,3.75c-.02,.12-.12,.21-.24,.21-.54,.03-2,.11-2.44,.11-.04,0-.06,0-.09,0-2.69-.14-4.12-1.52-4.12-4v-7.61c0-.14-.11-.25-.25-.25h-1.65c-.14,0-.25-.11-.25-.25v-3.75c0-.14,.11-.25,.25-.25h1.65c.14,0,.25-.11,.25-.25v-4.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v4.35c0,.14,.11,.25,.25,.25h1.65c.14,0,.25,.11,.25,.25v3.75c0,.14-.11,.25-.25,.25h-1.65c-.14,0-.25,.11-.25,.25,0,1.32,0,5.21,0,5.25v.11c-.02,.48-.04,1.14,.34,1.54,.23,.23,.58,.35,1.05,.35h.86c.15,0,.27,.14,.25,.29Z" fill="#324a60"/><path d="M162.83,25.06v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-.23c0-.1-.11-.16-.19-.11-1.27,.72-2.71,1.1-4.18,1.1-4.64,0-8.42-3.73-8.42-8.3s3.78-8.3,8.42-8.3c1.47,0,2.91,.38,4.18,1.1,.08,.05,.19-.01,.19-.11v-.48c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm-4.94,7.8c0-2.1-1.48-3.81-3.61-3.81s-3.86,1.71-3.86,3.81,1.73,3.81,3.86,3.81,3.61-1.71,3.61-3.81Z" fill="#324a60"/><path d="M174.13,25.08l-.15,3.71c0,.15-.13,.26-.28,.24-.43-.04-1.3-.1-1.81,.03-.57,.14-.9,.58-1,.79-.26,.55-.26,1.03-.26,1.65v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.44c0,.1,.11,.16,.19,.11,1.05-.65,2.29-.79,3.34-.8,.15,0,.26,.12,.26,.26Z" fill="#324a60"/><path d="M181.06,20.07v3.24c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-3.24c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm0,4.99v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Z" fill="#324a60"/><path d="M199.29,32.87c0,4.58-3.78,8.3-8.42,8.3s-8.42-3.73-8.42-8.3,3.78-8.3,8.42-8.3,8.42,3.73,8.42,8.3Zm-4.75,0c0-2-1.65-3.62-3.67-3.62s-3.67,1.62-3.67,3.62,1.65,3.62,3.67,3.62,3.67-1.62,3.67-3.62Z" fill="#324a60"/></g></svg></a>
+        <div class="hidden lg:flex space-x-8 text-sm uppercase tracking-widest font-bold items-center">
+            <a href="/de/impact.html" class="hover:text-accentdark">Referenzen</a>
+            <a href="/de/resources.html" class="hover:text-accentdark">Ressourcen</a>
+            <a href="/de/about.html" class="hover:text-accentdark">Team</a>
+            <a href="/" class="hover:text-accentdark opacity-70" title="English version">EN</a>
+        </div>
+        <a href="/de/contact.html" class="hidden lg:inline-flex text-sm font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full hover:bg-accentdark transition-colors">Kontakt</a>
+        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 flex items-center justify-center" aria-label="Toggle menu"><i class="ph ph-list text-2xl"></i></button>
+    </div></nav>
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-bordercolor bg-base px-6 py-4 space-y-2">
+        <a href="/de/impact.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Referenzen</a>
+        <a href="/de/resources.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Ressourcen</a>
+        <a href="/de/about.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Team</a>
+        <a href="/de/contact.html" class="block mt-3 text-center text-sm font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full">Kontakt</a>
+    </div>
+
+    <!-- Hero — full-bleed cinematic with title + subtitle + filters overlaid -->
+    <section class="relative w-full overflow-hidden border-b border-bordercolor" style="background-color: #0f1623;">
+        <img src="/images/photography/team-summit-glow.jpg"
+             alt="Angeseilte Bergsteigergruppe erreicht den Gipfel bei Sonnenaufgang"
+             class="absolute inset-0 w-full h-full object-cover"
+             style="object-position: center 45%;">
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(11,17,28,0.55) 0%, rgba(11,17,28,0.72) 60%, rgba(11,17,28,0.92) 100%);"></div>
+        <div class="relative max-w-[1400px] mx-auto px-6 md:px-12 pt-20 md:pt-28 pb-10 md:pb-14">
+            <div class="max-w-4xl">
+                <h1 class="font-serif text-5xl md:text-7xl mb-6" style="color: #FAFAF7; text-shadow: 0 2px 28px rgba(0,0,0,0.7);">Aventario Referenzen</h1>
+                <p class="text-lg md:text-xl leading-relaxed max-w-2xl mb-10 md:mb-14" style="color: rgba(250,250,247,0.92); text-shadow: 0 1px 16px rgba(0,0,0,0.7);">Eine Auswahl von Aventario-Projekten, anonymisiert nach Branche. Filtern Sie nach Kompetenzbereich oder konkreter Lösung, um den Fall zu finden, der Ihrem am nächsten kommt.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Adaptive filter bar — area first, sub-topics appear only where references exist -->
+    <div id="impact-filterbar" class="border-b border-bordercolor" style="background-color:#FAFAF7;">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-3 md:py-4">
+        <div class="flex items-center justify-between gap-3">
+          <button id="filterToggle" type="button" class="md:hidden inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text bg-surface border border-bordercolor rounded-full px-4 py-2">
+            <i class="ph ph-funnel-simple"></i> Filter <i id="filterCaret" class="ph ph-caret-down text-[10px]"></i>
+          </button>
+          <p class="hidden md:block text-[11px] uppercase tracking-widest font-bold text-muted">Referenzen filtern</p>
+          <p id="resultCount" class="text-xs text-muted whitespace-nowrap"></p>
+        </div>
+        <div id="filterPanel" class="hidden md:block">
+          <p class="text-[10px] uppercase tracking-widest font-bold text-muted mt-4 mb-2">Kompetenzbereich</p>
+          <div class="flex flex-wrap gap-2" id="impact-filter-area">
+            <button type="button" data-area="all" class="fchip active text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">Alle Referenzen</button>
+            <button type="button" data-area="operational-excellence" class="fchip text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">Operational Excellence</button>
+            <button type="button" data-area="savings" class="fchip text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">Savings Realization</button>
+            <button type="button" data-area="vendor-consolidation" class="fchip text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">Service &amp; Vendor Consolidation</button>
+            <button type="button" data-area="complex-rfx" class="fchip text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">Complex RFX</button>
+            <button type="button" data-area="vendor-management" class="fchip text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">Vendor Management</button>
+          </div>
+          <div id="solWrap" class="hidden">
+            <p class="text-[10px] uppercase tracking-widest font-bold text-muted mt-4 mb-2">Konkrete Lösungen</p>
+            <div class="flex flex-wrap gap-2" id="impact-filter-solution">
+              <button type="button" data-solution="all" class="fchip active text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Beliebige Lösung</button>
+              <button type="button" data-solution="org-effort" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Organizational Effort Optimization</button>
+              <button type="button" data-solution="process-harmonization" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Process Harmonization &amp; Automation</button>
+              <button type="button" data-solution="it-landscape" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">IT Landscape Harmonization</button>
+              <button type="button" data-solution="ai-contract" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">(AI) Contract Analysis</button>
+              <button type="button" data-solution="service-cost" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Service (Cost) Assessment</button>
+              <button type="button" data-solution="sourcing-eval" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Shoring &amp; Sourcing Evaluation</button>
+              <button type="button" data-solution="portfolio-streamlining" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Service Portfolio Streamlining</button>
+              <button type="button" data-solution="sourcing-impl" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Shoring / Sourcing Concept Implementation</button>
+              <button type="button" data-solution="service-mgmt-opt" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Service Management Optimization</button>
+              <button type="button" data-solution="requirements" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Requirements Engineering</button>
+              <button type="button" data-solution="managed-rfx" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Managed RFX</button>
+              <button type="button" data-solution="frame-contract" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Frame Contract Implementation</button>
+              <button type="button" data-solution="vm-assessment" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Vendor Management Assessment</button>
+              <button type="button" data-solution="vm-implementation" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Vendor Management Implementation</button>
+              <button type="button" data-solution="vm-operation" class="fchip text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Vendor Management Operation</button>
+            </div>
+          </div>
+          <button id="filterClear" type="button" class="hidden mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-accentdark hover:text-text"><i class="ph ph-x text-[10px]"></i> Filter zurücksetzen</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card grid -->
+    <section class="px-6 md:px-12 py-12 md:py-16">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="impact-grid">
+
+                <!-- 1. Pharma — Global Fleet Electrification (#1) -->
+                <a href="/de/impact/pharma-global-fleet-electrification.html"
+                   data-services="operational-excellence change-communication"
+                   data-solutions="process-harmonization org-effort"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Pharma</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Operational Excellence</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Change &amp; Comms</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Global Fleet Electrification</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Prozessstandardisierung und Change Management für die Umstellung einer Flotte von 1.500 Fahrzeugen auf Elektromobilität.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">22 Monate &middot; 350 PT</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 2. Global Services — Unified Global ITSM (#14) -->
+                <a href="/de/impact/global-services-unified-itsm.html"
+                   data-services="operational-excellence vendor-consolidation"
+                   data-solutions="it-landscape portfolio-streamlining service-mgmt-opt"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap items-center gap-1.5 mb-4">
+                        <img src="/images/logos/clients/sodexo.svg" alt="Sodexo" class="h-4 w-auto mr-1 opacity-80">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Operational Excellence</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Consolidation</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Unified Global IT Service Management</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Konzeption und Rollout einer einheitlichen globalen ITSM-Plattform für eine Organisation mit über 400.000 Mitarbeitenden in mehr als 70 Ländern.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">24 Monate &middot; 900 PT</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 3. Pharma — IT Landscape Harmonization (#4) -->
+                <a href="/de/impact/pharma-it-landscape-harmonization.html"
+                   data-services="operational-excellence program-management"
+                   data-solutions="it-landscape"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Pharma</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Operational Excellence</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Program Mgmt</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">IT Landscape Harmonization</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Vollständige Analyse der IT-Landschaft und Zielarchitektur für 9.000 Systeme über 110 Capabilities, PMO über 110 Teilprojekte.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">26 Monate &middot; 410 PT</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 4. Pharma — Global Device Standardization Program (#13) -->
+                <a href="/de/impact/pharma-device-standardization.html"
+                   data-services="savings vendor-consolidation vendor-management operational-excellence"
+                   data-solutions="service-cost portfolio-streamlining vm-implementation"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Pharma</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Savings Realization</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Management</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Global Device Standardization Program</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Weltweite Standardisierung sicherheitsrelevanter Labor- und Betriebsgeräte, Programm- und Projektmanagement für den globalen Rollout.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">28 Monate &middot; 440 PT</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 5. Pharma — IT Infrastructure Consolidation & RFI (#15) -->
+                <a href="/de/impact/pharma-it-infrastructure-consolidation.html"
+                   data-services="savings vendor-consolidation complex-rfx"
+                   data-solutions="service-cost portfolio-streamlining requirements"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Pharma</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Savings Realization</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Consolidation</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Complex RFX</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">IT Infrastructure Consolidation &amp; RFI</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">IST-Analyse, RFI und Transformations-Roadmap für die Konsolidierung von 13 globalen IT-Service-Domänen.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">13 Service-Domänen</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 6. Aviation Infrastructure — 22-Domain IT Service Tender (#11) -->
+                <a href="/de/impact/aviation-it-outsourcing-tender.html"
+                   data-services="complex-rfx savings vendor-consolidation vendor-management"
+                   data-solutions="managed-rfx requirements frame-contract vm-operation"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap items-center gap-1.5 mb-4">
+                        <img src="/images/logos/clients/fraport.svg" alt="Fraport" class="h-4 w-auto mr-1 opacity-80">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Complex RFX</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Savings Realization</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Management</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">22-Domain IT Service Tender</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">BVergG-konforme öffentliche Ausschreibung für 22 IT-Service-Domänen, darunter Rechenzentrum, Cloud, Netzwerk, M365 und Service Desk.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">13 Monate &middot; 100 PT</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 7. Pharma — Global Engineering & Facilities Consolidation (#2) -->
+                <a href="/de/impact/pharma-facilities-consolidation.html"
+                   data-services="vendor-consolidation operational-excellence change-communication"
+                   data-solutions="portfolio-streamlining org-effort"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Pharma</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Consolidation</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Change &amp; Comms</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Global Engineering &amp; Facilities Consolidation</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Aufbau einer einheitlichen globalen Engineering- und Facilities-Organisation mit rund 8.500 Mitarbeitenden aus zuvor fragmentierten Regionaleinheiten.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">3 Jahre &middot; ~8.500 Mitarbeitende</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 8. Automotive — Global IT Client Rollout (#7) -->
+                <a href="/de/impact/automotive-global-it-rollout.html"
+                   data-services="vendor-consolidation operational-excellence program-management transition-management"
+                   data-solutions="it-landscape portfolio-streamlining"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Automotive</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Consolidation</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Program Mgmt</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Transition Mgmt</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Global IT Client Rollout</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Globaler Rollout eines standardisierten IT-Clients in 22 Ländern für rund 25.000 Endnutzer, mit Koordination von 120 internationalen Stakeholdern.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">22 Länder &middot; 400 PT</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 9. Aviation Infrastructure — Multi-Generation Outsourcing (#16) -->
+                <a href="/de/impact/aviation-multi-generation-outsourcing.html"
+                   data-services="vendor-consolidation vendor-management"
+                   data-solutions="frame-contract vm-operation"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Luftfahrtinfrastruktur</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Consolidation</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Management</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Multi-Generation Infrastructure Outsourcing</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Standardisierte Sourcing-Strukturen und Rahmenverträge über mehr als 20 Jahre aufeinanderfolgender Outsourcing-Generationen.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">20+ Jahre &middot; mehrere Generationen</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 10. Public Transport — Passenger Counter Platform Tender (#8) -->
+                <a href="/de/impact/public-transport-passenger-counter.html"
+                   data-services="complex-rfx program-management transition-management"
+                   data-solutions="managed-rfx requirements"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Öffentlicher Verkehr</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Complex RFX</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Program Mgmt</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Transition Mgmt</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Passenger Counter Platform Tender</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Durchgängige öffentliche Ausschreibung (BVergG) sowie agiles Projektmanagement über Entwicklung und Überführung in den Betrieb.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">18 Monate &middot; &gt;1 Mio. &euro; Auftrag</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 11. Public Transport — Onboard Information Platform Tender (#10) -->
+                <a href="/de/impact/public-transport-onboard-portal.html"
+                   data-services="complex-rfx program-management"
+                   data-solutions="managed-rfx requirements"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Öffentlicher Verkehr</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Complex RFX</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Program Mgmt</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Onboard Information Platform Tender</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">BVergG-konforme Ausschreibung für eine Onboard-Plattform für Fahrgastinformation, Services und Entertainment mit Cloud-Backend.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">18 Monate &middot; ~130 PT</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 12. Food Industry — IT Infrastructure Sourcing (#17) -->
+                <a href="/de/impact/food-industry-it-sourcing.html"
+                   data-services="complex-rfx savings"
+                   data-solutions="managed-rfx service-cost requirements"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Lebensmittelindustrie</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Complex RFX</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Savings Realization</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">IT Infrastructure Sourcing in 4 Months</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Vollständiges IT-Infrastruktur-Sourcing, von Strategie über RFI/RFP bis zu den Lieferantenverhandlungen, geliefert innerhalb einer engen Frist von 4 Monaten.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">4 Monate</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 13. Pharma — Global Portfolio & Program Management (#12) -->
+                <a href="/de/impact/pharma-portfolio-management.html"
+                   data-services="vendor-management program-management"
+                   data-solutions="vm-implementation vm-operation"
+                   class="impact-card group block bg-surface border border-bordercolor rounded-md p-6 hover:border-accent transition-colors flex flex-col">
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text bg-base border border-bordercolor px-2 py-1 rounded">Pharma</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Vendor Management</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-accentdark bg-accent/15 border border-accent/40 px-2 py-1 rounded">Program Mgmt</span>
+                    </div>
+                    <h3 class="font-serif text-xl text-text mb-3 group-hover:text-accentdark transition-colors">Global Portfolio &amp; Program Management</h3>
+                    <p class="text-sm text-text leading-relaxed flex-1 mb-4">Konzeption, Implementierung und Stabilisierung einer globalen Portfolio- und Programmmanagement-Capability für mehr als 320 Projekte.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-bordercolor">
+                        <p class="text-xs text-muted">315 PT &middot; 320+ Projekte</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-text group-hover:text-accentdark"><i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+
+            <div id="impact-empty" class="hidden py-12 md:py-16 text-center">
+                <img src="/images/illustrations/v2/shrugger.png"
+                     alt=""
+                     role="presentation"
+                     class="illu in-view w-full max-w-[280px] h-auto mx-auto mb-6"
+                     loading="lazy"
+                     decoding="async">
+                <p class="text-text text-base md:text-lg max-w-xl mx-auto">In diesem Bereich gibt es noch keine Referenzen. Gerne besprechen wir Ihre konkrete Herausforderung direkt mit Ihnen. <a href="/de/contact.html" class="font-bold text-accentdark hover:underline">Sprechen Sie mit uns</a>.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Standard contact section -->
+    <section id="book" class="relative overflow-hidden">
+        <img src="/images/cta-ridge.jpg" alt="" role="presentation" class="absolute inset-0 w-full h-full object-cover" style="object-position:center 52%;" loading="lazy" decoding="async">
+        <div class="absolute inset-0" style="background:linear-gradient(90deg, rgba(15,22,35,0.76) 0%, rgba(15,22,35,0.42) 50%, rgba(15,22,35,0.20) 100%);"></div>
+        <div class="relative max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-36 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <h2 class="font-serif text-4xl md:text-6xl leading-tight" style="color:#FAFAF7; text-shadow: 0 2px 18px rgba(0,0,0,0.55);">Sprechen wir.</h2>
+            <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+                <a href="/de/contact.html" class="inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest px-8 py-4 rounded-full transition-colors" style="background-color:#FAFAF7; color:#334b60;">Kontakt aufnehmen <i class="ph ph-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (PPTX slide 5 style) -->
+    <footer class="px-6 md:px-12 pt-16 pb-8" style="background-color: #334b60; color: #FAFAF7;">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+                <div class="lg:col-span-3">
+                    <a href="/de/index.html" class="inline-flex items-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.29 55.2" class="h-8"><g><path d="M37.22,40.94l-5.14-8.91c-.11-.19-.38-.19-.49,0l-5.14,8.91h10.78Z" fill="#8dccc0"/><polygon points="11.43 55.15 37.22 40.94 26.44 40.94 16.64 46.19 15.81 47.62 11.51 55.06 11.43 55.15" fill="#8dccc0"/><path d="M55.38,40.51l-7.53-13.05L32.08,.14c-.11-.19-.38-.19-.49,0L15.81,27.46.04,54.78c-.06,.1-.05,.21,0,.29,.05,.08,.13,.14,.24,.14H11.26c.1,0,.2-.05,.25-.14l4.3-7.45,.83-1.43,14.95-25.89c.11-.19,.38-.19,.49,0l11.83,20.49c.05,.09,.15,.14,.25,.14h10.98c.22,0,.36-.24,.25-.43Z" fill="#FAFAF7"/><path d="M86.05,40.9h-5.18c-.14,0-.26-.09-.3-.22l-1.09-3.31c-.04-.11-.13-.18-.25-.18h-6.41c-.11,0-.21,.07-.25,.18l-1.1,3.35c-.04,.11-.13,.18-.25,.18h-5.22c-.18,0-.31-.18-.24-.35l7.7-20.43c.05-.13,.17-.21,.31-.21h4.54c.12,0,.23,.07,.27,.19l7.71,20.46c.06,.17-.06,.35-.24,.35Zm-8.16-8.34l-1.61-4.89c-.08-.24-.42-.24-.51,0l-1.61,4.9c-.06,.17,.07,.34,.24,.34h3.24c.18,0,.31-.18,.25-.35Z" fill="#FAFAF7"/><path d="M99.59,25.15l-5.48,15.35c-.04,.1-.13,.17-.24,.17h-4.63c-.11,0-.2-.07-.24-.17l-5.48-15.35c-.06-.17,.06-.34,.24-.34h4.42c.11,0,.2,.07,.24,.17l3.14,8.8,3.14-8.8c.04-.1,.13-.17,.24-.17h4.42c.18,0,.3,.17,.24,.34Z" fill="#FAFAF7"/><path d="M116.31,32.86c0,.46-.05,1-.14,1.47-.02,.12-.13,.21-.25,.21h-11.11c-.2,0-.32,.21-.22,.38,.68,1.16,1.9,1.88,3.25,1.88,1.15,0,2.22-.5,2.98-1.48,.06-.08,.15-.11,.25-.1l4.25,.76c.16,.03,.26,.21,.18,.36-1.34,2.66-4.01,4.5-7.13,4.5-4.43,0-8.04-3.71-8.04-8.3s3.61-8.3,8.04-8.3,8.04,3.71,8.04,8.3Zm-4.96-2.1c-.2-1.17-1.55-2.08-3.27-2.08-1.56,0-3.05,.9-3.27,2.08-.03,.16,.09,.3,.25,.3h6.04c.16,0,.28-.14,.25-.3Z" fill="#FAFAF7"/><path d="M132.6,31.49v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-8.67c0-.59-.03-1.26-.28-1.81-.11-.23-.26-.42-.44-.56-.3-.23-.68-.35-1.17-.35-.91,0-1.62,.31-1.84,.82-.26,.55-.26,1.3-.26,1.9v8.67c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.43c0,.1,.11,.16,.2,.1,3.57-2.46,7.05,.27,7.08,.3,.13,.1,.25,.21,.36,.31,1.62,1.63,1.89,2.94,1.89,5.28Z" fill="#FAFAF7"/><path d="M143.71,36.84l-.57,3.75c-.02,.12-.12,.21-.24,.21-.54,.03-2,.11-2.44,.11-.04,0-.06,0-.09,0-2.69-.14-4.12-1.52-4.12-4v-7.61c0-.14-.11-.25-.25-.25h-1.65c-.14,0-.25-.11-.25-.25v-3.75c0-.14,.11-.25,.25-.25h1.65c.14,0,.25-.11,.25-.25v-4.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v4.35c0,.14,.11,.25,.25,.25h1.65c.14,0,.25,.11,.25,.25v3.75c0,.14-.11,.25-.25,.25h-1.65c-.14,0-.25,.11-.25,.25,0,1.32,0,5.21,0,5.25v.11c-.02,.48-.04,1.14,.34,1.54,.23,.23,.58,.35,1.05,.35h.86c.15,0,.27,.14,.25,.29Z" fill="#FAFAF7"/><path d="M162.83,25.06v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-.23c0-.1-.11-.16-.19-.11-1.27,.72-2.71,1.1-4.18,1.1-4.64,0-8.42-3.73-8.42-8.3s3.78-8.3,8.42-8.3c1.47,0,2.91,.38,4.18,1.1,.08,.05,.19-.01,.19-.11v-.48c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm-4.94,7.8c0-2.1-1.48-3.81-3.61-3.81s-3.86,1.71-3.86,3.81,1.73,3.81,3.86,3.81,3.61-1.71,3.61-3.81Z" fill="#FAFAF7"/><path d="M174.13,25.08l-.15,3.71c0,.15-.13,.26-.28,.24-.43-.04-1.3-.1-1.81,.03-.57,.14-.9,.58-1,.79-.26,.55-.26,1.03-.26,1.65v8.92c0,.14-.11,.25-.25,.25h-4.73c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25v.44c0,.1,.11,.16,.19,.11,1.05-.65,2.29-.79,3.34-.8,.15,0,.26,.12,.26,.26Z" fill="#FAFAF7"/><path d="M181.06,20.07v3.24c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-3.24c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Zm0,4.99v15.35c0,.14-.11,.25-.25,.25h-4.43c-.14,0-.25-.11-.25-.25v-15.35c0-.14,.11-.25,.25-.25h4.43c.14,0,.25,.11,.25,.25Z" fill="#FAFAF7"/><path d="M199.29,32.87c0,4.58-3.78,8.3-8.42,8.3s-8.42-3.73-8.42-8.3,3.78-8.3,8.42-8.3,8.42,3.73,8.42,8.3Zm-4.75,0c0-2-1.65-3.62-3.67-3.62s-3.67,1.62-3.67,3.62,1.65,3.62,3.67,3.62,3.67-1.62,3.67-3.62Z" fill="#FAFAF7"/></g></svg></a>
+                    <p class="text-sm leading-relaxed mb-6" style="color: rgba(250,250,247,0.75);">Kosten- und Wertoptimierung für IT und Supply Chain.</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.85);">
+                        <li class="flex items-center gap-2.5"><i class="ph ph-envelope-simple text-base" style="color: #8dccc0;"></i> <a href="mailto:office@aventario.com" class="hover:text-accent">office@aventario.com</a></li>
+                        <li class="flex items-center gap-2.5"><i class="ph ph-phone text-base" style="color: #8dccc0;"></i> +43 134 3354012</li>
+                        <li class="flex items-center gap-2.5"><i class="ph ph-map-pin text-base" style="color: #8dccc0;"></i> Tuchlauben 7a, 1010 Vienna</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color: rgba(250,250,247,0.55);">Ressourcen</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.9);">
+                        <li><a href="/de/resources.html" class="hover:text-accent">Whitepapers</a></li>
+                        <li><a href="https://form.typeform.com/to/qmNOmu5v" target="_blank" rel="noopener" class="hover:text-accent">Vendor Maturity Assessment</a></li>
+                        <li><a href="/de/resources.html" class="hover:text-accent">Webinare</a></li>
+                        <li><a href="/de/impact.html" class="hover:text-accent">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color: rgba(250,250,247,0.55);">Unternehmen</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.9);">
+                        <li><a href="/de/about.html" class="hover:text-accent">Über uns</a></li>
+                        <li><a href="/de/contact.html" class="hover:text-accent">Kontakt</a></li>
+                    </ul>
+                    <p class="text-xs uppercase tracking-widest font-bold mt-8 mb-4" style="color: rgba(250,250,247,0.55);">Rechtliches</p>
+                    <ul class="space-y-2.5 text-sm" style="color: rgba(250,250,247,0.9);">
+                        <li><a href="/de/datenschutz.html" class="hover:text-accent">Datenschutz</a></li>
+                        <li><a href="/de/impressum.html" class="hover:text-accent">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="https://managedsuppliers.com" target="_blank" rel="noopener" class="block rounded-md p-5 transition-colors hover:bg-white/[0.04]" style="background-color: rgba(255,255,255,0.04); border: 1px solid rgba(250,250,247,0.15);">
+                        <div class="flex items-center gap-2.5 mb-3">
+                            <i class="ph-fill ph-triangle text-lg" style="color: #8dccc0;"></i>
+                            <span class="text-xs uppercase tracking-widest font-bold" style="color: rgba(250,250,247,0.8);">managedsuppliers</span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-4" style="color: rgba(250,250,247,0.85);">Nutzen Sie unsere umfassende Vendor-Management-Plattform mit fortschrittlicher Analyse und Automatisierung.</p>
+                        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full" style="border: 1px solid rgba(250,250,247,0.45); color: #FAFAF7;">Mehr erfahren <i class="ph ph-arrow-up-right text-xs"></i></span>
+                    </a>
+                    <div class="rounded-md p-5" style="background-color: rgba(255,255,255,0.04); border: 1px solid rgba(250,250,247,0.15);">
+                        <p class="font-serif text-lg mb-2" style="color: #FAFAF7;">Monatlicher Newsletter</p>
+                        <p class="text-sm leading-relaxed mb-4" style="color: rgba(250,250,247,0.8);">Bleiben Sie auf dem Laufenden zu aktuellen Trends, Insights und Best Practices im Vendor Management.</p>
+                        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed';" class="flex flex-col sm:flex-row gap-2">
+                            <input type="email" required placeholder="you@company.com" class="flex-1 min-w-0 text-sm px-4 py-2 rounded-full bg-transparent placeholder:text-white/40" style="border: 1px solid rgba(250,250,247,0.25); color: #FAFAF7;">
+                            <button type="submit" class="text-xs font-bold uppercase tracking-widest whitespace-nowrap px-4 py-2 rounded-full" style="background-color: #FAFAF7; color: #334b60;">Jetzt abonnieren</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs gap-3" style="border-color: rgba(250,250,247,0.12); color: rgba(250,250,247,0.55);">
+                <p>&copy; 2026 Aventario Services GmbH. Alle Rechte vorbehalten.</p>
+                <a href="/de/contact.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full transition-colors hover:bg-white/5" style="border: 1px solid rgba(250,250,247,0.35); color: #FAFAF7;">Mit einem Experten sprechen <i class="ph ph-arrow-right text-xs"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky nav: hide on scroll down, show on scroll up (standard pattern)
+        (function(){
+          const n = document.getElementById('mainNav'); if (!n) return;
+          let lastY = window.scrollY;
+          let ticking = false;
+          const DELTA = 6;
+          const TOP_SAFE = 80;
+          const upd = () => {
+            const y = window.scrollY;
+            if (Math.abs(y - lastY) < DELTA) { ticking = false; return; }
+            if (y > lastY && y > TOP_SAFE) {
+              n.classList.add('nav-hidden');
+            } else {
+              n.classList.remove('nav-hidden');
+            }
+            lastY = y;
+            ticking = false;
+          };
+          window.addEventListener('scroll', () => {
+            if (!ticking) { window.requestAnimationFrame(upd); ticking = true; }
+          }, { passive: true });
+        })();
+        // Mobile menu
+        const mb = document.getElementById('mobileMenuBtn'); const mm = document.getElementById('mobileMenu');
+        if (mb && mm) { mb.addEventListener('click', () => { mm.classList.toggle('hidden'); const i = mb.querySelector('i'); i.classList.toggle('ph-list'); i.classList.toggle('ph-x'); }); }
+
+        // Adaptive filter: pick an area first, then only sub-topics that actually have references
+        const areaRow = document.getElementById('impact-filter-area');
+        const solRow = document.getElementById('impact-filter-solution');
+        const solWrap = document.getElementById('solWrap');
+        const empty = document.getElementById('impact-empty');
+        const resultCount = document.getElementById('resultCount');
+        const clearBtn = document.getElementById('filterClear');
+        const cards = Array.from(document.querySelectorAll('.impact-card'));
+        let activeArea = 'all';
+        let activeSol = 'all';
+
+        // Canonical map: the specific solutions assigned to each area of expertise (3 each)
+        const solByArea = {
+            'operational-excellence': new Set(['org-effort','process-harmonization','it-landscape']),
+            'savings': new Set(['ai-contract','service-cost','sourcing-eval']),
+            'vendor-consolidation': new Set(['portfolio-streamlining','sourcing-impl','service-mgmt-opt']),
+            'complex-rfx': new Set(['requirements','managed-rfx','frame-contract']),
+            'vendor-management': new Set(['vm-assessment','vm-implementation','vm-operation']),
+        };
+
+        function applyFilters() {
+            let visible = 0;
+            cards.forEach(card => {
+                const areas = (card.dataset.services || '').split(/\s+/);
+                const sols = (card.dataset.solutions || '').split(/\s+/);
+                const okArea = activeArea === 'all' || areas.includes(activeArea);
+                const okSol = activeSol === 'all' || sols.includes(activeSol);
+                const show = okArea && okSol;
+                card.style.display = show ? '' : 'none';
+                if (show) visible++;
+            });
+            if (empty) empty.classList.toggle('hidden', visible !== 0);
+            if (resultCount) resultCount.textContent = '';
+            if (clearBtn) clearBtn.classList.toggle('hidden', activeArea === 'all' && activeSol === 'all');
+        }
+
+        function rebuildSolutions() {
+            const valid = solByArea[activeArea] || new Set();
+            solRow.querySelectorAll('button').forEach(b => {
+                const s = b.dataset.solution;
+                b.classList.toggle('active', s === activeSol);
+                b.style.display = (s === 'all' || valid.has(s)) ? '' : 'none';
+            });
+            // specific-solutions group shows once an area of expertise is chosen
+            solWrap.classList.toggle('hidden', activeArea === 'all');
+        }
+
+        areaRow.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
+            activeArea = btn.dataset.area; activeSol = 'all';
+            areaRow.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+            rebuildSolutions();
+            applyFilters();
+        }));
+        solRow.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
+            activeSol = btn.dataset.solution;
+            solRow.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+            applyFilters();
+        }));
+        if (clearBtn) clearBtn.addEventListener('click', () => {
+            activeArea = 'all'; activeSol = 'all';
+            areaRow.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.area === 'all'));
+            rebuildSolutions(); applyFilters();
+        });
+        // Mobile: collapse the filter behind a button so content isn't buried
+        const fToggle = document.getElementById('filterToggle');
+        const fPanel = document.getElementById('filterPanel');
+        const fCaret = document.getElementById('filterCaret');
+        if (fToggle && fPanel) fToggle.addEventListener('click', () => {
+            fPanel.classList.toggle('hidden');
+            if (fCaret) { fCaret.classList.toggle('ph-caret-down'); fCaret.classList.toggle('ph-caret-up'); }
+        });
+        applyFilters();
+
+        // Deep link: ?area=<slug> from the homepage references matrix preselects that filter
+        (function(){
+            const area = new URLSearchParams(window.location.search).get('area');
+            if (!area) return;
+            const btn = areaRow.querySelector('button[data-area="' + area + '"]');
+            if (!btn) return;
+            btn.click();
+            const target = areaRow.closest('section') || document.getElementById('impact-grid');
+            if (target) window.requestAnimationFrame(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+        })();
+
+        // Transparent-over-hero nav: toggle .past-hero AND set inline background/border directly to win over Tailwind CDN cascade
+        (function(){
+          const n = document.getElementById('mainNav');
+          if (!n || !n.hasAttribute('data-over-hero')) return;
+          // Strip Tailwind utilities that fight our inline bg toggle
+          ['bg-base/95','backdrop-blur-sm','border-b','border-bordercolor'].forEach(c => n.classList.remove(c));
+          // Walk SVG paths and tag the originally-navy ones so JS can re-color them on past-hero toggle
+          n.querySelectorAll('svg path').forEach(pa => {
+            const f = (pa.getAttribute('fill') || '').toLowerCase();
+            if (f === '#324a60' || f === 'rgb(50, 74, 96)' || f === 'rgb(50,74,96)') {
+              pa.dataset.origFill = '#324a60';
+              pa.setAttribute('fill', '#FAFAF7');
+            }
+          });
+          n.querySelectorAll('.nav-inner > div a').forEach(a => a.classList.add('nav-link'));
+          const cta = n.querySelector('.nav-inner > a[href="/de/contact.html"], .nav-inner > a[href$="contact.html"]');
+          if (cta) cta.classList.add('nav-cta');
+          const hero = document.querySelector('main > section, body > section');
+          if (!hero) return;
+          let threshold = Math.max(50, hero.offsetHeight - 80);
+          const upd = () => {
+            const past = window.scrollY > threshold;
+            n.classList.toggle('past-hero', past);
+            if (past) {
+              n.style.setProperty('background-color', 'rgba(250,250,247,0.95)', 'important');
+              n.style.setProperty('border-bottom', '1px solid rgba(51,75,96,0.12)', 'important');
+              n.querySelectorAll('svg path[data-orig-fill]').forEach(pa => pa.setAttribute('fill', pa.dataset.origFill));
+            } else {
+              n.style.setProperty('background-color', 'transparent', 'important');
+              n.style.setProperty('border-color', 'transparent', 'important');
+              n.querySelectorAll('svg path[data-orig-fill]').forEach(pa => pa.setAttribute('fill', '#FAFAF7'));
+            }
+          };
+          upd();
+          window.addEventListener('scroll', upd, { passive: true });
+          window.addEventListener('resize', () => { threshold = Math.max(50, hero.offsetHeight - 80); upd(); }, { passive: true });
+        })();
+    
+        // Fade-up + scale-in for hand-drawn illustrations
+        (function(){
+          const els = document.querySelectorAll('.illu');
+          if (!els.length || !('IntersectionObserver' in window)) {
+            els.forEach(el => el.classList.add('in-view'));
+            return;
+          }
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+          }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+          els.forEach(el => io.observe(el));
+        })();
+    </script>
+</body>
+</html>
