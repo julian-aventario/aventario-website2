@@ -21,7 +21,7 @@
     <link href="/assets/fonts/lato.css" rel="stylesheet">
     <script src="/assets/vendor/tailwind.js"></script>
     <script>
-        tailwind.config = { theme: { extend: { colors: { base: '#FAFAF7', surface: '#FFFFFF', text: '#334b60', muted: '#5f768b', accent: '#88C9BE', accentdark: '#5FA99D', orange: '#f19a51', bordercolor: 'rgba(51, 75, 96, 0.12)' }, fontFamily: { serif: ['"Lato"', '-apple-system', 'sans-serif'], sans: ['"Lato"', '-apple-system', 'sans-serif'] } } } }
+        tailwind.config = { theme: { extend: { colors: { base: '#FAFAF7', surface: '#FFFFFF', text: '#334b60', muted: '#5f768b', accent: '#88C9BE', accentdark: '#2C7A6B', orange: '#f19a51', bordercolor: 'rgba(51, 75, 96, 0.12)' }, fontFamily: { serif: ['"Lato"', '-apple-system', 'sans-serif'], sans: ['"Lato"', '-apple-system', 'sans-serif'] } } } }
     </script>
     <link rel="stylesheet" href="/assets/vendor/phosphor/phosphor.css">
     <style>
@@ -65,7 +65,7 @@
         @media (min-width: 768px) { .card-title { font-size: 1.3rem; } }
         .card-desc { font-size: 0.82rem; line-height: 1.55; color: rgba(255,255,255,0.9); text-shadow: 0 1px 8px rgba(0,0,0,0.45); }
         .search-input { background: #FFFFFF; border: 1px solid rgba(51, 75, 96, 0.18); border-radius: 9999px; padding: 0.55rem 1rem 0.55rem 2.5rem; font-size: 0.9rem; color: #334b60; outline: none; width: 100%; transition: border-color 0.15s ease; }
-        .search-input:focus { border-color: #5FA99D; }
+        .search-input:focus { border-color:#2C7A6B; }
         .search-input::placeholder { color: rgba(51, 75, 96, 0.45); }
         .article-card.hidden { display: none; }
         #empty-state { display: none; }
@@ -186,6 +186,7 @@
         <a href="/de/contact.html" class="hidden lg:inline-flex text-sm font-bold uppercase tracking-widest bg-text text-surface px-6 py-3 rounded-full hover:bg-accentdark transition-colors">Kontakt</a>
         <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 flex items-center justify-center" aria-label="Toggle menu"><i class="ph ph-list text-2xl"></i></button>
     </div></nav>
+    <main>
     <div id="mobileMenu" class="hidden lg:hidden border-b border-bordercolor bg-base px-6 py-4 space-y-2">
         <a href="/de/impact.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Referenzen</a>
         <a href="/de/resources.html" class="block py-2 text-base font-bold uppercase tracking-widest hover:text-accentdark">Ressourcen</a>
@@ -715,6 +716,7 @@
         </div>
     </section>
 
+    </main>
     <footer class="bg-text text-surface px-6 md:px-12 py-16">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">

@@ -13,4 +13,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://aventario.com/sitemap.xml
+Sitemap: https://www.aventario.com/sitemap.xml
