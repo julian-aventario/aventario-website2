@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
+    <!-- Aventario analytics: consent-gated GA4 / Google Ads (Consent Mode v2) -->
+    <script>
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+      window.AV_GA_ID='G-WV4NNK7FSV';
+      window.avLoadGA=function(){if(window.__avGA)return;window.__avGA=true;gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+AV_GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',AV_GA_ID);};
+      try{if(localStorage.getItem('av-consent')==='granted')window.avLoadGA();}catch(e){}
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Aventario Services GmbH</title>
@@ -96,7 +104,7 @@
 
             <h3 class="font-serif text-3xl mt-12 mb-4">Fonts, Styles and Icons</h3>
             <p>
-                All fonts, stylesheets and icons used on this website are served directly from our own server in the European Union. We do not load fonts, scripts or other resources from third-party content delivery networks (for example Google Fonts). No data is transmitted to such providers when you view our pages.
+                All fonts, stylesheets and icons used on this website are served directly from our own server in the European Union. We do not load fonts, stylesheets or icons from third-party content delivery networks (for example Google Fonts). The only third-party script that may load is the Google analytics and advertising tag described under "Cookies, Analytics and Advertising" below, and only after you have given your consent.
             </p>
 
             <h3 class="font-serif text-3xl mt-12 mb-4">Contact and Enquiry Forms</h3>
@@ -117,9 +125,15 @@
                 Within the scope of an advisory engagement, we process the personal data necessary to provide our services, on the basis of the contract with you or your organisation (Art. 6(1)(b) GDPR). This data is treated as strictly confidential and is not disclosed to third parties without authorisation.
             </p>
 
-            <h3 class="font-serif text-3xl mt-12 mb-4">Cookies and Analytics</h3>
+            <h3 class="font-serif text-3xl mt-12 mb-4">Cookies, Analytics and Advertising</h3>
             <p>
-                This website does not use tracking, advertising or analytics cookies, and it does not profile your behaviour. Only technically necessary data required to deliver the site is processed (see "Hosting and Server Log Files" above). Because we set no non-essential cookies, no cookie consent banner is required.
+                We use Google Analytics 4 and Google Ads, services provided by Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Ireland), to measure how this website is used and to evaluate the performance of our advertising. These services set cookies and process usage data such as the pages you visit, your approximate location, and device and browser information together with an online identifier.
+            </p>
+            <p>
+                These analytics and advertising tools load only after you give your consent through the cookie banner shown on your first visit. Until you accept, no Google analytics or advertising script is loaded and no related cookie is set. We use Google Consent Mode so that your choice is applied before any tag fires. The legal basis is your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time with future effect by declining in the banner, clearing this site's data in your browser, or contacting us.
+            </p>
+            <p>
+                Google may transfer data to servers operated by Google LLC in the United States. Such transfers are safeguarded by the European Commission's Standard Contractual Clauses and the EU&ndash;US Data Privacy Framework (see "Data Transfers Outside the EU/EEA" below). You can opt out of Google Analytics across all websites using Google's browser add-on at <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.
             </p>
 
             <h3 class="font-serif text-3xl mt-12 mb-4">Data Transfers Outside the EU/EEA</h3>
@@ -149,5 +163,37 @@
         <p>&copy; 2026 Aventario Services GmbH. <a href="/de/impressum.html" class="hover:text-surface underline ml-4">Impressum</a></p>
     </footer>
 
-</body>
+
+    <!-- Aventario cookie consent banner -->
+    <style>
+    #av-consent{position:fixed;left:1rem;right:1rem;bottom:1rem;max-width:30rem;margin-left:auto;z-index:9999;background:#334b60;color:#fff;border-radius:12px;padding:1.2rem;box-shadow:0 18px 50px -20px rgba(0,0,0,.55);font-family:'Lato',system-ui,sans-serif;font-size:14px;line-height:1.55}
+    #av-consent p{margin:0 0 .9rem}
+    #av-consent a{color:#8dccc0;text-decoration:underline}
+    #av-consent .av-row{display:flex;gap:.6rem;flex-wrap:wrap}
+    #av-consent button{font:inherit;font-weight:700;border-radius:999px;padding:.55rem 1.15rem;cursor:pointer;border:1px solid transparent}
+    #av-accept{background:#8dccc0;color:#16323f}
+    #av-decline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+    #av-consent[hidden]{display:none}
+    </style>
+    <div id="av-consent" role="dialog" aria-label="Cookie consent" hidden>
+      <p id="av-consent-text"></p>
+      <div class="av-row">
+        <button id="av-accept" type="button"></button>
+        <button id="av-decline" type="button"></button>
+      </div>
+    </div>
+    <script>
+    (function(){var el=document.getElementById('av-consent');if(!el)return;
+     try{if(localStorage.getItem('av-consent'))return;}catch(e){}
+     var de=(document.documentElement.lang||'en').slice(0,2)==='de';
+     var txt=de?'Wir nutzen Cookies für Analyse und Werbung, um die Leistung unserer Website zu verstehen. Diese werden erst nach Ihrer Zustimmung geladen. Mehr in unserer <a href="/datenschutz">Datenschutzerklärung</a>.':'We use analytics and advertising cookies to understand how our site performs. They load only after you accept. See our <a href="/datenschutz">Privacy Policy</a>.';
+     document.getElementById('av-consent-text').innerHTML=txt;
+     document.getElementById('av-accept').textContent=de?'Zustimmen':'Accept';
+     document.getElementById('av-decline').textContent=de?'Ablehnen':'Decline';
+     el.hidden=false;
+     document.getElementById('av-accept').addEventListener('click',function(){try{localStorage.setItem('av-consent','granted');}catch(e){}if(window.avLoadGA)window.avLoadGA();el.hidden=true;});
+     document.getElementById('av-decline').addEventListener('click',function(){try{localStorage.setItem('av-consent','denied');}catch(e){}el.hidden=true;});
+    })();
+    </script>
+  </body>
 </html>
