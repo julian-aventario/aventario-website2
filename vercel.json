@@ -6,6 +6,9 @@
     { "source": "/success-stories", "destination": "/impact", "permanent": true },
     { "source": "/success-stories/:slug", "destination": "/impact/:slug", "permanent": true }
   ],
+  "crons": [
+    { "path": "/api/keepalive", "schedule": "0 6 */5 * *" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
