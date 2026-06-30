@@ -409,7 +409,7 @@
 
                     <!-- AI Products -->
                     <h3 class="font-serif text-2xl text-text mb-5">Aventario AI Products</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12">
                         <div class="bg-surface border border-bordercolor rounded-md flex flex-col" style="padding: 1.4rem;">
                             <div style="display:flex; align-items:baseline; gap:0.65rem; margin-bottom:0.7rem;">
                                 <span class="font-serif text-lg" style="color:#B45309;">01</span>
@@ -431,52 +431,70 @@
                             </div>
                             <p class="text-sm text-muted leading-relaxed">AI-based agent that checks incoming invoices against the price units and contract terms held in the underlying contracts.</p>
                         </div>
-                    </div>
-
-                    <!-- AI Consulting Service: editorial ruled list, not a card grid -->
-                    <h3 class="font-serif text-2xl text-text mb-5">AI Consulting Service</h3>
-                    <div class="mb-12" style="border-top:1px solid rgba(51,75,96,0.12);">
-                        <div style="display:flex; gap:1.25rem; align-items:baseline; padding:1.1rem 0; border-bottom:1px solid rgba(51,75,96,0.12);">
-                            <span class="font-serif text-lg" style="color:#B45309; flex:0 0 2rem;">01</span>
-                            <div>
-                                <h4 class="font-bold text-base text-text leading-tight" style="margin-bottom:0.2rem;">AI Awareness and Enablement</h4>
-                                <p class="text-sm text-muted leading-relaxed">Creative workshops for AI use-case identification and qualification with IT and business.</p>
+                        <div class="bg-surface border border-bordercolor rounded-md flex flex-col" style="padding: 1.4rem;">
+                            <div style="display:flex; align-items:baseline; gap:0.65rem; margin-bottom:0.7rem;">
+                                <span class="font-serif text-lg" style="color:#B45309;">04</span>
+                                <h4 class="font-serif text-lg text-text leading-tight">Vendor and Contract Managed Services</h4>
                             </div>
-                        </div>
-                        <div style="display:flex; gap:1.25rem; align-items:baseline; padding:1.1rem 0; border-bottom:1px solid rgba(51,75,96,0.12);">
-                            <span class="font-serif text-lg" style="color:#B45309; flex:0 0 2rem;">02</span>
-                            <div>
-                                <h4 class="font-bold text-base text-text leading-tight" style="margin-bottom:0.2rem;">AI Empowerment</h4>
-                                <p class="text-sm text-muted leading-relaxed">Workshops and trainings for AI usage in specific work situations, for example prompting techniques for internal auditors.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex; gap:1.25rem; align-items:baseline; padding:1.1rem 0; border-bottom:1px solid rgba(51,75,96,0.12);">
-                            <span class="font-serif text-lg" style="color:#B45309; flex:0 0 2rem;">03</span>
-                            <div>
-                                <h4 class="font-bold text-base text-text leading-tight" style="margin-bottom:0.2rem;">AI Process Efficiency Elevation</h4>
-                                <p class="text-sm text-muted leading-relaxed">Evaluation of complex processes to find efficiency gains through AI agents and automation, plus the definition of the related concepts.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex; gap:1.25rem; align-items:baseline; padding:1.1rem 0; border-bottom:1px solid rgba(51,75,96,0.12);">
-                            <span class="font-serif text-lg" style="color:#B45309; flex:0 0 2rem;">04</span>
-                            <div>
-                                <h4 class="font-bold text-base text-text leading-tight" style="margin-bottom:0.2rem;">AI Team Efficiency Elevation</h4>
-                                <p class="text-sm text-muted leading-relaxed">Structured evaluation of all core tasks across an organization to identify every AI potential.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex; gap:1.25rem; align-items:baseline; padding:1.1rem 0;">
-                            <span class="font-serif text-lg" style="color:#B45309; flex:0 0 2rem;">05</span>
-                            <div>
-                                <h4 class="font-bold text-base text-text leading-tight" style="margin-bottom:0.2rem;">AI Proof of Concepts</h4>
-                                <p class="text-sm text-muted leading-relaxed">Implementation of PoCs to evaluate impact and to enable qualified decision-making.</p>
-                            </div>
+                            <p class="text-sm text-muted leading-relaxed">Manage, improve, and renegotiate selected contract bundles, combining subject-matter experts with Aventario's AI products to run contracts efficiently.</p>
                         </div>
                     </div>
 
-                    <!-- Vendor and Contract Managed Services: navy anchor band -->
-                    <div class="rounded-md mb-12" style="background-color:#334b60; padding:1.6rem 1.8rem;">
-                        <h4 class="font-serif text-xl mb-1" style="color:#FAFAF7;">Vendor and Contract Managed Services</h4>
-                        <p class="text-sm leading-relaxed" style="color:rgba(250,250,247,0.85);">Manage, improve, and renegotiate selected contract bundles with subject-matter experts and Aventario product solutions, to run contracts in a highly efficient way.</p>
+                    <!-- AI Consulting Service: a connected adoption journey (awareness -> proof of concept) -->
+                    <style>
+                      .aics-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem;}
+                      .aics-kicker{font-size:.78rem;color:#5f768b;letter-spacing:.02em;}
+                      .aics-journey{position:relative;}
+                      .aics-journey::before{content:"";position:absolute;left:23px;top:30px;bottom:30px;width:2px;background:linear-gradient(180deg,#8dccc0 0%,rgba(51,75,96,0.18) 30%,rgba(51,75,96,0.18) 70%,#f19a51 100%);}
+                      .aics-step{position:relative;display:flex;gap:1.5rem;padding-bottom:2.1rem;}
+                      .aics-step:last-child{padding-bottom:0;}
+                      .aics-node{position:relative;z-index:1;flex:0 0 48px;height:48px;border-radius:9999px;background:#FAFAF7;border:2px solid rgba(51,75,96,0.22);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.05rem;color:#334b60;transition:border-color .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease;}
+                      .aics-step:hover .aics-node{border-color:#B45309;color:#B45309;transform:translateY(-2px);box-shadow:0 10px 22px -14px rgba(51,75,96,.55);}
+                      .aics-body{padding-top:.45rem;}
+                      .aics-title{font-weight:900;color:#334b60;font-size:1.12rem;line-height:1.2;margin-bottom:.3rem;}
+                      .aics-desc{color:#5f768b;font-size:.92rem;line-height:1.6;max-width:64ch;}
+                      @media(max-width:640px){.aics-journey::before{left:19px;}.aics-node{flex-basis:40px;height:40px;font-size:.95rem;}}
+                    </style>
+                    <div class="aics-head">
+                        <h3 class="font-serif text-2xl text-text">AI Consulting Service</h3>
+                        <span class="aics-kicker">From first awareness to a working proof of concept.</span>
+                    </div>
+                    <div class="aics-journey mb-12">
+                        <div class="aics-step">
+                            <div class="aics-node">01</div>
+                            <div class="aics-body">
+                                <h4 class="aics-title">AI Awareness and Enablement</h4>
+                                <p class="aics-desc">Creative workshops for AI use-case identification and qualification with IT and business.</p>
+                            </div>
+                        </div>
+                        <div class="aics-step">
+                            <div class="aics-node">02</div>
+                            <div class="aics-body">
+                                <h4 class="aics-title">AI Empowerment</h4>
+                                <p class="aics-desc">Workshops and trainings for AI usage in specific work situations, for example prompting techniques for internal auditors.</p>
+                            </div>
+                        </div>
+                        <div class="aics-step">
+                            <div class="aics-node">03</div>
+                            <div class="aics-body">
+                                <h4 class="aics-title">AI Process Efficiency Elevation</h4>
+                                <p class="aics-desc">Evaluation of complex processes to find efficiency gains through AI agents and automation, plus the definition of the related concepts.</p>
+                            </div>
+                        </div>
+                        <div class="aics-step">
+                            <div class="aics-node">04</div>
+                            <div class="aics-body">
+                                <h4 class="aics-title">AI Team Efficiency Elevation</h4>
+                                <p class="aics-desc">Structured evaluation of all core tasks across an organization to identify every AI potential.</p>
+                            </div>
+                        </div>
+                        <div class="aics-step">
+                            <div class="aics-node">05</div>
+                            <div class="aics-body">
+                                <h4 class="aics-title">AI Proof of Concepts</h4>
+                                <p class="aics-desc">Implementation of PoCs to evaluate impact and to enable qualified decision-making.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- How we deliver: engagement model (moved below the consulting service, lighter USP treatment) -->
