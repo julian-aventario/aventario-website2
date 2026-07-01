@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport:{width:1440,height:900}, deviceScaleFactor:2 });
+await ctx.addInitScript(()=>{ try{localStorage.setItem('av-consent','accepted');}catch(e){} });
+const p = await ctx.newPage();
+await p.goto('http://localhost:8901/', {waitUntil:'networkidle', timeout:30000});
+await p.evaluate(async()=>{await new Promise(r=>{let y=0;const t=setInterval(()=>{window.scrollBy(0,700);y+=700;if(y>=document.body.scrollHeight){clearInterval(t);r();}},80);});});
+await p.waitForTimeout(800); await p.evaluate(()=>window.scrollTo(0,0)); await p.waitForTimeout(500);
+await p.screenshot({path:'C:/Users/robid/Desktop/Aventario Claude/documents/management-updates/_status-deck-2026-06-20/shots/local-index-static.png', fullPage:true});
+await b.close(); console.log('local shot done');

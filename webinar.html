@@ -25,6 +25,7 @@
         .field { width: 100%; font-size: 0.875rem; padding: 0.75rem 1rem; border-radius: 0.5rem; background: #FAFAF7; border: 1px solid rgba(51,75,96,0.12); outline: none; transition: border-color .15s; }
         .field:focus { border-color:#2C7A6B; }
     </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Aventario","legalName":"Aventario Services GmbH","url":"https://www.aventario.com","email":"office@aventario.com","telephone":"+43 134 3354012","address":{"@type":"PostalAddress","streetAddress":"Tuchlauben 7a","postalCode":"1010","addressLocality":"Vienna","addressCountry":"AT"},"description":"Cost and value optimization for IT and supply chain."}</script>
 </head>
 <body>
 
@@ -64,7 +65,7 @@
             <div class="bg-surface border border-bordercolor rounded-xl p-6 md:p-8 shadow-sm">
                 <h2 class="font-serif text-2xl mb-1">Save your seat.</h2>
                 <p class="text-sm text-muted mb-6">Limited to 100 attendees. We'll email you the join link.</p>
-                <form id="regForm" class="space-y-4" novalidate>
+                <form id="regForm" class="space-y-4" novalidate><input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
                     <div>
                         <label for="r-name" class="block text-sm font-bold mb-1.5">Name</label>
                         <input id="r-name" name="name" type="text" autocomplete="name" required class="field">
@@ -109,6 +110,7 @@
             function show(msg, ok) { status.textContent = msg; status.classList.remove('hidden'); status.style.color = ok ? '#5FA99D' : '#b4456f'; }
             form.addEventListener('submit', async function (e) {
                 e.preventDefault();
+                var _hp=e.target.querySelector('input[name=company_website]');if(_hp&&_hp.value)return;
                 if (!form.checkValidity()) { form.reportValidity(); return; }
                 var fd = new FormData(form);
                 var row = {
@@ -121,6 +123,7 @@
                 };
                 var orig = btn.textContent; btn.disabled = true; btn.textContent = 'Registering…';
                 try {
+                    try{Object.assign(data,(window.avAttr&&window.avAttr())||{});}catch(_){}
                     var r = await fetch(SB_URL + '/rest/v1/webinar_registrations', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json', apikey: SB_KEY, Prefer: 'return=minimal' },
@@ -168,5 +171,6 @@
      document.getElementById('av-decline').addEventListener('click',function(){try{localStorage.setItem('av-consent','denied');}catch(e){}el.hidden=true;});
     })();
     </script>
+      <script src="/assets/site.js" defer></script>
   </body>
 </html>

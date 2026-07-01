@@ -209,7 +209,7 @@
             <h1 class="font-serif text-5xl md:text-7xl mb-12">Kontakt aufnehmen.</h1>
             <div class="max-w-2xl">
                 <div class="bg-surface border border-bordercolor rounded-md p-6 md:p-8">
-                        <form id="contactForm" class="space-y-4" novalidate>
+                        <form id="contactForm" class="space-y-4" novalidate><input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
                             <div>
                                 <label for="cf-name" class="block text-sm font-bold mb-1.5">Name</label>
                                 <input id="cf-name" name="name" type="text" autocomplete="name" required class="w-full text-sm px-4 py-3 rounded-md bg-base border border-bordercolor focus:border-accentdark outline-none transition-colors">
@@ -251,6 +251,7 @@
             function show(msg, ok) { status.textContent = msg; status.classList.remove('hidden'); status.style.color = ok ? '#5FA99D' : '#b4456f'; }
             form.addEventListener('submit', async function (e) {
                 e.preventDefault();
+                var _hp=e.target.querySelector('input[name=company_website]');if(_hp&&_hp.value)return;
                 if (!form.checkValidity()) { form.reportValidity(); return; }
                 var fd = new FormData(form);
                 var data = {
@@ -264,6 +265,7 @@
                 };
                 var orig = btn.textContent; btn.disabled = true; btn.textContent = 'Wird gesendet…';
                 try {
+                    try{Object.assign(data,(window.avAttr&&window.avAttr())||{});}catch(_){}
                     var r = await fetch(SB_URL + '/rest/v1/leads', { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: SB_KEY, Prefer: 'return=minimal' }, body: JSON.stringify(data) });
                     if (!r.ok) throw new Error('status ' + r.status);
                     if (window.gtag) gtag('event','generate_lead',{form_location:location.pathname});
@@ -323,7 +325,7 @@
                     <div class="rounded-md p-5" style="background-color: rgba(255,255,255,0.04); border: 1px solid rgba(250,250,247,0.7);">
                         <p class="font-serif text-lg mb-2" style="color: #FAFAF7;">Monatlicher Newsletter</p>
                         <p class="text-sm leading-relaxed mb-4" style="color: rgba(250,250,247,0.8);">Bleiben Sie auf dem Laufenden zu aktuellen Trends, Insights und Best Practices im Vendor Management.</p>
-                        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed';" class="flex flex-col sm:flex-row gap-2">
+                        <form data-newsletter class="flex flex-col sm:flex-row gap-2"><input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
                             <input type="email" required placeholder="you@company.com" class="flex-1 min-w-0 text-sm px-4 py-2 rounded-full bg-transparent placeholder:text-white/70" style="border: 1px solid rgba(250,250,247,0.7); color: #FAFAF7;">
                             <button type="submit" class="text-xs font-bold uppercase tracking-widest whitespace-nowrap px-4 py-2 rounded-full" style="background-color: #FAFAF7; color: #334b60;">Jetzt abonnieren</button>
                         </form>
@@ -409,5 +411,6 @@
      document.getElementById('av-decline').addEventListener('click',function(){try{localStorage.setItem('av-consent','denied');}catch(e){}el.hidden=true;});
     })();
     </script>
+      <script src="/assets/site.js" defer></script>
   </body>
 </html>

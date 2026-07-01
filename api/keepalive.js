@@ -8,6 +8,14 @@ export default async function handler(req, res) {
   // Publishable key — safe to ship (it is already public in the site's form JS).
   const KEY = process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_0R1ZCaygbhIA4xY3MhpN6w_qOFeRhoa';
   const started = Date.now();
+  // W5: alert MS Teams if the health check fails (env-gated — set TEAMS_WEBHOOK_URL to enable).
+  const TEAMS = process.env.TEAMS_WEBHOOK_URL;
+  async function alertTeams(text) {
+    if (!TEAMS) return;
+    try {
+      await fetch(TEAMS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
+    } catch (_) {}
+  }
   try {
     // A real PostgREST query touches the database, which is what resets the
     // inactivity timer. RLS may return an empty set; the request still counts.
@@ -25,6 +33,7 @@ export default async function handler(req, res) {
       ts: new Date().toISOString(),
     };
     console.log('[keepalive]', JSON.stringify(body));
+    if (!alive) await alertTeams('Aventario Supabase health check FAILED (status ' + r.status + '). Forms may be down.');
     res.status(alive ? 200 : 503).json(body);
   } catch (e) {
     const body = {
@@ -35,6 +44,7 @@ export default async function handler(req, res) {
       ts: new Date().toISOString(),
     };
     console.error('[keepalive] FAILED', JSON.stringify(body));
+    await alertTeams('Aventario Supabase keepalive threw: ' + body.error + '. Project may be paused.');
     res.status(503).json(body);
   }
 }
