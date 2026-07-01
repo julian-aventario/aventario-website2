@@ -556,22 +556,20 @@
                     <p>We provide our clients with a <strong>single, integrated service</strong>.</p>
                 </div>
             </div>
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
-                <div class="md:col-start-5 md:col-span-8">
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-stretch">
-                    <a href="support-services.html#transformation-implementation" class="group flex flex-col h-full text-center bg-surface border border-bordercolor rounded-xl p-6 hover:border-accent transition-all" style="box-shadow:0 1px 0 rgba(0,0,0,.02);" onmouseover="this.style.boxShadow='0 20px 40px -28px rgba(20,32,44,.5)'" onmouseout="this.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'">
-                        <h3 class="font-serif text-xl text-text mb-4 group-hover:text-accentdark transition-colors">Transformation Implementation</h3>
+            <div class="mt-10">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-stretch">
+                    <a href="support-services.html#transformation-implementation" class="group flex flex-col h-full justify-center items-center text-center bg-surface border border-bordercolor rounded-xl p-6 hover:border-accent transition-all" style="box-shadow:0 1px 0 rgba(0,0,0,.02);" onmouseover="this.style.boxShadow='0 20px 40px -28px rgba(20,32,44,.5)'" onmouseout="this.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'">
+                        <h3 class="font-serif text-xl text-text group-hover:text-accentdark transition-colors">Transformation Implementation</h3>
                         
                     </a>
-                    <a href="support-services.html#program-project" class="group flex flex-col h-full text-center bg-surface border border-bordercolor rounded-xl p-6 hover:border-accent transition-all" style="box-shadow:0 1px 0 rgba(0,0,0,.02);" onmouseover="this.style.boxShadow='0 20px 40px -28px rgba(20,32,44,.5)'" onmouseout="this.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'">
-                        <h3 class="font-serif text-xl text-text mb-4 group-hover:text-accentdark transition-colors">Program &amp; Project Management</h3>
+                    <a href="support-services.html#program-project" class="group flex flex-col h-full justify-center items-center text-center bg-surface border border-bordercolor rounded-xl p-6 hover:border-accent transition-all" style="box-shadow:0 1px 0 rgba(0,0,0,.02);" onmouseover="this.style.boxShadow='0 20px 40px -28px rgba(20,32,44,.5)'" onmouseout="this.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'">
+                        <h3 class="font-serif text-xl text-text group-hover:text-accentdark transition-colors">Program &amp; Project Management</h3>
                         
                     </a>
-                    <a href="support-services.html#change-communication" class="group flex flex-col h-full text-center bg-surface border border-bordercolor rounded-xl p-6 hover:border-accent transition-all" style="box-shadow:0 1px 0 rgba(0,0,0,.02);" onmouseover="this.style.boxShadow='0 20px 40px -28px rgba(20,32,44,.5)'" onmouseout="this.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'">
-                        <h3 class="font-serif text-xl text-text mb-4 group-hover:text-accentdark transition-colors">Change &amp;<br>Communication</h3>
+                    <a href="support-services.html#change-communication" class="group flex flex-col h-full justify-center items-center text-center bg-surface border border-bordercolor rounded-xl p-6 hover:border-accent transition-all" style="box-shadow:0 1px 0 rgba(0,0,0,.02);" onmouseover="this.style.boxShadow='0 20px 40px -28px rgba(20,32,44,.5)'" onmouseout="this.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'">
+                        <h3 class="font-serif text-xl text-text group-hover:text-accentdark transition-colors">Change &amp;<br>Communication</h3>
                         
                     </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -794,27 +792,11 @@
     </main>
 
     <script>
-        // Sticky nav: hide on scroll down, show on scroll up (standard pattern)
+        // Header stays sticky and always visible (hide-on-scroll disabled — the
+        // switcher lives here, so it must never disappear).
         (function(){
           const n = document.getElementById('mainNav'); if (!n) return;
-          let lastY = window.scrollY;
-          let ticking = false;
-          const DELTA = 6;          // ignore tiny jitter
-          const TOP_SAFE = 80;      // always show within 80px of top
-          const upd = () => {
-            const y = window.scrollY;
-            if (Math.abs(y - lastY) < DELTA) { ticking = false; return; }
-            if (y > lastY && y > TOP_SAFE) {
-              n.classList.add('nav-hidden');
-            } else {
-              n.classList.remove('nav-hidden');
-            }
-            lastY = y;
-            ticking = false;
-          };
-          window.addEventListener('scroll', () => {
-            if (!ticking) { window.requestAnimationFrame(upd); ticking = true; }
-          }, { passive: true });
+          n.classList.remove('nav-hidden');
         })();
 
         // Transparent-over-hero nav: toggle .past-hero AND set inline background/border directly to win over Tailwind CDN cascade
