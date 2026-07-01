@@ -1,9 +1,9 @@
-// Vercel Cron keepalive + health check.
+// Vercel Cron keepalive + health check (ESM — the project's package.json is type:module).
 // The Supabase free tier auto-pauses a project after 7 days with no requests.
 // This function makes a real database request so the project stays counted as
 // active, and reports Supabase reachability on each run (visible in the Vercel
 // function logs). Scheduled every 5 days in vercel.json.
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   const SB = 'https://zpuywttjadohtxvaloyq.supabase.co';
   // Publishable key — safe to ship (it is already public in the site's form JS).
   const KEY = process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_0R1ZCaygbhIA4xY3MhpN6w_qOFeRhoa';
@@ -37,4 +37,4 @@ module.exports = async (req, res) => {
     console.error('[keepalive] FAILED', JSON.stringify(body));
     res.status(503).json(body);
   }
-};
+}
